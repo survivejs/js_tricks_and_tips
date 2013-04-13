@@ -220,7 +220,44 @@ build_lists: true
 
 ---
 
-title: Tooling
+title: Development Strategies
+class: segue dark nobackground
+
+---
+
+title: Evolution of Development Process
+class: big
+build_lists: true
+
+- dev -> test -> UX (waterfall)
+- test -> dev -> UX (TDD, BDD and such)
+- UX -> test -> dev (Lean UX)
+
+---
+
+title: Development Approaches
+class: big
+build_lists: true
+
+- Pretotyping
+- Wireframes
+- Plain paper and pen
+- Just code it?
+
+---
+
+title: Validating Outcomes
+class: big
+build_lists: true
+
+- AB-testing (ie. Optimizely)
+- User testing
+- WTFs per minute
+- Plain old money (sales for instance)
+
+---
+
+title: Development Tooling
 class: segue dark nobackground
 
 ---
