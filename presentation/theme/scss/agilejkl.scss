@@ -181,7 +181,6 @@ slides > slide {
     }
     &:after {
       font-size: 12pt;
-      content: attr(data-slide-num) '/' attr(data-total-slides);
       position: absolute;
       bottom: $slide-top-bottom-padding / 2;
       right: $slide-left-right-padding;
