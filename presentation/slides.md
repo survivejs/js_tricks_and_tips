@@ -71,6 +71,14 @@ build_lists: true
 
 ---
 
+title: JavaScript has Traction
+
+![Traction](images/redmonk.png)
+
+<footer class="source">source http://redmonk.com/sogrady/2013/02/28/language-rankings-1-13/</footer>
+
+---
+
 title: JavaScript Rage
 
 ![Rage](images/rage.jpg)
