@@ -56,7 +56,7 @@ title: Web - From Documents to Applications
 class: big
 build_lists: true
 
-- Web as Document Platform
+- Web as a Document Platform
     * 1995 - Brendan Eich's ten days
     * 1999 - ES3 (modern baseline), Mozilla established
 - Improved Interactivity
