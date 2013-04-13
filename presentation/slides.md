@@ -377,6 +377,8 @@ define(['jquery', './math'], function($, math) {
 ---
 
 title: Browserify + NPM
+class: big
+build_lists: true
 
 <pre class="prettyprint" data-lang="html">
 &lt;script src='application.js' type='text/javascript'&gt;&lt;/script&gt;
