@@ -1,17 +1,4 @@
 
-title: Agenda
-class: big
-build_lists: true
-notes: ["testing", "and then some"]
-
-Things we'll cover (list should build):
-
-- Bullet1
-- Bullet2
-- Bullet3
-
----
-
 title: Strategy for Goldfishes
 class: nobackground fill
 
@@ -26,6 +13,46 @@ class: nobackground fill
 notes. ["About what, not how", "From A (now) to B (future)"]
 
 TODO: from A to B
+
+---
+
+title: How Did We Get Here
+class: segue dark nobackground
+
+---
+
+title: Brief History of JavaScript
+class: big
+build_lists: true
+notes: ["testing", "and then some"]
+
+- 1995 - Brendan Eich's ten days &rarr; Mocha
+- Known as LiveScript till the marketing folks changed the name
+- Java is to JavaScript as ham is to hamster
+- 1999 - ES3, modern baseline
+- 2005 - AJAX
+- 2008 - RIP ES4
+- 2009 - ES5 - IE9+ + Modern browsers
+- 2013 - ES6?
+
+<footer class="source"><a href="http://brendaneich.github.io/Strange-Loop-2012/#/1">Brendan Eich at Strange Loop '12</a></footer>
+
+---
+
+title: Where Are We Now
+class: segue dark nobackground
+
+---
+
+title: Responsive Web Design
+class: big
+
+<iframe src="http://finecitizens.com/defineResponsive/"></iframe>
+
+---
+
+title: Where Are We Headed
+class: segue dark nobackground
 
 ---
 
