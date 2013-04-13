@@ -305,14 +305,93 @@ title: JSter
 ---
 
 title: Structuring Code
+class: segue dark nobackground
+
+---
+
+title: Current Status
 class: big
 build_lists: true
 
 * No official module system (yet)
-* De facto
-* Custom concat scripts
-* Require.js + AMD + Bower etc.
-* Browserify + NPM
+* Supposedly ES6 will bring one
+* Still, it will remain as a compile target
+
+---
+
+title: The Anti-Pattern
+class: big
+build_lists: true
+
+<pre class="prettyprint" data-lang="html">
+&lt;script src='jquery-current.js' type='text/javascript'&gt;&lt;/script&gt;
+&lt;script src='sorttable.js'      type='text/javascript'&gt;&lt;/script&gt;
+&lt;script src='scripts.js'        type='text/javascript'&gt;&lt;/script&gt;
+&lt;script src='miniCalendar.js'   type='text/javascript'&gt;&lt;/script&gt;
+</pre>
+
+* Each include has to be defined by hand
+* Brittle and prone to error, especially with large codebases
+* Does not encourage to modularity
+* Hard to reuse
+
+---
+
+title: Concatenate Scripts
+class: big
+build_lists: true
+
+<pre class="prettyprint" data-lang="html">
+&lt;script src='application.js' type='text/javascript'&gt;&lt;/script&gt;
+</pre>
+
+* Old skool but works
+* Less overhead at HTML
+* Still, running into dependency order problem at concatenation
+* Possible to complement by loading scripts (ie. jQuery) from a CDN
+* Nevertheless a step forward
+
+---
+
+title: RequireJS and AMD + Bower
+class: big
+build_lists: true
+
+<pre class="prettyprint" data-lang="html">
+&lt;script data-main="scripts/main" src="scripts/require.js"&gt;&lt;/script&gt;
+</pre>
+
+<pre class="prettyprint" data-lang="javascript">
+define(['jquery', './math'], function($, math) {
+    return { // exports
+        vector: function() {...}
+    };
+});
+</pre>
+
+* Modular, asynchronous approach
+* Includes `define` overhead (possible to mimic Node.js convention, though)
+* Optimizer resolves dependencies and creates build (loadable with Almond)
+* Configuration complex at times
+
+---
+
+title: Browserify + NPM
+
+<pre class="prettyprint" data-lang="html">
+&lt;script src='application.js' type='text/javascript'&gt;&lt;/script&gt;
+</pre>
+
+<pre class="prettyprint" data-lang="javascript">
+var $ = require('jquery');
+var math = require('./math');
+
+exports.vector = function() {...};
+</pre>
+
+* Allows to use Node.js module convention (CJS)
+* Better yet allows to hook into NPM ecosystem!
+* Still fairly bleeding edge
 
 ---
 

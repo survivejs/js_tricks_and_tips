@@ -534,19 +534,125 @@ function hello(target) {
  
 </slide>
 
+<slide class="segue dark nobackground" >
+  
+  
+    <hgroup class="auto-fadein">
+      <h2>Structuring Code</h2>
+      <h3></h3>
+    </hgroup>
+  
+</slide>
+
 <slide class="big" >
   
   
     <hgroup>
-      <h2>Structuring Code</h2>
+      <h2>Current Status</h2>
       <h3></h3>
     </hgroup>
     <article ><ul class="build">
 <li>No official module system (yet)</li>
-<li>De facto</li>
-<li>Custom concat scripts</li>
-<li>Require.js + AMD + Bower etc.</li>
-<li>Browserify + NPM</li>
+<li>Supposedly ES6 will bring one</li>
+<li>Still, it will remain as a compile target</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+  
+    <hgroup>
+      <h2>The Anti-Pattern</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><pre class="prettyprint" data-lang="html">
+&lt;script src='jquery-current.js' type='text/javascript'&gt;&lt;/script&gt;
+&lt;script src='sorttable.js'      type='text/javascript'&gt;&lt;/script&gt;
+&lt;script src='scripts.js'        type='text/javascript'&gt;&lt;/script&gt;
+&lt;script src='miniCalendar.js'   type='text/javascript'&gt;&lt;/script&gt;
+</pre>
+
+<ul class="build">
+<li>Each include has to be defined by hand</li>
+<li>Brittle and prone to error, especially with large codebases</li>
+<li>Does not encourage to modularity</li>
+<li>Hard to reuse</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+  
+    <hgroup>
+      <h2>Concatenate Scripts</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><pre class="prettyprint" data-lang="html">
+&lt;script src='application.js' type='text/javascript'&gt;&lt;/script&gt;
+</pre>
+
+<ul class="build">
+<li>Old skool but works</li>
+<li>Less overhead at HTML</li>
+<li>Still, running into dependency order problem at concatenation</li>
+<li>Possible to complement by loading scripts (ie. jQuery) from a CDN</li>
+<li>Nevertheless a step forward</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+  
+    <hgroup>
+      <h2>RequireJS and AMD + Bower</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><pre class="prettyprint" data-lang="html">
+&lt;script data-main="scripts/main" src="scripts/require.js"&gt;&lt;/script&gt;
+</pre>
+
+<pre class="prettyprint" data-lang="javascript">
+define(['jquery', './math'], function($, math) {
+    return { // exports
+        vector: function() {...}
+    };
+});
+</pre>
+
+<ul class="build">
+<li>Modular, asynchronous approach</li>
+<li>Includes <code>define</code> overhead (possible to mimic Node.js convention, though)</li>
+<li>Optimizer resolves dependencies and creates build (loadable with Almond)</li>
+<li>Configuration complex at times</li>
+</ul></article>
+ 
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>Browserify + NPM</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><pre class="prettyprint" data-lang="html">
+&lt;script src='application.js' type='text/javascript'&gt;&lt;/script&gt;
+</pre>
+
+<pre class="prettyprint" data-lang="javascript">
+var $ = require('jquery');
+var math = require('./math');
+
+exports.vector = function() {...};
+</pre>
+
+<ul>
+<li>Allows to use Node.js module convention (CJS)</li>
+<li>Better yet allows to hook into NPM ecosystem!</li>
+<li>Still fairly bleeding edge</li>
 </ul></article>
  
 </slide>
