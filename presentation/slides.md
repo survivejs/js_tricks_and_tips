@@ -92,6 +92,14 @@ class: segue dark nobackground
 
 ---
 
+title: Web Stacks
+class: big
+build_lists: true
+
+- TODO: show possible stacks here ranging from pure static to something more JS driven
+
+---
+
 title: Node.js
 class: big
 build_lists: true
@@ -111,6 +119,16 @@ class: big
 
 ---
 
+title: Front-end Frameworks
+class: big
+build_lists: true
+
+- Twitter Bootstrap
+- Zurb Foundation
+- et. co.
+
+---
+
 title: Where Are We Headed
 class: segue dark nobackground
 
@@ -126,3 +144,129 @@ title: Enlightenment
 
 title: Back to Reality
 class: segue dark nobackground
+
+---
+
+title: Reality is Ugly
+class: big
+build_lists: true
+
+- Ideally things "would just work" (tm)
+- Unfortunately it's not that simple always
+- Bleeding edge is bleeds for a reason
+- Solutions
+    * Shims
+    * Better testing (ie. browserling, browserstack)
+    * Reduced quality of service for older browsers
+    * Dropping support altogether (encourage to switch browser)
+
+---
+
+title: Data-Driven Architecture of the Web
+class: segue dark nobackground
+
+---
+
+title: Elements of Web Applications
+
+TODO: image with logic, markup, representation, data
+
+---
+
+title: Logic
+class: big
+build_lists: true
+
+- JavaScript
+- Or language that compiles to JavaScript. Examples:
+    * CoffeeScript
+    * Dart
+    * TypeScript
+    * altjs.org
+
+---
+
+title: Markup
+class: big
+build_lists: true
+
+- HTML
+- Or language that compiles to HTML. Examples:
+    * HAML
+    * Jade
+    * Handlebars
+    * Mustache
+
+---
+
+title: Representation
+class: big
+build_lists: true
+
+- CSS
+- Or language that compiles to CSS. Examples:
+    * LESS
+    * SASS (compass, stylus?)
+
+---
+
+title: Data
+class: big
+build_lists: true
+
+- Served through backend(s) usually in JSON
+- Easy to use in JavaScript this way
+- RESTful interfaces
+
+---
+
+title: Tooling
+class: segue dark nobackground
+
+---
+
+title: Editors
+class: big
+build_lists: true
+
+- Regular development: Plain old IDE or editor
+- LiveReload
+- Prototyping: Web based service (jsfiddle, jsbin)
+- Future is in the web? Cloud9?
+- Continous integration (travis and such)
+- Browserify etc. (cross-browser issues)
+
+---
+
+title: Finding Libraries
+class: big
+build_lists: true
+
+* NPM
+* Bower
+* jswiki
+* JSter
+
+---
+
+title: Structuring Code
+class: big
+build_lists: true
+
+* No official module system (yet)
+* De facto
+* Custom concat scripts
+* Require.js + AMD + Bower etc.
+* Browserify + NPM
+
+---
+
+title: Conclusions
+class: segue dark nobackground
+
+---
+
+title: Conclusions
+
+TODO
+
