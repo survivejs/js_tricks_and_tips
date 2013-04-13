@@ -52,16 +52,20 @@ function hello(target) {
 
 ---
 
-title: Brief History of JavaScript
+title: Web - From Documents to Applications
 class: big
 build_lists: true
 
-- 1995 - Brendan Eich's ten days
-- 1999 - ES3, modern baseline
-- 2005 - AJAX
-- 2008 - RIP ES4
-- 2009 - ES5 - IE9+ + Modern browsers
-- 2013 - ES6?
+- Web as Document Platform
+    * 1995 - Brendan Eich's ten days
+    * 1999 - ES3 (modern baseline), Mozilla established
+- Improved Interactivity
+    * 2005 - AJAX, dynamic loading (search for instance)
+    * 2008 - RIP ES4, parts of HTML5 emerge, Chrome (V8) introduced
+    * 2009 - ES5 (Modern browsers IE9 included), Chrome OS, Node.js
+- Web as an Application Platform
+    * 2012 - HTML5 well supported (interesting JS APIs)
+    * 2013 - ES6?
 
 <footer class="source"><a href="http://brendaneich.github.io/Strange-Loop-2012/#/1">Brendan Eich at Strange Loop '12</a></footer>
 
@@ -122,44 +126,3 @@ title: Enlightenment
 
 title: Back to Reality
 class: segue dark nobackground
-
----
-
-title: Code Example
-
-Media Queries are sweet:
-
-<pre class="prettyprint" data-lang="css">
-@media screen and (max-width: 640px) {
-  #sidebar { display: none; }
-}
-</pre>
-
----
-
-title: Once more, with JavaScript
-
-<pre class="prettyprint" data-lang="javascript">
-function isSmall() {
-  return window.matchMedia("(min-device-width: ???)").matches;
-}
-
-function hasTouch() {
-  return Modernizr.touch;
-}
-
-function detectFormFactor() {
-  var device = DESKTOP;
-  if (hasTouch()) {
-    device = isSmall() ? PHONE : TABLET;
-  }
-  return device;
-}
-</pre>
-
----
-
-title: Centered content
-content_class: flexbox vcenter
-
-This content should be centered!

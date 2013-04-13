@@ -121,16 +121,26 @@ function hello(target) {
   
   
     <hgroup>
-      <h2>Brief History of JavaScript</h2>
+      <h2>Web - From Documents to Applications</h2>
       <h3></h3>
     </hgroup>
     <article ><ul class="build">
+<li>Web as Document Platform<ul class="build">
 <li>1995 - Brendan Eich's ten days</li>
-<li>1999 - ES3, modern baseline</li>
-<li>2005 - AJAX</li>
-<li>2008 - RIP ES4</li>
-<li>2009 - ES5 - IE9+ + Modern browsers</li>
+<li>1999 - ES3 (modern baseline), Mozilla established</li>
+</ul>
+</li>
+<li>Improved Interactivity<ul class="build">
+<li>2005 - AJAX, dynamic loading (search for instance)</li>
+<li>2008 - RIP ES4, parts of HTML5 emerge, Chrome (V8) introduced</li>
+<li>2009 - ES5 (Modern browsers IE9 included), Chrome OS, Node.js</li>
+</ul>
+</li>
+<li>Web as an Application Platform<ul class="build">
+<li>2012 - HTML5 well supported (interesting JS APIs)</li>
 <li>2013 - ES6?</li>
+</ul>
+</li>
 </ul>
 <footer class="source"><a href="http://brendaneich.github.io/Strange-Loop-2012/#/1">Brendan Eich at Strange Loop '12</a></footer></article>
  
@@ -239,60 +249,6 @@ function hello(target) {
       <h3></h3>
     </hgroup>
   
-</slide>
-
-<slide  >
-  
-  
-    <hgroup>
-      <h2>Code Example</h2>
-      <h3></h3>
-    </hgroup>
-    <article ><p>Media Queries are sweet:</p>
-<pre class="prettyprint" data-lang="css">
-@media screen and (max-width: 640px) {
-  #sidebar { display: none; }
-}
-</pre></article>
- 
-</slide>
-
-<slide  >
-  
-  
-    <hgroup>
-      <h2>Once more, with JavaScript</h2>
-      <h3></h3>
-    </hgroup>
-    <article ><pre class="prettyprint" data-lang="javascript">
-function isSmall() {
-  return window.matchMedia("(min-device-width: ???)").matches;
-}
-
-function hasTouch() {
-  return Modernizr.touch;
-}
-
-function detectFormFactor() {
-  var device = DESKTOP;
-  if (hasTouch()) {
-    device = isSmall() ? PHONE : TABLET;
-  }
-  return device;
-}
-</pre></article>
- 
-</slide>
-
-<slide  >
-  
-  
-    <hgroup>
-      <h2>Centered content</h2>
-      <h3></h3>
-    </hgroup>
-    <article class="flexbox vcenter"><p>This content should be centered!</p></article>
- 
 </slide>
 
 
