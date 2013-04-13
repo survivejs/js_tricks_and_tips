@@ -12,6 +12,23 @@ Things we'll cover (list should build):
 
 ---
 
+title: Strategy for Goldfishes
+class: nobackground fill
+
+![Strategy](images/strategy.jpg)
+
+<footer class="source">source: http://www.flickr.com/photos/32066106@N06/3000884576/, CC BY-NC-ND by HikingArtist.com</footer>
+
+---
+
+title: Strategy for the Rest of Us
+class: nobackground fill
+notes. ["About what, not how", "From A (now) to B (future)"]
+
+TODO: from A to B
+
+---
+
 title: 1990s
 class: nobackground fill
 
