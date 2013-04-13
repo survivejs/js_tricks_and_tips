@@ -100,64 +100,6 @@ class: segue dark nobackground
 
 ---
 
-title: Web Stacks
-class: big
-build_lists: true
-
-- TODO: show possible stacks here ranging from pure static to something more JS driven
-
----
-
-title: Node.js
-class: big
-build_lists: true
-notes: ["testing", "and then some"]
-
-- Established
-- NPM
-- Full stack
-- When to use
-
----
-
-title: Where Are We Headed
-class: segue dark nobackground
-
----
-
-title: Enlightenment
-
-![Crockford](images/enlightenment.jpg)
-
-<footer class="source">CC BY-NC-SA by <a href="http://redmonk.com/sogrady/2013/02/28/language-rankings-1-13/">michael.heiss</a></footer>
-
----
-
-title: Back to Reality
-class: segue dark nobackground
-
----
-
-title: Reality is Ugly
-class: big
-build_lists: true
-
-- Ideally things "would just work" (tm)
-- Unfortunately it's not that simple always
-- Bleeding edge bleeds for a reason
-- Solutions
-    * Shims
-    * Better testing (ie. browserling, browserstack)
-    * Reduced quality of service for older browsers
-    * Dropping support altogether (encourage to switch browser)
-
----
-
-title: Application Architecture
-class: segue dark nobackground
-
----
-
 title: Elements of Web Applications
 
 TODO: image with logic, markup, representation, data
@@ -289,6 +231,74 @@ build_lists: true
 - Served through backend(s) usually in JSON
 - Easy to use in JavaScript this way
 - RESTful interfaces
+
+---
+
+title: Web Architectures
+class: big
+build_lists: true
+
+- TODO: show possible stacks here ranging from pure static to something more JS driven
+
+---
+
+title: Node.js
+class: big
+build_lists: true
+notes: ["testing", "and then some"]
+
+- Established
+- NPM
+- Full stack
+- When to use
+
+---
+
+title: Not Just for Web Development
+class: big
+build_lists: true
+
+- Arduino, electronics
+- System tools (Node.js)
+- Mobile
+
+---
+
+title: Where Are We Headed
+class: segue dark nobackground
+
+---
+
+title: Enlightenment
+
+![Enlightenment](images/enlightenment.jpg)
+
+<footer class="source">CC BY-NC-SA by <a href="http://redmonk.com/sogrady/2013/02/28/language-rankings-1-13/">michael.heiss</a></footer>
+
+---
+
+title: Reality is Ugly
+class: big
+build_lists: true
+
+- Ideally things "would just work"&trade;
+- Unfortunately it's not that simple always
+- Bleeding edge bleeds for a reason
+- Solutions
+    * Shims
+    * Better testing (ie. browserling, browserstack)
+    * Reduced quality of service for older browsers
+    * Dropping support altogether (encourage to switch browser)
+
+---
+
+title: Rise of the Mobile
+class: big
+build_lists: true
+
+- Already an option (PhoneGap and such)
+- Stronger if Firefox OS, Ubuntu or some alternative catches on
+- Currently native applications provide the best experience
 
 ---
 
