@@ -276,13 +276,31 @@ build_lists: true
 ---
 
 title: Finding Libraries
-class: big
-build_lists: true
+class: segue dark nobackground
 
-* NPM
-* Bower
-* jswiki
-* JSter
+---
+
+title: NPM
+
+<iframe src="https://npmjs.org/"></iframe>
+
+---
+
+title: Bower
+
+<iframe src="http://sindresorhus.com/bower-components/"></iframe>
+
+---
+
+title: JSwiki
+
+<iframe src="http://jswiki.org"></iframe>
+
+---
+
+title: JSter
+
+<iframe src="http://jster.net/"></iframe>
 
 ---
 
