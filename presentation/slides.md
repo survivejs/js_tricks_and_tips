@@ -112,23 +112,6 @@ notes: ["testing", "and then some"]
 
 ---
 
-title: Responsive Web Design
-class: big
-
-<iframe src="http://finecitizens.com/defineResponsive/"></iframe>
-
----
-
-title: Front-end Frameworks
-class: big
-build_lists: true
-
-- Twitter Bootstrap
-- Zurb Foundation
-- et. co.
-
----
-
 title: Where Are We Headed
 class: segue dark nobackground
 
@@ -153,7 +136,7 @@ build_lists: true
 
 - Ideally things "would just work" (tm)
 - Unfortunately it's not that simple always
-- Bleeding edge is bleeds for a reason
+- Bleeding edge bleeds for a reason
 - Solutions
     * Shims
     * Better testing (ie. browserling, browserstack)
@@ -162,7 +145,7 @@ build_lists: true
 
 ---
 
-title: Data-Driven Architecture of the Web
+title: Application Architecture
 class: segue dark nobackground
 
 ---
@@ -174,39 +157,120 @@ TODO: image with logic, markup, representation, data
 ---
 
 title: Logic
-class: big
-build_lists: true
+class: segue dark nobackground
 
-- JavaScript
-- Or language that compiles to JavaScript. Examples:
-    * CoffeeScript
-    * Dart
-    * TypeScript
-    * altjs.org
+---
+
+content_class: flexbox vcenter bigText
+
+# JavaScript
+
+---
+
+title: CoffeeScript
+
+<iframe src="http://coffeescript.org/"></iframe>
+
+---
+
+title: Dart
+
+<iframe src="http://www.dartlang.org/"></iframe>
+
+---
+
+title: TypeScript
+
+<iframe src="http://www.typescriptlang.org/"></iframe>
+
+---
+
+title: And many others
+content_class: flexbox vcenter bigText
+
+# [altJS](http://altjs.org/)
 
 ---
 
 title: Markup
-class: big
-build_lists: true
+class: segue dark nobackground
 
-- HTML
-- Or language that compiles to HTML. Examples:
-    * HAML
-    * Jade
-    * Handlebars
-    * Mustache
+---
+
+content_class: flexbox vcenter bigText
+
+# HTML
+
+---
+
+title: HAML
+
+<iframe src="http://haml.info/"></iframe>
+
+---
+
+title: Jade
+
+<iframe src="http://jade-lang.com/"></iframe>
+
+---
+
+title: Mustache
+
+<iframe src="http://mustache.github.io/"></iframe>
+
+---
+
+title: Handlebars
+
+<iframe src="http://handlebarsjs.com/"></iframe>
+
+---
+
+title: Transparency
+
+<iframe src="http://leonidas.github.io/transparency/"></iframe>
 
 ---
 
 title: Representation
-class: big
-build_lists: true
+class: segue dark nobackground
 
-- CSS
-- Or language that compiles to CSS. Examples:
-    * LESS
-    * SASS (compass, stylus?)
+---
+
+content_class: flexbox vcenter bigText
+
+# CSS
+
+---
+
+title: LESS
+
+<iframe src="http://lesscss.org/"></iframe>
+
+---
+
+title: SASS
+
+<iframe src="http://sass-lang.com/"></iframe>
+
+---
+
+title: Responsive Web Design
+
+<iframe src="http://finecitizens.com/defineResponsive/"></iframe>
+
+---
+
+title: Twitter Bootstrap
+
+<iframe src="http://twitter.github.io/bootstrap/"></iframe>
+
+---
+
+title: Zurb Foundation
+
+<iframe src="http://foundation.zurb.com/"></iframe>
 
 ---
 
