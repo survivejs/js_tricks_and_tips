@@ -44,6 +44,17 @@ URL: https://code.google.com/p/io-2012-slides
 
 {% for slide in slides %}
 <slide {% if slide.class %}class="{{- slide.class -}}"{% endif %} {% if slide.image %}style="background-image: url({{- slide.image -}})"{% endif %}>
+  {% if slide.notes %}
+    <aside class="note">
+      <section>
+        <ul>
+          {% for note in slide.notes %}
+          <li>{{ note }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+    </aside>
+  {% endif %}
   {% if 'segue' in slide.class %}
     <aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside>
     <hgroup class="auto-fadein">

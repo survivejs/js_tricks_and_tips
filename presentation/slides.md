@@ -2,6 +2,7 @@
 title: Agenda
 class: big
 build_lists: true
+notes: ["testing", "and then some"]
 
 Things we'll cover (list should build):
 

@@ -4,6 +4,7 @@ import codecs
 import re
 import jinja2
 import markdown
+import json
 
 def process_slides():
   with codecs.open('index.html', 'w', encoding='utf8') as outfile:
@@ -42,9 +43,13 @@ def parse_metadata(section):
     if colon_index != -1:
       key = line[:colon_index].strip()
       val = line[colon_index + 1:].strip()
-      metadata[key] = val
+
+      metadata[key] = parse_list(val) if val[0] == '[' else val
 
   return metadata
+
+def parse_list(val):
+  return json.loads(val)
 
 def postprocess_html(html, metadata):
   """Returns processed HTML to fit into the slide template format."""
