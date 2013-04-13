@@ -102,7 +102,7 @@ class: segue dark nobackground
 
 title: Elements of Web Applications
 
-TODO: image with logic, markup, representation, data
+![Elements](images/elements.png)
 
 ---
 
@@ -183,7 +183,7 @@ title: Transparency
 
 ---
 
-title: Representation
+title: Styling
 class: segue dark nobackground
 
 ---
@@ -225,12 +225,18 @@ title: Zurb Foundation
 ---
 
 title: Data
+class: segue dark nobackground
+
+---
+
+title: Data
 class: big
 build_lists: true
 
-- Served through backend(s) usually in JSON
-- Easy to use in JavaScript this way
-- RESTful interfaces
+- Usually handled with a backend or external services (Disqus for comments for example)
+- RESTful interfaces (client-side MVC)
+- Local caching (localStorage ie.)
+- Offline usage (replication, PouchDB)
 
 ---
 

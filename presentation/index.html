@@ -1,0 +1,885 @@
+<!--
+Google IO 2012 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahe <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google IO 2012</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/agilejkl.css">
+  <link rel="stylesheet" media="all" href="theme/css/app.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+<!-- <slide class="logoslide nobackground">
+  <article class="flexbox vcenter">
+    <span><img src="images/google_developers_logo.png"></span>
+  </article>
+</slide>
+ -->
+<slide class="title-slide segue nobackground">
+  <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+  <hgroup class="auto-fadein">
+    <h1 data-config-title><!-- populated from slide_config.json --></h1>
+    <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+    <p data-config-presenter><!-- populated from slide_config.json --></p>
+  </hgroup>
+</slide>
+
+
+<slide class="nobackground fill" >
+  
+  
+    <hgroup>
+      <h2>Strategy for Goldfishes</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img alt="Strategy" src="images/strategy.jpg" /></p>
+<footer class="source">CC BY-NC-ND by <a href="http://redmonk.com/sogrady/2013/02/28/language-rankings-1-13/">HikingArtist.com</a></footer></article>
+ 
+</slide>
+
+<slide class="nobackground fill" >
+  
+  
+    <hgroup>
+      <h2>Strategy for the Rest of Us</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img alt="Strategy in a Nutshell" src="images/strategysimple.png" /></p></article>
+ 
+</slide>
+
+<slide class="segue dark nobackground" >
+  
+  
+    <hgroup class="auto-fadein">
+      <h2>How Did We Get Here</h2>
+      <h3></h3>
+    </hgroup>
+  
+</slide>
+
+<slide class="big" >
+  
+  
+    <hgroup>
+      <h2>Ten Days to JavaScript</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul class="build">
+<li>1995 - Brendan Eich's ten days &rarr; Mocha</li>
+<li>Known as LiveScript till the marketing folks changed the name</li>
+<li>Even though has Java in name, completely different</li>
+<li>Influence of Java 1.0 visible mainly in Math and Time modules</li>
+<li>Prototypal inheritance a lá Self</li>
+<li>Dynamic, flexible, lambdas</li>
+<li>Scheme in disguise - See <a href="http://www.crockford.com/javascript/little.html">The Little JavaScripter</a> by Crockford</li>
+</ul></article>
+ 
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>A Bit of JavaScript</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><pre class="prettyprint" data-lang="javascript">
+var helloWorld = hello.bind(undefined, 'World!');
+
+helloWorld();
+
+function hello(target) {
+    console.log('Hello ' + target);
+}
+
+// or could just console.log('Hello World!');
+// way to over-engineer!
+</pre></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+  
+    <hgroup>
+      <h2>Web - From Documents to Applications</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul class="build">
+<li>Web as a Document Platform<ul class="build">
+<li>1995 - Brendan Eich's ten days</li>
+<li>1999 - ES3 (modern baseline), Mozilla established</li>
+</ul>
+</li>
+<li>Improved Interactivity<ul class="build">
+<li>2005 - AJAX, dynamic loading (search for instance)</li>
+<li>2008 - RIP ES4, parts of HTML5 emerge, Chrome (V8) introduced</li>
+<li>2009 - ES5 (Modern browsers IE9 included), Chrome OS, Node.js</li>
+</ul>
+</li>
+<li>Web as an Application Platform<ul class="build">
+<li>2012 - HTML5 well supported (interesting JS APIs)</li>
+<li>2013 - ES6?</li>
+</ul>
+</li>
+</ul>
+<footer class="source"><a href="http://brendaneich.github.io/Strange-Loop-2012/#/1">Brendan Eich at Strange Loop '12</a></footer></article>
+ 
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>JavaScript Has Traction</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img alt="Traction" src="images/redmonk.png" /></p>
+<footer class="source"><a href="http://redmonk.com/sogrady/2013/02/28/language-rankings-1-13/">Redmonk</a></footer></article>
+ 
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>JavaScript Rage</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img alt="Rage" src="images/rage.jpg" /></p>
+<footer class="source">CC BY-SA by <a href="http://redmonk.com/sogrady/2013/02/28/language-rankings-1-13/">Augie Schwer</a></footer></article>
+ 
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>Crockford</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img alt="Crockford" src="images/crockford.jpg" /></p>
+<footer class="source">CC BY-NC-SA by <a href="http://redmonk.com/sogrady/2013/02/28/language-rankings-1-13/">superfluity</a></footer></article>
+ 
+</slide>
+
+<slide class="segue dark nobackground" >
+  
+  
+    <hgroup class="auto-fadein">
+      <h2>Where Are We Now</h2>
+      <h3></h3>
+    </hgroup>
+  
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>Elements of Web Applications</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img alt="Elements" src="images/elements.png" /></p></article>
+ 
+</slide>
+
+<slide class="segue dark nobackground" >
+  
+  
+    <hgroup class="auto-fadein">
+      <h2>Logic</h2>
+      <h3></h3>
+    </hgroup>
+  
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2></h2>
+      <h3></h3>
+    </hgroup>
+    <article class="flexbox vcenter bigText"><h1>JavaScript</h1></article>
+ 
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>CoffeeScript</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><iframe src="http://coffeescript.org/"></iframe></article>
+ 
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>Dart</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><iframe src="http://www.dartlang.org/"></iframe></article>
+ 
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>TypeScript</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><iframe src="http://www.typescriptlang.org/"></iframe></article>
+ 
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>And many others</h2>
+      <h3></h3>
+    </hgroup>
+    <article class="flexbox vcenter bigText"><h1><a href="http://altjs.org/">altJS</a></h1></article>
+ 
+</slide>
+
+<slide class="segue dark nobackground" >
+  
+  
+    <hgroup class="auto-fadein">
+      <h2>Markup</h2>
+      <h3></h3>
+    </hgroup>
+  
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2></h2>
+      <h3></h3>
+    </hgroup>
+    <article class="flexbox vcenter bigText"><h1>HTML</h1></article>
+ 
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>HAML</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><iframe src="http://haml.info/"></iframe></article>
+ 
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>Jade</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><iframe src="http://jade-lang.com/"></iframe></article>
+ 
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>Mustache</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><iframe src="http://mustache.github.io/"></iframe></article>
+ 
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>Handlebars</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><iframe src="http://handlebarsjs.com/"></iframe></article>
+ 
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>Transparency</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><iframe src="http://leonidas.github.io/transparency/"></iframe></article>
+ 
+</slide>
+
+<slide class="segue dark nobackground" >
+  
+  
+    <hgroup class="auto-fadein">
+      <h2>Styling</h2>
+      <h3></h3>
+    </hgroup>
+  
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2></h2>
+      <h3></h3>
+    </hgroup>
+    <article class="flexbox vcenter bigText"><h1>CSS</h1></article>
+ 
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>LESS</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><iframe src="http://lesscss.org/"></iframe></article>
+ 
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>SASS</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><iframe src="http://sass-lang.com/"></iframe></article>
+ 
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>Responsive Web Design</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><iframe src="http://finecitizens.com/defineResponsive/"></iframe></article>
+ 
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>Twitter Bootstrap</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><iframe src="http://twitter.github.io/bootstrap/"></iframe></article>
+ 
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>Zurb Foundation</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><iframe src="http://foundation.zurb.com/"></iframe></article>
+ 
+</slide>
+
+<slide class="segue dark nobackground" >
+  
+  
+    <hgroup class="auto-fadein">
+      <h2>Data</h2>
+      <h3></h3>
+    </hgroup>
+  
+</slide>
+
+<slide class="big" >
+  
+  
+    <hgroup>
+      <h2>Data</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul class="build">
+<li>Usually handled with a backend or external services (Disqus for comments for example)</li>
+<li>RESTful interfaces (client-side MVC)</li>
+<li>Local caching (localStorage ie.)</li>
+<li>Offline usage (replication, PouchDB)</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+  
+    <hgroup>
+      <h2>Web Architectures</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul class="build">
+<li>TODO: show possible stacks here ranging from pure static to something more JS driven</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+    <aside class="note">
+      <section>
+        <ul>
+          
+          <li>testing</li>
+          
+          <li>and then some</li>
+          
+        </ul>
+      </section>
+    </aside>
+  
+  
+    <hgroup>
+      <h2>Node.js</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul class="build">
+<li>Established</li>
+<li>NPM</li>
+<li>Full stack</li>
+<li>When to use</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+  
+    <hgroup>
+      <h2>Not Just for Web Development</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul class="build">
+<li>Arduino, electronics</li>
+<li>System tools (Node.js)</li>
+<li>Mobile</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="segue dark nobackground" >
+  
+  
+    <hgroup class="auto-fadein">
+      <h2>Where Are We Headed</h2>
+      <h3></h3>
+    </hgroup>
+  
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>Enlightenment</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img alt="Enlightenment" src="images/enlightenment.jpg" /></p>
+<footer class="source">CC BY-NC-SA by <a href="http://redmonk.com/sogrady/2013/02/28/language-rankings-1-13/">michael.heiss</a></footer></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+  
+    <hgroup>
+      <h2>Reality is Ugly</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul class="build">
+<li>Ideally things "would just work"&trade;</li>
+<li>Unfortunately it's not that simple always</li>
+<li>Bleeding edge bleeds for a reason</li>
+<li>Solutions<ul class="build">
+<li>Shims</li>
+<li>Better testing (ie. browserling, browserstack)</li>
+<li>Reduced quality of service for older browsers</li>
+<li>Dropping support altogether (encourage to switch browser)</li>
+</ul>
+</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+  
+    <hgroup>
+      <h2>Rise of the Mobile</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul class="build">
+<li>Already an option (PhoneGap and such)</li>
+<li>Stronger if Firefox OS, Ubuntu or some alternative catches on</li>
+<li>Currently native applications provide the best experience</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="segue dark nobackground" >
+  
+  
+    <hgroup class="auto-fadein">
+      <h2>Development Strategies</h2>
+      <h3></h3>
+    </hgroup>
+  
+</slide>
+
+<slide class="big" >
+  
+  
+    <hgroup>
+      <h2>Evolution of Development Process</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul class="build">
+<li>dev -&gt; test -&gt; UX (waterfall)</li>
+<li>test -&gt; dev -&gt; UX (TDD, BDD and such)</li>
+<li>UX -&gt; test -&gt; dev (Lean UX)</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+  
+    <hgroup>
+      <h2>Development Approaches</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul class="build">
+<li>Pretotyping</li>
+<li>Wireframes</li>
+<li>Plain paper and pen</li>
+<li>Just code it?</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+  
+    <hgroup>
+      <h2>Validating Outcomes</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul class="build">
+<li>AB-testing (ie. Optimizely)</li>
+<li>User testing</li>
+<li>WTFs per minute</li>
+<li>Plain old money (sales for instance)</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="segue dark nobackground" >
+  
+  
+    <hgroup class="auto-fadein">
+      <h2>Development Tooling</h2>
+      <h3></h3>
+    </hgroup>
+  
+</slide>
+
+<slide class="big" >
+  
+  
+    <hgroup>
+      <h2>Editors</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul class="build">
+<li>Regular development: Plain old IDE or editor</li>
+<li>LiveReload</li>
+<li>Prototyping: Web based service (jsfiddle, jsbin)</li>
+<li>Future is in the web? Cloud9?</li>
+<li>Continous integration (travis and such)</li>
+<li>Browserify etc. (cross-browser issues)</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="segue dark nobackground" >
+  
+  
+    <hgroup class="auto-fadein">
+      <h2>Finding Libraries</h2>
+      <h3></h3>
+    </hgroup>
+  
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>NPM</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><iframe src="https://npmjs.org/"></iframe></article>
+ 
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>Bower</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><iframe src="http://sindresorhus.com/bower-components/"></iframe></article>
+ 
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>JSwiki</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><iframe src="http://jswiki.org"></iframe></article>
+ 
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>JSter</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><iframe src="http://jster.net/"></iframe></article>
+ 
+</slide>
+
+<slide class="segue dark nobackground" >
+  
+  
+    <hgroup class="auto-fadein">
+      <h2>Structuring Code</h2>
+      <h3></h3>
+    </hgroup>
+  
+</slide>
+
+<slide class="big" >
+  
+  
+    <hgroup>
+      <h2>Current Status</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul class="build">
+<li>No official module system (yet)</li>
+<li>Supposedly ES6 will bring one</li>
+<li>Still, it will remain as a compile target</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+  
+    <hgroup>
+      <h2>The Anti-Pattern</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><pre class="prettyprint" data-lang="html">
+&lt;script src='jquery-current.js' type='text/javascript'&gt;&lt;/script&gt;
+&lt;script src='sorttable.js'      type='text/javascript'&gt;&lt;/script&gt;
+&lt;script src='scripts.js'        type='text/javascript'&gt;&lt;/script&gt;
+&lt;script src='miniCalendar.js'   type='text/javascript'&gt;&lt;/script&gt;
+</pre>
+
+<ul class="build">
+<li>Each include has to be defined by hand</li>
+<li>Brittle and prone to error, especially with large codebases</li>
+<li>Does not encourage to modularity</li>
+<li>Hard to reuse</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+  
+    <hgroup>
+      <h2>Concatenate Scripts</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><pre class="prettyprint" data-lang="html">
+&lt;script src='application.js' type='text/javascript'&gt;&lt;/script&gt;
+</pre>
+
+<ul class="build">
+<li>Old skool but works</li>
+<li>Less overhead at HTML</li>
+<li>Still, running into dependency order problem at concatenation</li>
+<li>Possible to complement by loading scripts (ie. jQuery) from a CDN</li>
+<li>Nevertheless a step forward</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+  
+    <hgroup>
+      <h2>RequireJS and AMD + Bower</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><pre class="prettyprint" data-lang="html">
+&lt;script data-main="scripts/main" src="scripts/require.js"&gt;&lt;/script&gt;
+</pre>
+
+<pre class="prettyprint" data-lang="javascript">
+define(['jquery', './math'], function($, math) {
+    return { // exports
+        vector: function() {...}
+    };
+});
+</pre>
+
+<ul class="build">
+<li>Modular, asynchronous approach</li>
+<li>Includes <code>define</code> overhead (possible to mimic Node.js convention, though)</li>
+<li>Optimizer resolves dependencies and creates build (loadable with Almond)</li>
+<li>Configuration complex at times</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+  
+    <hgroup>
+      <h2>Browserify + NPM</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><pre class="prettyprint" data-lang="html">
+&lt;script src='application.js' type='text/javascript'&gt;&lt;/script&gt;
+</pre>
+
+<pre class="prettyprint" data-lang="javascript">
+var $ = require('jquery');
+var math = require('./math');
+
+exports.vector = function() {...};
+</pre>
+
+<ul class="build">
+<li>Allows to use Node.js module convention (CJS)</li>
+<li>Better yet allows to hook into NPM ecosystem!</li>
+<li>Still fairly bleeding edge</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="segue dark nobackground" >
+  
+  
+    <hgroup class="auto-fadein">
+      <h2>Conclusions</h2>
+      <h3></h3>
+    </hgroup>
+  
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>Conclusions</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p>TODO</p></article>
+ 
+</slide>
+
+
+<slide class="thank-you-slide segue nobackground">
+  <article class="flexbox vleft auto-fadein">
+    <h2>Thank You!</h2>
+    <p>Important contact information goes here.</p>
+  </article>
+  <p class="auto-fadein" data-config-contact>
+    <!-- populated from slide_config.json -->
+  </p>
+</slide>
+
+<!-- <slide class="logoslide dark nobackground">
+  <article class="flexbox vcenter">
+    <span><img src="images/google_developers_logo_white.png"></span>
+  </article>
+</slide> -->
+
+<slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
