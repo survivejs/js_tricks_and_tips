@@ -21,14 +21,42 @@ class: segue dark nobackground
 
 ---
 
-title: Brief History of JavaScript
+title: Ten Days to JavaScript
 class: big
 build_lists: true
-notes: ["testing", "and then some"]
 
 - 1995 - Brendan Eich's ten days &rarr; Mocha
 - Known as LiveScript till the marketing folks changed the name
-- Java is to JavaScript as ham is to hamster
+- Even though has Java in name, completely different
+- Influence of Java 1.0 visible mainly in Math and Time modules
+- Prototypal inheritance a lá Self
+- Dynamic, flexible, lambdas
+- Scheme in disguise - See [The Little JavaScripter](http://www.crockford.com/javascript/little.html) by Crockford
+
+---
+
+title: A Bit of JavaScript
+
+<pre class="prettyprint" data-lang="javascript">
+var helloWorld = hello.bind(undefined, 'World!');
+
+helloWorld();
+
+function hello(target) {
+    console.log('Hello ' + target);
+}
+
+// or could just console.log('Hello World!');
+// way to over-engineer!
+</pre>
+
+---
+
+title: Brief History of JavaScript
+class: big
+build_lists: true
+
+- 1995 - Brendan Eich's ten days
 - 1999 - ES3, modern baseline
 - 2005 - AJAX
 - 2008 - RIP ES4
@@ -39,8 +67,36 @@ notes: ["testing", "and then some"]
 
 ---
 
+title: JavaScript Rage
+
+![Rage](images/rage.jpg)
+
+<footer class="source">source: http://www.flickr.com/photos/augie/77419568/, CC BY-SA by Augie Schwer</footer>
+
+---
+
+title: Crockford
+
+![Crockford](images/crockford.jpg)
+
+<footer class="source">source: http://www.flickr.com/photos/equanimity/4206032023/, CC BY-NC-SA by superfluity</footer>
+
+---
+
 title: Where Are We Now
 class: segue dark nobackground
+
+---
+
+title: Node.js
+class: big
+build_lists: true
+notes: ["testing", "and then some"]
+
+- Established
+- NPM
+- Full stack
+- When to use
 
 ---
 
@@ -56,17 +112,16 @@ class: segue dark nobackground
 
 ---
 
-title: 1990s
-class: nobackground fill
+title: Enlightenment
 
-![MTV](http://farm5.staticflickr.com/4065/4489637577_ce553503d0_z.jpg)
+![Crockford](images/enlightenment.jpg)
 
-<footer class="source">source: http://www.flickr.com/photos/44302262@N08/4489637577/</footer>
+<footer class="source">source: http://www.flickr.com/photos/michaelheiss/452908317/, CC BY-NC-SA by michael.heiss</footer>
 
 ---
 
-title: Big Title Slide
-class: title-slide
+title: Back to Reality
+class: segue dark nobackground
 
 ---
 
