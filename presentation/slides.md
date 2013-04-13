@@ -71,7 +71,7 @@ build_lists: true
 
 ---
 
-title: JavaScript has Traction
+title: JavaScript Has Traction
 
 ![Traction](images/redmonk.png)
 
