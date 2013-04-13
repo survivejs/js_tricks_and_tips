@@ -2,7 +2,6 @@
 @import "compass/css3/columns";
 @import "compass/css3/user-interface";
 
-$social-tags: '#survivejs';
 $brand-small-icon-size: 30px;
 
 $gray-1: #e6e6e6;
@@ -92,7 +91,7 @@ $article-content-top-padding: 45px;
 }
 
 .bigText {
-  font-size: 800%;
+  font-size: 600%;
 }
 
 body {
@@ -166,30 +165,6 @@ slides > slide {
 
   &.dark {
     background: $gray-4 !important;
-  }
-
-  &:not(.nobackground) {
-    //background: white url(../../images/google_developers_icon_128.png) ($brand-small-icon-size * 2) 98% no-repeat;
-    //@include background-size($brand-small-icon-size $brand-small-icon-size);
-
-    &:before {
-      font-size: 12pt;
-      content: $social-tags;
-      position: absolute;
-      bottom: $slide-top-bottom-padding / 2;
-      left: $slide-left-right-padding;
-      @include background-size($brand-small-icon-size $brand-small-icon-size);
-      padding-left: $brand-small-icon-size + 10;
-      height: $brand-small-icon-size;
-      line-height: 1.9;
-    }
-    &:after {
-      font-size: 12pt;
-      position: absolute;
-      bottom: $slide-top-bottom-padding / 2;
-      right: $slide-left-right-padding;
-      line-height: 1.9;
-    }
   }
 
   &.title-slide {
@@ -761,10 +736,16 @@ article.smaller {
 
 .source {
   font-size: 14px;
-  color: $gray-2;
+  color: #eee;
+  background-color: #111;
+  padding: 0.5em;
   position: absolute;
   bottom: $slide-top-bottom-padding + 30px;
   left: $slide-left-right-padding;
+}
+
+.source:before {
+  content: "Source: ";
 }
 
 .centered {
