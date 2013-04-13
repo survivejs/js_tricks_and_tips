@@ -12,7 +12,7 @@ title: Strategy for the Rest of Us
 class: nobackground fill
 notes. ["About what, not how", "From A (now) to B (future)"]
 
-TODO: from A to B
+![Strategy in a Nutshell](images/strategysimple.png)
 
 ---
 
