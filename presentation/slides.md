@@ -1,15 +1,13 @@
 
 title: Strategy for Goldfishes
-class: nobackground fill
 
 ![Strategy](images/strategy.jpg)
 
-<footer class="source"><a href="http://redmonk.com/sogrady/2013/02/28/language-rankings-1-13/">HikingArtist.com</a> (CC BY-NC-ND) </footer>
+<footer class="source"><a href="http://www.flickr.com/photos/hikingartist/3000884576">HikingArtist.com</a> (CC BY-NC-ND) </footer>
 
 ---
 
 title: Strategy for the Rest of Us
-class: nobackground fill
 notes. ["About what, not how", "From A (now) to B (future)"]
 
 ![Strategy in a Nutshell](images/strategysimple.png)
@@ -79,19 +77,11 @@ title: JavaScript Has Traction
 
 ---
 
-title: JavaScript Rage
-
-![Rage](images/rage.jpg)
-
-<footer class="source"><a href="http://redmonk.com/sogrady/2013/02/28/language-rankings-1-13/">Augie Schwer</a> (CC BY-SA)</footer>
-
----
-
 title: Crockford
 
 ![Crockford](images/crockford.jpg)
 
-<footer class="source"><a href="http://redmonk.com/sogrady/2013/02/28/language-rankings-1-13/">superfluity</a> (CC BY-NC-SA)</footer>
+<footer class="source"><a href="http://www.flickr.com/photos/equanimity/4206032023/">superfluity</a> (CC BY-NC-SA)</footer>
 
 ---
 
@@ -323,7 +313,7 @@ title: Enlightenment
 
 ![Enlightenment](images/enlightenment.jpg)
 
-<footer class="source"><a href="http://redmonk.com/sogrady/2013/02/28/language-rankings-1-13/">michael.heiss</a> (CC BY-NC-SA)</footer>
+<footer class="source"><a href="http://www.flickr.com/photos/michaelheiss/452908317/">michael.heiss</a> (CC BY-NC-SA)</footer>
 
 ---
 
@@ -379,13 +369,36 @@ build_lists: true
 ---
 
 title: Validating Outcomes
-class: big
-build_lists: true
+class: segue dark nobackground
 
-- AB-testing (ie. Optimizely)
-- User testing
-- WTFs per minute
-- Plain old money (sales for instance)
+---
+
+title: AB Testing
+notes: ["Optimizely"]
+
+![Apple and Orange](images/appleorange.jpg)
+
+<footer class="source"><a href="http://www.flickr.com/photos/26176646@N04/2492945625/">TheBusyBrain</a> (CC BY)</footer>
+
+---
+
+title: User Testing
+
+![Rage](images/rage.jpg)
+
+<footer class="source"><a href="http://www.flickr.com/photos/augie/77419568/">Augie Schwer</a> (CC BY-SA)</footer>
+
+---
+
+content_class: flexbox vcenter bigText
+
+# WTFs/min
+
+---
+
+title: Money
+
+![Money](images/coins.jpg)
 
 ---
 
