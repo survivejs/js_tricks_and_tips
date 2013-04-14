@@ -263,6 +263,19 @@ title: Future JSter?
 
 ---
 
+title: Other Considerations
+class: big
+build_lists: true
+
+- What belongs to server, what to client and why (business goals)
+- [Client-side MVC is not a silver bullet](http://mir.aculo.us/2013/02/26/client-side-mvc-is-not-a-silver-bullet/)
+- [Basecamp's experiences](http://37signals.com/svn/posts/3112-how-basecamp-next-got-to-be-so-damn-fast-without-using-much-client-side-ui) (hint: pushState, aggressive caching, minimal client)
+- Synchronization, offline-usage (mobile apps), skills, time, budget...
+- A bit like fashion. New techs come and go. Different answer each time you ask.
+- Up and coming? [Meteor](http://meteor.com/), [Derby](http://derbyjs.com/)
+
+---
+
 title: Node.js
 class: segue dark nobackground
 
