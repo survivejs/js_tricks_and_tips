@@ -241,17 +241,36 @@ build_lists: true
 ---
 
 title: Web Architectures
-class: big
-build_lists: true
+class: segue dark nobackground
 
-- TODO: show possible stacks here ranging from pure static to something more JS driven
+---
+
+title: Blog (Static Site)
+
+![Static Architecture](images/staticarch.png)
+
+---
+
+title: JSter (Portal)
+
+![Traditional Architecture](images/tradarch.png)
+
+---
+
+title: Future JSter?
+
+![Modern Architecture](images/modernarch.png)
+
+---
+
+title: Node.js
+class: segue dark nobackground
 
 ---
 
 title: Node.js
 class: big
 build_lists: true
-notes: ["testing", "and then some"]
 
 - Established
 - NPM
