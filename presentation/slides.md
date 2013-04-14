@@ -38,16 +38,16 @@ build_lists: true
 title: A Bit of JavaScript
 
 <pre class="prettyprint" data-lang="javascript">
-var helloWorld = hello.bind(undefined, 'World!');
+var helloAgileJkl = hello.bind(undefined, 'AgileJkl!');
 
-helloWorld();
+helloAgileJkl();
 
 function hello(target) {
     console.log('Hello ' + target);
 }
 
-// or could just console.log('Hello World!');
-// way to over-engineer!
+// or could just console.log('Hello AgileJkl!');
+// to avoid over-engineering!
 </pre>
 
 ---
