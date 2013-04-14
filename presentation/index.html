@@ -507,10 +507,12 @@ function hello(target) {
       <h3></h3>
     </hgroup>
     <article ><ul class="build">
-<li>Established</li>
-<li>NPM</li>
-<li>Full stack</li>
-<li>When to use</li>
+<li>JavaScript on backend!</li>
+<li>Development started in 2009 by Ryan Dahl</li>
+<li>Enabled by Google's V8</li>
+<li>Excellent for prototyping</li>
+<li>Strong ecosystem (<a href="https://npmjs.org/">NPM</a>)</li>
+<li>Develops at a blistering pace</li>
 </ul></article>
  
 </slide>
@@ -519,13 +521,23 @@ function hello(target) {
   
   
     <hgroup>
-      <h2>Not Just for Web Development</h2>
+      <h2>Server Using Node.js</h2>
       <h3></h3>
     </hgroup>
-    <article ><ul class="build">
-<li>Arduino, electronics</li>
-<li>System tools (Node.js)</li>
-<li>Mobile</li>
+    <article ><pre class="prettyprint" data-lang="javascript">
+var http = require('http');
+
+http.createServer(
+    function(req, res) {
+        res.writeHead(200, {'Content-Type': 'text/plain'});
+        res.end('Hello AgileJkl!\n');
+    }
+).listen(8000);
+</pre>
+
+<ul class="build">
+<li>Short and sweet</li>
+<li><a href="http://expressjs.com/">Express</a> is very popular for more complex cases</li>
 </ul></article>
  
 </slide>

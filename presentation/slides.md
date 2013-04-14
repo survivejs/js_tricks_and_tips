@@ -272,20 +272,32 @@ title: Node.js
 class: big
 build_lists: true
 
-- Established
-- NPM
-- Full stack
-- When to use
+- JavaScript on backend!
+- Development started in 2009 by Ryan Dahl
+- Enabled by Google's V8
+- Excellent for prototyping
+- Strong ecosystem ([NPM](https://npmjs.org/))
+- Develops at a blistering pace
 
 ---
 
-title: Not Just for Web Development
+title: Server Using Node.js
 class: big
 build_lists: true
 
-- Arduino, electronics
-- System tools (Node.js)
-- Mobile
+<pre class="prettyprint" data-lang="javascript">
+var http = require('http');
+
+http.createServer(
+    function(req, res) {
+        res.writeHead(200, {'Content-Type': 'text/plain'});
+        res.end('Hello AgileJkl!\n');
+    }
+).listen(8000);
+</pre>
+
+- Short and sweet
+- [Express](http://expressjs.com/) is very popular for more complex cases
 
 ---
 
