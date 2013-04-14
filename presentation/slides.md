@@ -4,7 +4,7 @@ class: nobackground fill
 
 ![Strategy](images/strategy.jpg)
 
-<footer class="source">CC BY-NC-ND by <a href="http://redmonk.com/sogrady/2013/02/28/language-rankings-1-13/">HikingArtist.com</a></footer>
+<footer class="source"><a href="http://redmonk.com/sogrady/2013/02/28/language-rankings-1-13/">HikingArtist.com</a> (CC BY-NC-ND) </footer>
 
 ---
 
@@ -83,7 +83,7 @@ title: JavaScript Rage
 
 ![Rage](images/rage.jpg)
 
-<footer class="source">CC BY-SA by <a href="http://redmonk.com/sogrady/2013/02/28/language-rankings-1-13/">Augie Schwer</a></footer>
+<footer class="source"><a href="http://redmonk.com/sogrady/2013/02/28/language-rankings-1-13/">Augie Schwer</a> (CC BY-SA)</footer>
 
 ---
 
@@ -91,7 +91,7 @@ title: Crockford
 
 ![Crockford](images/crockford.jpg)
 
-<footer class="source">CC BY-NC-SA by <a href="http://redmonk.com/sogrady/2013/02/28/language-rankings-1-13/">superfluity</a></footer>
+<footer class="source"><a href="http://redmonk.com/sogrady/2013/02/28/language-rankings-1-13/">superfluity</a> (CC BY-NC-SA)</footer>
 
 ---
 
@@ -323,7 +323,7 @@ title: Enlightenment
 
 ![Enlightenment](images/enlightenment.jpg)
 
-<footer class="source">CC BY-NC-SA by <a href="http://redmonk.com/sogrady/2013/02/28/language-rankings-1-13/">michael.heiss</a></footer>
+<footer class="source"><a href="http://redmonk.com/sogrady/2013/02/28/language-rankings-1-13/">michael.heiss</a> (CC BY-NC-SA)</footer>
 
 ---
 
