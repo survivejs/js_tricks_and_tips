@@ -342,18 +342,31 @@ build_lists: true
 
 ---
 
-title: Development Strategies
+title: Development Models
 class: segue dark nobackground
 
 ---
 
-title: Evolution of Development Process
-class: big
-build_lists: true
+title: Waterfall
 
-- dev -> test -> UX (waterfall)
-- test -> dev -> UX (TDD, BDD and such)
-- UX -> test -> dev (Lean UX)
+![Waterfall](images/dtu1.png)
+
+---
+
+title: xDD
+
+![xDD](images/dtu2.png)
+
+---
+
+title: Lean UX
+
+![Lean UX](images/dtu3.png)
+
+---
+
+title: Development Approaches
+class: segue dark nobackground
 
 ---
 
