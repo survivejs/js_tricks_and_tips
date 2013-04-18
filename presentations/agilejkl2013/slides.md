@@ -162,12 +162,6 @@ content_class: flexbox vcenter bigText
 
 ---
 
-title: HAML
-
-<iframe src="http://haml.info/"></iframe>
-
----
-
 title: Jade
 
 <iframe src="http://jade-lang.com/"></iframe>
