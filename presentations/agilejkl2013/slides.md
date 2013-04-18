@@ -318,6 +318,18 @@ build_lists: true
 
 ---
 
+title: Packages per Year
+class: big
+build_lists: true
+
+- Python: 29,720 packages / 22 years = *1351* packages per year
+- Ruby: 54,385 packages / 18 years = *3022* packages per year
+- Node.js: 26,966 packages / 4 years = *6742* packages per year
+
+<footer class="source"><a href="http://caines.ca/blog/programming/the-node-js-community-is-quietly-changing-the-face-of-open-source/">Gregg Gaines</a></footer>
+
+---
+
 title: Server Using Node.js
 class: big
 build_lists: true
