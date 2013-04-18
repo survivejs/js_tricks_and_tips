@@ -85,6 +85,14 @@ title: Crockford
 
 ---
 
+title: The Good Parts vs. The Rest
+
+![Good vs. Rest](images/goodvsrest.jpg)
+
+<footer class="source"><a href="http://www.flickr.com/photos/nathansmith/4704268314/">Oльга + Haфaн (CC BY)</a></footer>
+
+---
+
 title: Where Are We Now
 class: segue dark nobackground
 
