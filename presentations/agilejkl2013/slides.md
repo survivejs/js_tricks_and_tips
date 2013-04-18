@@ -372,7 +372,7 @@ build_lists: true
 
 - Already an option (PhoneGap and such)
 - Stronger if Firefox OS, Ubuntu or some alternative catches on
-- Currently native applications provide the best experience
+- Currently native applications provide the best experience (especially for games, multimedia)
 
 ---
 
