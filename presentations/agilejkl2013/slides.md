@@ -376,76 +376,12 @@ build_lists: true
 
 ---
 
-title: Development Models
+title: JavaScript Development in Practice
 class: segue dark nobackground
 
 ---
 
-title: Waterfall
-
-![Waterfall](images/dtu1.png)
-
----
-
-title: xDD
-
-![xDD](images/dtu2.png)
-
----
-
-title: Lean UX
-
-![Lean UX](images/dtu3.png)
-
----
-
-title: Development Approaches
-class: segue dark nobackground
-
----
-
-title: Development Approaches
-class: big
-build_lists: true
-
-- Pretotyping
-- Wireframes
-- Plain paper and pen
-- Just code it?
-
----
-
-title: Validating Outcomes
-class: segue dark nobackground
-
----
-
-title: AB Testing
-notes: ["Optimizely"]
-
-![Apple and Orange](images/appleorange.jpg)
-
-<footer class="source"><a href="http://www.flickr.com/photos/26176646@N04/2492945625/">TheBusyBrain</a> (CC BY)</footer>
-
----
-
-title: User Testing
-
-![Rage](images/rage.jpg)
-
-<footer class="source"><a href="http://www.flickr.com/photos/augie/77419568/">Augie Schwer</a> (CC BY-SA)</footer>
-
----
-
-content_class: flexbox vcenter bigText
-
-# WTFs/min
-
----
-
-title: Money
-
-![Money](images/coins.jpg)
+title: TODO
 
 ---
 
@@ -586,6 +522,40 @@ exports.vector = function() {...};
 * Allows to use Node.js module convention (CJS)
 * Better yet allows to hook into NPM ecosystem!
 * Still fairly bleeding edge
+
+---
+
+title: Testing
+class: segue dark nobackground
+
+---
+
+title: AB Testing
+notes: ["Optimizely"]
+
+![Apple and Orange](images/appleorange.jpg)
+
+<footer class="source"><a href="http://www.flickr.com/photos/26176646@N04/2492945625/">TheBusyBrain</a> (CC BY)</footer>
+
+---
+
+title: User Testing
+
+![Rage](images/rage.jpg)
+
+<footer class="source"><a href="http://www.flickr.com/photos/augie/77419568/">Augie Schwer</a> (CC BY-SA)</footer>
+
+---
+
+content_class: flexbox vcenter bigText
+
+# WTFs/min
+
+---
+
+title: Money
+
+![Money](images/coins.jpg)
 
 ---
 
