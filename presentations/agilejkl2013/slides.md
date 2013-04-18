@@ -330,6 +330,14 @@ build_lists: true
 
 ---
 
+title: Trends
+
+![Trends](images/nodetrend.png)
+
+<footer class="source"><a href="http://goo.gl/B7Bzz">Google Trends</a></footer>
+
+---
+
 title: Server Using Node.js
 class: big
 build_lists: true
