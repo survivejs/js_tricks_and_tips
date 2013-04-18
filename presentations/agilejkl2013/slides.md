@@ -93,6 +93,17 @@ title: The Good Parts vs. The Rest
 
 ---
 
+title: Recap
+class: big
+build_lists: true
+
+- JavaScript, an unlikely winner
+- Language of the web
+- More powerful than it seems
+- Web isn't just about documents, now applications too
+
+---
+
 title: Where Are We Now
 class: segue dark nobackground
 
