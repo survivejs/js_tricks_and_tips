@@ -243,6 +243,27 @@ build_lists: true
 
 ---
 
+title: Big Data
+
+![Static Architecture](images/bigdata.jpg)
+
+<footer class="source"><a href="http://www.flickr.com/photos/89334594@N07/8450190120/">infocux Technologies (CC BY-NC)</a></footer>
+
+---
+
+title: Recap
+class: big
+
+> Logics are violet
+
+> Markups are blue
+
+> Styling is sweet
+
+> And so is data
+
+---
+
 title: Web Architectures
 class: segue dark nobackground
 
