@@ -453,13 +453,35 @@ class: segue dark nobackground
 
 ---
 
-title: Rise of the Mobile
+title: Android
+class: big
+
+![Terminator](images/terminator.jpg)
+
+<footer class="source"><a href="http://www.flickr.com/photos/19953384@N00/3750802591/">San Diego Shooter</a> (CC BY-NC-ND)</footer>
+
+---
+
+![PhoneGap](images/phonegap.jpg)
+
+<footer class="source"><a href="http://www.flickr.com/photos/44124462151@N01/4923953409/">Brian LeRoux</a> (CC BY-NC-SA)</footer>
+
+---
+
+content_class: flexbox vcenter bigText
+
+## Firefox OS, Jolla etc.
+
+---
+
+title: Recap
 class: big
 build_lists: true
 
-- Already an option (PhoneGap and such)
-- Stronger if Firefox OS, Ubuntu or some alternative catches on
-- Currently native applications provide the best experience (especially for games, multimedia)
+- Web dev is as hard as you make it
+- Especially on the bleeding edge
+- Fortunately a bit of tape fixes anything
+- Mobile on the rise, native HTML5 apps not mainstream yet
 
 ---
 
