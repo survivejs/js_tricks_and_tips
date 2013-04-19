@@ -394,18 +394,62 @@ title: Enlightenment
 
 ---
 
-title: Reality is Ugly
-class: big
-build_lists: true
+![Rage](images/rage.jpg)
 
-- Ideally things "would just work"&trade;
-- Unfortunately it's not that simple always
-- Bleeding edge bleeds for a reason
-- Solutions
-    * Shims
-    * Better testing (ie. browserling, browserstack)
-    * Reduced quality of service for older browsers
-    * Dropping support altogether (encourage to switch browser)
+<footer class="source"><a href="http://www.flickr.com/photos/augie/77419568/">Augie Schwer</a> (CC BY-SA)</footer>
+
+---
+
+![MacGyver](images/macgyver.jpg)
+
+<footer class="source"><a href="http://www.flickr.com/photos/59023810@N00/455252569/">letmehearyousaydeskomdeskom</a> (CC BY-SA)</footer>
+
+---
+
+title: caniuse.com
+
+<iframe src="http://caniuse.com/"></iframe>
+
+---
+
+title: Shim
+class: big
+
+> a thin often tapered piece of material (as wood, metal, or stone) used to fill in space between things (as for support, leveling, or adjustment of fit)
+
+![Shim](images/shim.jpg)
+
+<footer class="source"><a href="http://www.merriam-webster.com/dictionary/shim">Merriam-Webster</a></footer>
+<footer class="source"><a href="http://www.flickr.com/photos/7357861@N03/2339001640/">esagor</a> (CC BY-NC)</footer>
+
+---
+
+title: Browserling
+
+<iframe src="http://ci.testling.com/"></iframe>
+
+---
+
+title: Browserstack
+
+<iframe src="http://www.browserstack.com/"></iframe>
+
+---
+
+title: Travis
+
+<iframe src="http://about.travis-ci.org/"></iframe>
+
+---
+
+![IE](images/ie.jpg)
+
+<footer class="source"><a href="http://www.flickr.com/photos/46307289@N00/2093478809/">T.R.G.</a> (CC BY-NC-SA)</footer>
+
+---
+
+title: Rise of the Mobile
+class: segue dark nobackground
 
 ---
 
@@ -579,14 +623,6 @@ notes: ["Optimizely"]
 ![Apple and Orange](images/appleorange.jpg)
 
 <footer class="source"><a href="http://www.flickr.com/photos/26176646@N04/2492945625/">TheBusyBrain</a> (CC BY)</footer>
-
----
-
-title: User Testing
-
-![Rage](images/rage.jpg)
-
-<footer class="source"><a href="http://www.flickr.com/photos/augie/77419568/">Augie Schwer</a> (CC BY-SA)</footer>
 
 ---
 
