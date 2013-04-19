@@ -334,7 +334,7 @@ title: Trends
 
 ![Trends](images/nodetrend.png)
 
-<footer class="source"><a href="http://goo.gl/B7Bzz">Google Trends</a></footer>
+<footer class="source"><a href="http://goo.gl/NBFnd">Google Trends</a></footer>
 
 ---
 
