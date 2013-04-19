@@ -338,7 +338,7 @@ title: Trends
 
 ---
 
-title: Server Using Node.js
+title: Server Using Callbacks
 class: big
 build_lists: true
 
@@ -355,6 +355,29 @@ http.createServer(
 
 - Short and sweet
 - [Express](http://expressjs.com/) is very popular for more complex cases
+
+---
+
+title: Server Using EventStreams
+class: big
+build_lists: true
+
+
+<pre class="prettyprint" data-lang="javascript">
+var http = require('http');
+
+var s = new http.Server();
+
+s.on('request', function(req, res) {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('Hello AgileJkl!\n');
+});
+
+s.listen(8000);
+</pre>
+
+- Viable alternative to callbacks at times
+- More info at [Node.js: Patterns and Opinions](https://dl.dropboxusercontent.com/u/3685/presentations/node-patterns/node-patterns.pdf) by @izs (the Node guy)
 
 ---
 
