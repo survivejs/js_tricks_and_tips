@@ -1,3 +1,26 @@
+title: What's in Store?
+class: big
+build_lists: true
+
+- Web Development Strategies
+    * How Did We Get Here
+    * Where Are We Now
+    * Where Are We Headed
+- JavaScript Tricks
+    * Node.js
+    * Editors
+    * Finding Libraries
+    * Structuring Code
+    * Testing
+- Phew
+    * Surprise!
+
+---
+
+title: Web Development Strategies
+class: segue dark nobackground
+
+---
 
 title: Strategy for Goldfishes
 
@@ -264,6 +287,81 @@ class: big
 
 ---
 
+title: Where Are We Headed
+class: segue dark nobackground
+
+---
+
+title: Enlightenment
+
+![Enlightenment](images/enlightenment.jpg)
+
+<footer class="source"><a href="http://www.flickr.com/photos/michaelheiss/452908317/">michael.heiss</a> (CC BY-NC-SA)</footer>
+
+---
+
+![Rage](images/rage.jpg)
+
+<footer class="source"><a href="http://www.flickr.com/photos/augie/77419568/">Augie Schwer</a> (CC BY-SA)</footer>
+
+---
+
+![MacGyver](images/macgyver.jpg)
+
+<footer class="source"><a href="http://www.flickr.com/photos/59023810@N00/455252569/">letmehearyousaydeskomdeskom</a> (CC BY-SA)</footer>
+
+---
+
+title: caniuse.com
+
+<iframe src="http://caniuse.com/"></iframe>
+
+---
+
+title: Shim
+class: big
+
+> a thin often tapered piece of material (as wood, metal, or stone) used to fill in space between things (as for support, leveling, or adjustment of fit)
+
+![Shim](images/shim.jpg)
+
+<footer class="source"><a href="http://www.merriam-webster.com/dictionary/shim">Merriam-Webster</a></footer>
+<footer class="source"><a href="http://www.flickr.com/photos/7357861@N03/2339001640/">esagor</a> (CC BY-NC)</footer>
+
+---
+
+![IE](images/ie.jpg)
+
+<footer class="source"><a href="http://www.flickr.com/photos/46307289@N00/2093478809/">T.R.G.</a> (CC BY-NC-SA)</footer>
+
+---
+
+title: Rise of the Mobile
+class: segue dark nobackground
+
+---
+
+title: Android
+class: big
+
+![Terminator](images/terminator.jpg)
+
+<footer class="source"><a href="http://www.flickr.com/photos/19953384@N00/3750802591/">San Diego Shooter</a> (CC BY-NC-ND)</footer>
+
+---
+
+![PhoneGap](images/phonegap.jpg)
+
+<footer class="source"><a href="http://www.flickr.com/photos/44124462151@N01/4923953409/">Brian LeRoux</a> (CC BY-NC-SA)</footer>
+
+---
+
+content_class: flexbox vcenter bigText
+
+## Firefox OS, Jolla etc.
+
+---
+
 title: Web Architectures
 class: segue dark nobackground
 
@@ -297,6 +395,23 @@ build_lists: true
 - Synchronization, offline-usage (mobile apps), skills, time, budget...
 - A bit like fashion. New techs come and go. Different answer each time you ask.
 - Up and coming? [Meteor](http://meteor.com/), [Derby](http://derbyjs.com/)
+
+---
+
+title: Recap
+class: big
+build_lists: true
+
+- Web dev is as hard as you make it
+- Especially on the bleeding edge
+- Fortunately a bit of tape fixes anything
+- Mobile on the rise, native HTML5 apps not mainstream yet
+- Web architectures - from monoliths to distributed
+
+---
+
+title: JavaScript Tricks
+class: segue dark nobackground
 
 ---
 
@@ -381,120 +496,7 @@ s.listen(8000);
 
 ---
 
-title: Where Are We Headed
-class: segue dark nobackground
-
----
-
-title: Enlightenment
-
-![Enlightenment](images/enlightenment.jpg)
-
-<footer class="source"><a href="http://www.flickr.com/photos/michaelheiss/452908317/">michael.heiss</a> (CC BY-NC-SA)</footer>
-
----
-
-![Rage](images/rage.jpg)
-
-<footer class="source"><a href="http://www.flickr.com/photos/augie/77419568/">Augie Schwer</a> (CC BY-SA)</footer>
-
----
-
-![MacGyver](images/macgyver.jpg)
-
-<footer class="source"><a href="http://www.flickr.com/photos/59023810@N00/455252569/">letmehearyousaydeskomdeskom</a> (CC BY-SA)</footer>
-
----
-
-title: caniuse.com
-
-<iframe src="http://caniuse.com/"></iframe>
-
----
-
-title: Shim
-class: big
-
-> a thin often tapered piece of material (as wood, metal, or stone) used to fill in space between things (as for support, leveling, or adjustment of fit)
-
-![Shim](images/shim.jpg)
-
-<footer class="source"><a href="http://www.merriam-webster.com/dictionary/shim">Merriam-Webster</a></footer>
-<footer class="source"><a href="http://www.flickr.com/photos/7357861@N03/2339001640/">esagor</a> (CC BY-NC)</footer>
-
----
-
-title: Browserling
-
-<iframe src="http://ci.testling.com/"></iframe>
-
----
-
-title: Browserstack
-
-<iframe src="http://www.browserstack.com/"></iframe>
-
----
-
-title: Travis
-
-<iframe src="http://about.travis-ci.org/"></iframe>
-
----
-
-![IE](images/ie.jpg)
-
-<footer class="source"><a href="http://www.flickr.com/photos/46307289@N00/2093478809/">T.R.G.</a> (CC BY-NC-SA)</footer>
-
----
-
-title: Rise of the Mobile
-class: segue dark nobackground
-
----
-
-title: Android
-class: big
-
-![Terminator](images/terminator.jpg)
-
-<footer class="source"><a href="http://www.flickr.com/photos/19953384@N00/3750802591/">San Diego Shooter</a> (CC BY-NC-ND)</footer>
-
----
-
-![PhoneGap](images/phonegap.jpg)
-
-<footer class="source"><a href="http://www.flickr.com/photos/44124462151@N01/4923953409/">Brian LeRoux</a> (CC BY-NC-SA)</footer>
-
----
-
-content_class: flexbox vcenter bigText
-
-## Firefox OS, Jolla etc.
-
----
-
-title: Recap
-class: big
-build_lists: true
-
-- Web dev is as hard as you make it
-- Especially on the bleeding edge
-- Fortunately a bit of tape fixes anything
-- Mobile on the rise, native HTML5 apps not mainstream yet
-
----
-
-title: JavaScript Development in Practice
-class: segue dark nobackground
-
----
-
-title: TODO
-
----
-
-title: Development Tooling
+title: Editors
 class: segue dark nobackground
 
 ---
@@ -507,7 +509,7 @@ build_lists: true
 - LiveReload
 - Prototyping: Web based service (jsfiddle, jsbin)
 - Future is in the web? Cloud9?
-- Continous integration (travis and such)
+- Continuous integration (travis and such)
 - Browserify etc. (cross-browser issues)
 
 ---
@@ -636,6 +638,24 @@ exports.vector = function() {...};
 
 title: Testing
 class: segue dark nobackground
+
+---
+
+title: Browserling
+
+<iframe src="http://ci.testling.com/"></iframe>
+
+---
+
+title: Browserstack
+
+<iframe src="http://www.browserstack.com/"></iframe>
+
+---
+
+title: Travis
+
+<iframe src="http://about.travis-ci.org/"></iframe>
 
 ---
 
