@@ -659,6 +659,14 @@ title: Travis
 
 ---
 
+title: Chaos Monkey
+
+![Chaos Monkey](images/chaosmonkey.png)
+
+<footer class="source"><a href="">Jeff Atwood - Working with the Chaos Monkey</a></footer>
+
+---
+
 title: AB Testing
 notes: ["Optimizely"]
 
