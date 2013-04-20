@@ -667,6 +667,27 @@ title: Chaos Monkey
 
 ---
 
+title: Fuzz Testing
+
+<pre class="prettyprint" data-lang="javascript">
+// function to test, note annotation
+var title = annotate('title', 'Returns given string in a title format.')
+    .on(is.string, function(s) {
+        return s && s.split(' ').map(capitalize).join(' ');
+    }).satisfies(is.string);
+
+// testing an invariant
+fuzz(title, function(op, str) {
+    var parts = op(str).split(' ');
+
+    return parts.map(fst).map(isUpper).filter(id).length == parts.length;
+});
+</pre>
+
+<footer class="source"><a href="https://github.com/bebraw/annofuzz">bebraw/annofuzz</a></footer>
+
+---
+
 title: AB Testing
 notes: ["Optimizely"]
 
