@@ -8,9 +8,9 @@ build_lists: true
     * Where Are We Headed
 - JavaScript Tricks
     * Node.js
-    * Editors
-    * Finding Libraries
+    * Development Tools
     * Structuring Code
+    * Finding Libraries
     * Testing
 - Phew
     * Surprise!
