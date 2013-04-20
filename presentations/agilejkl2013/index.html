@@ -747,21 +747,27 @@ function hello(target) {
   
 </slide>
 
-<slide class="big" >
+<slide  >
+  
+    <aside class="note">
+      <section>
+        <ul>
+          
+          <li>Development started in 2009 by Ryan Dahl</li>
+          
+          <li>Enabled by V8</li>
+          
+        </ul>
+      </section>
+    </aside>
   
   
     <hgroup>
-      <h2>Node.js</h2>
+      <h2>Trends</h2>
       <h3></h3>
     </hgroup>
-    <article ><ul class="build">
-<li>JavaScript on backend!</li>
-<li>Development started in 2009 by Ryan Dahl</li>
-<li>Enabled by Google's V8</li>
-<li>Excellent for prototyping</li>
-<li>Strong ecosystem (<a href="https://npmjs.org/">NPM</a>)</li>
-<li>Develops at a blistering pace</li>
-</ul></article>
+    <article ><p><img alt="Trends" src="images/nodetrend.png" /></p>
+<footer class="source"><a href="http://goo.gl/NBFnd">Google Trends</a></footer></article>
  
 </slide>
 
@@ -778,18 +784,6 @@ function hello(target) {
 <li>Node.js: 26,966 packages / 4 years = <em>6742</em> packages per year</li>
 </ul>
 <footer class="source"><a href="http://caines.ca/blog/programming/the-node-js-community-is-quietly-changing-the-face-of-open-source/">Gregg Gaines</a></footer></article>
- 
-</slide>
-
-<slide  >
-  
-  
-    <hgroup>
-      <h2>Trends</h2>
-      <h3></h3>
-    </hgroup>
-    <article ><p><img alt="Trends" src="images/nodetrend.png" /></p>
-<footer class="source"><a href="http://goo.gl/NBFnd">Google Trends</a></footer></article>
  
 </slide>
 
@@ -845,6 +839,21 @@ s.listen(8000);
  
 </slide>
 
+<slide class="big" >
+  
+  
+    <hgroup>
+      <h2>Recap</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul class="build">
+<li>Excellent for prototyping</li>
+<li>Strong ecosystem thanks to <a href="https://npmjs.org/">NPM</a></li>
+<li>Develops at a blistering pace</li>
+</ul></article>
+ 
+</slide>
+
 <slide class="segue dark nobackground" >
   
   
@@ -866,6 +875,21 @@ s.listen(8000);
  
 </slide>
 
+<slide class="big" >
+  
+  
+    <hgroup>
+      <h2>Chrome Inspector</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img alt="Chrome Inspector" src="images/inspector.png" /></p>
+<ul class="build">
+<li>See also <a href="http://getfirebug.com/">Firebug</a></li>
+</ul>
+<footer class="source"><a href="https://developers.google.com/chrome-developer-tools/">Chrome DevTools</a></footer></article>
+ 
+</slide>
+
 <slide  >
   
   
@@ -881,7 +905,22 @@ s.listen(8000);
   
   
     <hgroup>
-      <h2>jsfiddle</h2>
+      <h2>JSHint</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><iframe src="http://jshint.com/"></iframe>
+
+<ul class="build">
+<li>See also <a href="http://jslint.com/">JSLint</a> by Crockford</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+  
+    <hgroup>
+      <h2>jsFiddle</h2>
       <h3></h3>
     </hgroup>
     <article ><iframe src="http://jsfiddle.net/"></iframe>
@@ -903,57 +942,18 @@ s.listen(8000);
  
 </slide>
 
-<slide class="segue dark nobackground" >
-  
-  
-    <hgroup class="auto-fadein">
-      <h2>Finding Libraries</h2>
-      <h3></h3>
-    </hgroup>
-  
-</slide>
-
-<slide  >
+<slide class="big" >
   
   
     <hgroup>
-      <h2>NPM</h2>
+      <h2>Recap</h2>
       <h3></h3>
     </hgroup>
-    <article ><iframe src="https://npmjs.org/"></iframe></article>
- 
-</slide>
-
-<slide  >
-  
-  
-    <hgroup>
-      <h2>Bower</h2>
-      <h3></h3>
-    </hgroup>
-    <article ><iframe src="http://sindresorhus.com/bower-components/"></iframe></article>
- 
-</slide>
-
-<slide  >
-  
-  
-    <hgroup>
-      <h2>JSwiki</h2>
-      <h3></h3>
-    </hgroup>
-    <article ><iframe src="http://jswiki.org"></iframe></article>
- 
-</slide>
-
-<slide  >
-  
-  
-    <hgroup>
-      <h2>JSter</h2>
-      <h3></h3>
-    </hgroup>
-    <article ><iframe src="http://jster.net/"></iframe></article>
+    <article ><ul class="build">
+<li>Traditional editors and IDEs are fine</li>
+<li>Additional tooling available, use it</li>
+<li>Future in the web?</li>
+</ul></article>
  
 </slide>
 
@@ -965,21 +965,6 @@ s.listen(8000);
       <h3></h3>
     </hgroup>
   
-</slide>
-
-<slide class="big" >
-  
-  
-    <hgroup>
-      <h2>Current Status</h2>
-      <h3></h3>
-    </hgroup>
-    <article ><ul class="build">
-<li>No official module system (yet)</li>
-<li>Supposedly ES6 will bring one</li>
-<li>Still, it will remain as a compile target</li>
-</ul></article>
- 
 </slide>
 
 <slide class="big" >
@@ -1076,6 +1061,89 @@ exports.vector = function() {...};
 <li>Allows to use Node.js module convention (CJS)</li>
 <li>Better yet allows to hook into NPM ecosystem!</li>
 <li>Still fairly bleeding edge</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+  
+    <hgroup>
+      <h2>Recap</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul class="build">
+<li>No official module system yet (ES6?)</li>
+<li>Many alternatives (AMD, CJS etc.)</li>
+<li>browserify looks promising (NPM!)</li>
+</ul></article>
+ 
+</slide>
+
+<slide class="segue dark nobackground" >
+  
+  
+    <hgroup class="auto-fadein">
+      <h2>Finding Libraries</h2>
+      <h3></h3>
+    </hgroup>
+  
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>NPM</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><iframe src="https://npmjs.org/"></iframe></article>
+ 
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>Bower</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><iframe src="http://sindresorhus.com/bower-components/"></iframe></article>
+ 
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>JSwiki</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><iframe src="http://jswiki.org"></iframe></article>
+ 
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>JSter</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><iframe src="http://jster.net/"></iframe></article>
+ 
+</slide>
+
+<slide class="big" >
+  
+  
+    <hgroup>
+      <h2>Recap</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul class="build">
+<li>No need to just Google it</li>
+<li>Poke me if you need something better</li>
 </ul></article>
  
 </slide>
@@ -1214,25 +1282,19 @@ fuzz(title, function(op, str) {
  
 </slide>
 
-<slide  >
+<slide class="big" >
   
   
     <hgroup>
-      <h2></h2>
+      <h2>Recap</h2>
       <h3></h3>
     </hgroup>
-    <article class="flexbox vcenter bigText"><h1>WTFs/min</h1></article>
- 
-</slide>
-
-<slide  >
-  
-  
-    <hgroup>
-      <h2>Money</h2>
-      <h3></h3>
-    </hgroup>
-    <article ><p><img alt="Money" src="images/coins.jpg" /></p></article>
+    <article ><ul class="build">
+<li>Test your JS</li>
+<li>Browser differences bring their own challenge</li>
+<li>Future in continuous integration (Travis and co.)</li>
+<li>Fail constantly to avoid failure</li>
+</ul></article>
  
 </slide>
 
@@ -1240,7 +1302,7 @@ fuzz(title, function(op, str) {
   
   
     <hgroup class="auto-fadein">
-      <h2>Conclusions</h2>
+      <h2>Conclusion</h2>
       <h3></h3>
     </hgroup>
   
@@ -1250,7 +1312,7 @@ fuzz(title, function(op, str) {
   
   
     <hgroup>
-      <h2>Conclusions</h2>
+      <h2>Conclusion</h2>
       <h3></h3>
     </hgroup>
     <article ><p>TODO</p></article>

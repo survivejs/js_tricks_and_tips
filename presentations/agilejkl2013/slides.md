@@ -46,13 +46,13 @@ title: Ten Days to JavaScript
 class: big
 build_lists: true
 
-- 1995 - Brendan Eich's ten days &rarr; Mocha
-- Known as LiveScript till the marketing folks changed the name
-- Even though has Java in name, completely different
-- Influence of Java 1.0 visible mainly in Math and Time modules
-- Prototypal inheritance a lá Self
-- Dynamic, flexible, lambdas
-- Scheme in disguise - See [The Little JavaScripter](http://www.crockford.com/javascript/little.html) by Crockford
+* 1995 - Brendan Eich's ten days &rarr; Mocha
+* Known as LiveScript till the marketing folks changed the name
+* Even though has Java in name, completely different
+* Influence of Java 1.0 visible mainly in Math and Time modules
+* Prototypal inheritance a lá Self
+* Dynamic, flexible, lambdas
+* Scheme in disguise - See [The Little JavaScripter](http://www.crockford.com/javascript/little.html) by Crockford
 
 ---
 
@@ -120,10 +120,10 @@ title: Recap
 class: big
 build_lists: true
 
-- JavaScript, an unlikely winner
-- Language of the web
-- More powerful than it seems
-- Web isn't just about documents, now applications too
+* JavaScript, an unlikely winner
+* Language of the web
+* More powerful than it seems
+* Web isn't just about documents, now applications too
 
 ---
 
@@ -259,10 +259,10 @@ title: Data
 class: big
 build_lists: true
 
-- Usually handled with a backend or external services (Disqus for comments for example)
-- RESTful interfaces (client-side MVC)
-- Local caching (localStorage ie.)
-- Offline usage (replication, PouchDB)
+* Usually handled with a backend or external services (Disqus for comments for example)
+* RESTful interfaces (client-side MVC)
+* Local caching (localStorage ie.)
+* Offline usage (replication, PouchDB)
 
 ---
 
@@ -389,12 +389,12 @@ title: Other Considerations
 class: big
 build_lists: true
 
-- What belongs to server, what to client and why (business goals)
-- [Client-side MVC is not a silver bullet](http://mir.aculo.us/2013/02/26/client-side-mvc-is-not-a-silver-bullet/)
-- [Basecamp's experiences](http://37signals.com/svn/posts/3112-how-basecamp-next-got-to-be-so-damn-fast-without-using-much-client-side-ui) (hint: pushState, aggressive caching, minimal client)
-- Synchronization, offline-usage (mobile apps), skills, time, budget...
-- A bit like fashion. New techs come and go. Different answer each time you ask.
-- Up and coming? [Meteor](http://meteor.com/), [Derby](http://derbyjs.com/)
+* What belongs to server, what to client and why (business goals)
+* [Client-side MVC is not a silver bullet](http://mir.aculo.us/2013/02/26/client-side-mvc-is-not-a-silver-bullet/)
+* [Basecamp's experiences](http://37signals.com/svn/posts/3112-how-basecamp-next-got-to-be-so-damn-fast-without-using-much-client-side-ui) (hint: pushState, aggressive caching, minimal client)
+* Synchronization, offline-usage (mobile apps), skills, time, budget...
+* A bit like fashion. New techs come and go. Different answer each time you ask.
+* Up and coming? [Meteor](http://meteor.com/), [Derby](http://derbyjs.com/)
 
 ---
 
@@ -402,11 +402,11 @@ title: Recap
 class: big
 build_lists: true
 
-- Web dev is as hard as you make it
-- Especially on the bleeding edge
-- Fortunately a bit of tape fixes anything
-- Mobile on the rise, native HTML5 apps not mainstream yet
-- Web architectures - from monoliths to distributed
+* Web dev is as hard as you make it
+* Especially on the bleeding edge
+* Fortunately a bit of tape fixes anything
+* Mobile on the rise, native HTML5 apps not mainstream yet
+* Web architectures - from monoliths to distributed
 
 ---
 
@@ -420,16 +420,12 @@ class: segue dark nobackground
 
 ---
 
-title: Node.js
-class: big
-build_lists: true
+title: Trends
+notes: ["Development started in 2009 by Ryan Dahl", "Enabled by V8"]
 
-- JavaScript on backend!
-- Development started in 2009 by Ryan Dahl
-- Enabled by Google's V8
-- Excellent for prototyping
-- Strong ecosystem ([NPM](https://npmjs.org/))
-- Develops at a blistering pace
+![Trends](images/nodetrend.png)
+
+<footer class="source"><a href="http://goo.gl/NBFnd">Google Trends</a></footer>
 
 ---
 
@@ -437,19 +433,11 @@ title: Packages per Year
 class: big
 build_lists: true
 
-- Python: 29,720 packages / 22 years = *1351* packages per year
-- Ruby: 54,385 packages / 18 years = *3022* packages per year
-- Node.js: 26,966 packages / 4 years = *6742* packages per year
+* Python: 29,720 packages / 22 years = *1351* packages per year
+* Ruby: 54,385 packages / 18 years = *3022* packages per year
+* Node.js: 26,966 packages / 4 years = *6742* packages per year
 
 <footer class="source"><a href="http://caines.ca/blog/programming/the-node-js-community-is-quietly-changing-the-face-of-open-source/">Gregg Gaines</a></footer>
-
----
-
-title: Trends
-
-![Trends](images/nodetrend.png)
-
-<footer class="source"><a href="http://goo.gl/NBFnd">Google Trends</a></footer>
 
 ---
 
@@ -490,8 +478,18 @@ s.on('request', function(req, res) {
 s.listen(8000);
 </pre>
 
-- Viable alternative to callbacks at times
-- More info at [Node.js: Patterns and Opinions](https://dl.dropboxusercontent.com/u/3685/presentations/node-patterns/node-patterns.pdf) by @izs (the Node guy)
+* Viable alternative to callbacks at times
+* More info at [Node.js: Patterns and Opinions](https://dl.dropboxusercontent.com/u/3685/presentations/node-patterns/node-patterns.pdf) by @izs (the Node guy)
+
+---
+
+title: Recap
+class: big
+build_lists: true
+
+* Excellent for prototyping
+* Strong ecosystem thanks to [NPM](https://npmjs.org/)
+* Develops at a blistering pace
 
 ---
 
@@ -506,9 +504,31 @@ content_class: flexbox vcenter bigText
 
 ---
 
+title: Chrome Inspector
+class: big
+build_lists: true
+
+![Chrome Inspector](images/inspector.png)
+
+* See also [Firebug](http://getfirebug.com/)
+
+<footer class="source"><a href="https://developers.google.com/chrome-developer-tools/">Chrome DevTools</a></footer>
+
+---
+
 title: LiveReload
 
 <iframe src="http://livereload.com/"></iframe>
+
+---
+
+title: JSHint
+class: big
+build_lists: true
+
+<iframe src="http://jshint.com/"></iframe>
+
+* See also [JSLint](http://jslint.com/) by Crockford
 
 ---
 
@@ -518,7 +538,7 @@ build_lists: true
 
 <iframe src="http://jsfiddle.net/"></iframe>
 
-- Others: [jsbin](http://jsbin.com/), [jsdo.it](http://jsdo.it/), ...
+* Others: [jsbin](http://jsbin.com/), [jsdo.it](http://jsdo.it/), ...
 
 ---
 
@@ -529,47 +549,18 @@ class: big
 
 ---
 
-title: Finding Libraries
-class: segue dark nobackground
+title: Recap
+class: big
+build_lists: true
 
----
-
-title: NPM
-
-<iframe src="https://npmjs.org/"></iframe>
-
----
-
-title: Bower
-
-<iframe src="http://sindresorhus.com/bower-components/"></iframe>
-
----
-
-title: JSwiki
-
-<iframe src="http://jswiki.org"></iframe>
-
----
-
-title: JSter
-
-<iframe src="http://jster.net/"></iframe>
+* Traditional editors and IDEs are fine
+* Additional tooling available, use it
+* Future in the web?
 
 ---
 
 title: Structuring Code
 class: segue dark nobackground
-
----
-
-title: Current Status
-class: big
-build_lists: true
-
-* No official module system (yet)
-* Supposedly ES6 will bring one
-* Still, it will remain as a compile target
 
 ---
 
@@ -648,6 +639,54 @@ exports.vector = function() {...};
 * Allows to use Node.js module convention (CJS)
 * Better yet allows to hook into NPM ecosystem!
 * Still fairly bleeding edge
+
+---
+
+title: Recap
+class: big
+build_lists: true
+
+* No official module system yet (ES6?)
+* Many alternatives (AMD, CJS etc.)
+* browserify looks promising (NPM!)
+
+---
+
+title: Finding Libraries
+class: segue dark nobackground
+
+---
+
+title: NPM
+
+<iframe src="https://npmjs.org/"></iframe>
+
+---
+
+title: Bower
+
+<iframe src="http://sindresorhus.com/bower-components/"></iframe>
+
+---
+
+title: JSwiki
+
+<iframe src="http://jswiki.org"></iframe>
+
+---
+
+title: JSter
+
+<iframe src="http://jster.net/"></iframe>
+
+---
+
+title: Recap
+class: big
+build_lists: true
+
+* No need to just Google it
+* Poke me if you need something better
 
 ---
 
@@ -737,24 +776,23 @@ notes: ["Optimizely"]
 
 ---
 
-content_class: flexbox vcenter bigText
+title: Recap
+class: big
+build_lists: true
 
-# WTFs/min
+* Test your JS
+* Browser differences bring their own challenge
+* Future in continuous integration (Travis and co.)
+* Fail constantly to avoid failure
 
 ---
 
-title: Money
-
-![Money](images/coins.jpg)
-
----
-
-title: Conclusions
+title: Conclusion
 class: segue dark nobackground
 
 ---
 
-title: Conclusions
+title: Conclusion
 
 TODO
 
