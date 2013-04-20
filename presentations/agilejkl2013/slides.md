@@ -477,7 +477,6 @@ title: Server Using EventStreams
 class: big
 build_lists: true
 
-
 <pre class="prettyprint" data-lang="javascript">
 var http = require('http');
 
@@ -496,21 +495,37 @@ s.listen(8000);
 
 ---
 
-title: Editors
+title: Development Tools
 class: segue dark nobackground
 
 ---
 
-title: Editors
+content_class: flexbox vcenter bigText
+
+## Vim, Emacs, Sublime Text, WebStorm...
+
+---
+
+title: LiveReload
+
+<iframe src="http://livereload.com/"></iframe>
+
+---
+
+title: jsFiddle
 class: big
 build_lists: true
 
-- Regular development: Plain old IDE or editor
-- LiveReload
-- Prototyping: Web based service (jsfiddle, jsbin)
-- Future is in the web? Cloud9?
-- Continuous integration (travis and such)
-- Browserify etc. (cross-browser issues)
+<iframe src="http://jsfiddle.net/"></iframe>
+
+- Others: [jsbin](http://jsbin.com/), [jsdo.it](http://jsdo.it/), ...
+
+---
+
+title: Cloud9 IDE
+class: big
+
+<iframe src="https://c9.io/"></iframe>
 
 ---
 
