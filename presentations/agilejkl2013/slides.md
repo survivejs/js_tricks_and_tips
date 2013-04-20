@@ -394,7 +394,7 @@ build_lists: true
 * [Basecamp's experiences](http://37signals.com/svn/posts/3112-how-basecamp-next-got-to-be-so-damn-fast-without-using-much-client-side-ui) (hint: pushState, aggressive caching, minimal client)
 * Synchronization, offline-usage (mobile apps), skills, time, budget...
 * A bit like fashion. New techs come and go. Different answer each time you ask.
-* Up and coming? [Meteor](http://meteor.com/), [Derby](http://derbyjs.com/)
+* Up and coming? Mixed approaches. Examples: [Meteor](http://meteor.com/), [Derby](http://derbyjs.com/), [mojito](http://developer.yahoo.com/cocktails/mojito/), [rendr](https://github.com/airbnb/rendr)
 
 ---
 
