@@ -11,7 +11,7 @@ $gray-4: #515151;
 
 $brand-blue: rgb(67, 135, 253);
 $brand-blue-secondary: #3c8ef3;
-$brand-blue-secondary2: #2a7cdf;
+$brand-blue-secondary2: rgb(152, 198, 255);
 
 $brand-red: rgb(244, 74, 63);
 $brand-red-secondary: #e0543e;
@@ -281,7 +281,7 @@ a {
   border-bottom: 1px solid rgba(42, 124, 223, 0.5);
 
   &:hover {
-    color: black !important;
+    color: white !important;
   }
 }
 
