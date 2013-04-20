@@ -641,6 +641,52 @@ class: segue dark nobackground
 
 ---
 
+title: Unit Testing
+class: big
+build_lists: true
+
+<pre class="prettyprint" data-lang="javascript">
+assert(title('HELLO WORLD!') === 'Hello World!');
+assert(title('Hello world!') === 'Hello World!');
+assert(title('hi') === 'Hi');
+assert(title() === undefined);
+
+function title(s) {
+    return s && s.split(' ').map(capitalize).join(' ');
+}
+
+function assert(s) {
+    if(!s) throw new Error('Assertion failed!');
+}
+</pre>
+
+* Popular alternatives: [Jasmine](http://pivotal.github.io/jasmine/) (BDD), [Mocha](http://visionmedia.github.io/mocha/), [QUnit](http://qunitjs.com/)
+
+---
+
+title: Fuzz Testing
+
+<pre class="prettyprint" data-lang="javascript">
+// function to test, note annotation
+var title = annotate('title', 'Returns given string in a title format.')
+    .on(is.string, function(s) {
+        return s && s.split(' ').map(capitalize).join(' ');
+    }).satisfies(is.string);
+
+// testing an invariant
+fuzz(title, function(op, str) {
+    var parts = op(str).split(' ');
+
+    return parts.map(fst).map(isUpper).filter(id).length == parts.length;
+});
+</pre>
+
+* Up and coming (hopefully)
+
+<footer class="source"><a href="https://github.com/bebraw/annofuzz">bebraw/annofuzz</a></footer>
+
+---
+
 title: Browserling
 
 <iframe src="http://ci.testling.com/"></iframe>
@@ -664,27 +710,6 @@ title: Chaos Monkey
 ![Chaos Monkey](images/chaosmonkey.png)
 
 <footer class="source"><a href="">Jeff Atwood - Working with the Chaos Monkey</a></footer>
-
----
-
-title: Fuzz Testing
-
-<pre class="prettyprint" data-lang="javascript">
-// function to test, note annotation
-var title = annotate('title', 'Returns given string in a title format.')
-    .on(is.string, function(s) {
-        return s && s.split(' ').map(capitalize).join(' ');
-    }).satisfies(is.string);
-
-// testing an invariant
-fuzz(title, function(op, str) {
-    var parts = op(str).split(' ');
-
-    return parts.map(fst).map(isUpper).filter(id).length == parts.length;
-});
-</pre>
-
-<footer class="source"><a href="https://github.com/bebraw/annofuzz">bebraw/annofuzz</a></footer>
 
 ---
 

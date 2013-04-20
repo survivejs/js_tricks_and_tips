@@ -1060,6 +1060,63 @@ exports.vector = function() {...};
   
 </slide>
 
+<slide class="big" >
+  
+  
+    <hgroup>
+      <h2>Unit Testing</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><pre class="prettyprint" data-lang="javascript">
+assert(title('HELLO WORLD!') === 'Hello World!');
+assert(title('Hello world!') === 'Hello World!');
+assert(title('hi') === 'Hi');
+assert(title() === undefined);
+
+function title(s) {
+    return s && s.split(' ').map(capitalize).join(' ');
+}
+
+function assert(s) {
+    if(!s) throw new Error('Assertion failed!');
+}
+</pre>
+
+<ul class="build">
+<li>Popular alternatives: <a href="http://pivotal.github.io/jasmine/">Jasmine</a> (BDD), <a href="http://visionmedia.github.io/mocha/">Mocha</a>, <a href="http://qunitjs.com/">QUnit</a></li>
+</ul></article>
+ 
+</slide>
+
+<slide  >
+  
+  
+    <hgroup>
+      <h2>Fuzz Testing</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><pre class="prettyprint" data-lang="javascript">
+// function to test, note annotation
+var title = annotate('title', 'Returns given string in a title format.')
+    .on(is.string, function(s) {
+        return s && s.split(' ').map(capitalize).join(' ');
+    }).satisfies(is.string);
+
+// testing an invariant
+fuzz(title, function(op, str) {
+    var parts = op(str).split(' ');
+
+    return parts.map(fst).map(isUpper).filter(id).length == parts.length;
+});
+</pre>
+
+<ul>
+<li>Up and coming (hopefully)</li>
+</ul>
+<footer class="source"><a href="https://github.com/bebraw/annofuzz">bebraw/annofuzz</a></footer></article>
+ 
+</slide>
+
 <slide  >
   
   
@@ -1102,32 +1159,6 @@ exports.vector = function() {...};
     </hgroup>
     <article ><p><img alt="Chaos Monkey" src="images/chaosmonkey.png" /></p>
 <footer class="source"><a href="">Jeff Atwood - Working with the Chaos Monkey</a></footer></article>
- 
-</slide>
-
-<slide  >
-  
-  
-    <hgroup>
-      <h2>Fuzz Testing</h2>
-      <h3></h3>
-    </hgroup>
-    <article ><pre class="prettyprint" data-lang="javascript">
-// function to test, note annotation
-var title = annotate('title', 'Returns given string in a title format.')
-    .on(is.string, function(s) {
-        return s && s.split(' ').map(capitalize).join(' ');
-    }).satisfies(is.string);
-
-// testing an invariant
-fuzz(title, function(op, str) {
-    var parts = op(str).split(' ');
-
-    return parts.map(fst).map(isUpper).filter(id).length == parts.length;
-});
-</pre>
-
-<footer class="source"><a href="https://github.com/bebraw/annofuzz">bebraw/annofuzz</a></footer></article>
  
 </slide>
 
