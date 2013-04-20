@@ -312,12 +312,6 @@ title: Enlightenment
 
 ---
 
-title: caniuse.com
-
-<iframe src="http://caniuse.com/"></iframe>
-
----
-
 title: Shim
 class: big
 
@@ -327,6 +321,12 @@ class: big
 
 <footer class="source"><a href="http://www.merriam-webster.com/dictionary/shim">Merriam-Webster</a></footer>
 <footer class="source"><a href="http://www.flickr.com/photos/7357861@N03/2339001640/">esagor</a> (CC BY-NC)</footer>
+
+---
+
+title: caniuse.com
+
+<iframe src="http://caniuse.com/"></iframe>
 
 ---
 
