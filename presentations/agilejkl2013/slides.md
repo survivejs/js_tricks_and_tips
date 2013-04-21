@@ -12,8 +12,7 @@ build_lists: true
     * Structuring Code
     * Finding Libraries
     * Testing
-- Phew
-    * Surprise!
+- Conclusion
 
 ---
 
@@ -87,11 +86,10 @@ notes: ["Documents to applications to documents again?"]
     * 1999 - ES3 (modern baseline), Mozilla established
 - Improved Interactivity
     * 2005 - AJAX, dynamic loading (search for instance)
-    * 2008 - RIP ES4, parts of HTML5 emerge, Chrome (V8) introduced
-    * 2009 - ES5 (Modern browsers IE9 included), Chrome OS, Node.js
+    * 2008 - RIP ES4, parts of HTML5 emerge, Chrome (V8)
+    * 2009 - ES5, Chrome OS, Node.js
 - Web as an Application Platform
     * 2012 - HTML5 well supported (interesting JS APIs)
-    * 2013 - ES6?
 
 <footer class="source"><a href="http://brendaneich.github.io/Strange-Loop-2012/#/1">Brendan Eich at Strange Loop '12</a></footer>
 
@@ -329,8 +327,7 @@ class: big
 
 ![Shim](images/shim.jpg)
 
-<footer class="source"><a href="http://www.merriam-webster.com/dictionary/shim">Merriam-Webster</a></footer>
-<footer class="source"><a href="http://www.flickr.com/photos/7357861@N03/2339001640/">esagor</a> (CC BY-NC)</footer>
+<footer class="source"><a href="http://www.merriam-webster.com/dictionary/shim">Merriam-Webster</a>, <a href="http://www.flickr.com/photos/7357861@N03/2339001640/">esagor</a> (CC BY-NC)</footer>
 
 ---
 
@@ -411,9 +408,9 @@ build_lists: true
 
 * What belongs to server, what to client and why (business goals)
 * [Client-side MVC is not a silver bullet](http://mir.aculo.us/2013/02/26/client-side-mvc-is-not-a-silver-bullet/)
-* [Basecamp's experiences](http://37signals.com/svn/posts/3112-how-basecamp-next-got-to-be-so-damn-fast-without-using-much-client-side-ui) (hint: pushState, aggressive caching, minimal client)
-* Synchronization, offline-usage (mobile apps), skills, time, budget...
-* A bit like fashion. New techs come and go. Different answer each time you ask.
+* [Basecamp's experiences](http://37signals.com/svn/posts/3112-how-basecamp-next-got-to-be-so-damn-fast-without-using-much-client-side-ui) (hint: pushState, aggressive caching)
+* Synchronization, offline usage, skills, time, budget...
+* Fashion. Techs come and go
 * Up and coming? Mixed approaches. Examples: [Meteor](http://meteor.com/), [Derby](http://derbyjs.com/), [mojito](http://developer.yahoo.com/cocktails/mojito/), [rendr](https://github.com/airbnb/rendr)
 
 ---
@@ -453,9 +450,9 @@ title: Packages per Year
 class: big
 build_lists: true
 
-* Python: 29,720 packages / 22 years = *1351* packages per year
-* Ruby: 54,385 packages / 18 years = *3022* packages per year
-* Node.js: 26,966 packages / 4 years = *6742* packages per year
+* Python: 29,720 packages / 22 years = *1351* packages / year
+* Ruby: 54,385 packages / 18 years = *3022* packages / year
+* Node.js: 26,966 packages / 4 years = *6742* packages / year
 
 <footer class="source"><a href="http://caines.ca/blog/programming/the-node-js-community-is-quietly-changing-the-face-of-open-source/">Gregg Gaines</a></footer>
 
