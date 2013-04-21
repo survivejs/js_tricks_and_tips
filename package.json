@@ -1,0 +1,24 @@
+{
+    "name": "survive-js",
+    "description": "SurviveJS book",
+    "author": "Juho Vepsalainen <bebraw@gmail.com>",
+    "version": "0.1.0",
+    "private": "true",
+
+    "dependencies": {
+        "ghw": "0.9.0"
+    },
+
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:bebraw/survive-js.git"
+    },
+
+    "homepage": "http://survivejs.com",
+
+    "bugs": {
+        "url": "https://github.com/bebraw/survive-js/issues"
+    },
+
+    "keywords": ["javascript", "book"]
+}
