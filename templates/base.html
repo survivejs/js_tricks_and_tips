@@ -33,10 +33,6 @@
        <div class="twelve columns main">
             <header>
                 <h1><a href="/">{{ name }}</a></h1>
-                <div id="social">
-                    <a href="http://twitter.com/share" class="twitter-share-button" data-text="{{ name }}" data-count="horizontal">Tweet</a>
-                    <a href="{{ wikiUrl }}/{{ pageName }}/_edit" class="edit button">Edit</a>
-                </div>
             </header>
             <div class="content">
                 {{{ data }}}
@@ -44,7 +40,11 @@
         </div>
         <div class="three columns sidebar">
             <nav>
-            <h3 id="logo"><a href="/">{{ name }}</a></h3>
+                <h3 id="logo"><a href="/">{{ name }}</a></h3>
+                <div id="social">
+                    <a href="{{ wikiUrl }}/{{ pageName }}/_edit" class="edit button">Edit</a>
+                    <a href="http://twitter.com/share" class="twitter-share-button" data-text="{{ name }}" data-count="horizontal">Tweet</a>
+                </div>
                 <ul id="navi">
                     {{#sections}}
                         <li><a href="#{{id}}">{{name}}</a></li>

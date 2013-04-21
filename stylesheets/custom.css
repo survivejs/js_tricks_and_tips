@@ -40,15 +40,10 @@ nav {
 
 #social {
     margin-right: 2em;
-    margin-bottom: 0;
 }
 
 header, header h1 {
     margin-bottom: 0;
-}
-
-.edit {
-    margin: 0;
 }
 
 blockquote {
@@ -60,4 +55,8 @@ blockquote {
     top: 0;
     right: 0;
     border: 0;
+}
+
+#logo {
+    margin-bottom: 0;
 }
