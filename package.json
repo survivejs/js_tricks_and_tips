@@ -6,7 +6,7 @@
     "private": "true",
 
     "dependencies": {
-        "ghw": "0.9.1"
+        "ghw": "0.9.2"
     },
 
     "repository": {

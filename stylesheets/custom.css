@@ -21,6 +21,11 @@ hr {
     border: 0.1em dotted rgba(100, 100, 100, 0.5);
 }
 
+code {
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    background-color: rgba(138, 138, 138, 0.07);
+}
+
 .main {
     background: #eee;
     background-image: url('../images/bgnoise_lg.png');

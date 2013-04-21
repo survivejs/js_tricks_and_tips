@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="stylesheets/skeleton.css">
     <link rel="stylesheet" href="stylesheets/layout.css">
     <link rel="stylesheet" href="stylesheets/docs.css">
+    <link rel="stylesheet" href="stylesheets/github.css">
     <link rel="stylesheet" href="stylesheets/custom.css">
 
     <!--[if lt IE 9]>
@@ -36,25 +37,25 @@
             </header>
             <div class="content">
                 <p><p>It is not possible to prove (easily at least) absence of bugs. You can, however, show that there are bugs in your code. This is where testing comes handy. Let&#39;s start by defining behavior of an <code>assert</code> function. As JavaScript doesn&#39;t come with an <code>assert</code> statement by default I&#39;ve defined one myself. In case you are using Node, consider utilizing <a href="http://nodejs.org/api/assert.html">assert module</a>.</p></p>
-<pre><code class="lang-js">function assert(s) {
-    if(!s) throw new Error(&#39;Assertion failed!&#39;);
+<pre><code class="lang-js"><span class="keyword">function</span> assert(s) {
+    <span class="keyword">if</span>(!s) <span class="keyword">throw</span> <span class="keyword">new</span> Error(<span class="string">'Assertion failed!'</span>);
 }</code></pre>
 <h2><h2 id="unit testing">Unit Testing</h2></h2>
 <p><p>Now that we have a function we can test with, lets define a couple of <code>unit tests</code> for a function known as <code>title</code>. You may recognize it from some other languages you have used before. Strangely vanilla JavaScript doesn&#39;t come with an implementation. So it is up to us to step up to the plate and remedy this vile omission. You can see a specification of sort below.</p></p>
-<pre><code class="lang-js">function title(s) {}
+<pre><code class="lang-js"><span class="keyword">function</span> title(s) {}
 
-assert(title(&#39;HELLO WORLD!&#39;) === &#39;Hello World!&#39;);
-assert(title(&#39;Hello world!&#39;) === &#39;Hello World!&#39;);
-assert(title(&#39;hi&#39;) === &#39;Hi&#39;);
+assert(title(<span class="string">'HELLO WORLD!'</span>) === <span class="string">'Hello World!'</span>);
+assert(title(<span class="string">'Hello world!'</span>) === <span class="string">'Hello World!'</span>);
+assert(title(<span class="string">'hi'</span>) === <span class="string">'Hi'</span>);
 assert(title() === undefined);</code></pre>
 <p><p>As you can see <code>title</code> is simply a function that converts the first character of each word into a uppercase one while the remaining characters will remain lowercase. Now would be a good chance to go and implement it. Or if this is trivial and below your skills, consider the solution below:</p></p>
-<pre><code class="lang-js">function title(s) {
-    // idea: split, set first to upper return joined
-    var capitalize = function(k) {
-        return k[0].toUpperCase() + k.slice(1).toLowerCase();
+<pre><code class="lang-js"><span class="keyword">function</span> title(s) {
+    <span class="comment">// idea: split, set first to upper return joined</span>
+    <span class="keyword">var</span> capitalize = <span class="keyword">function</span>(k) {
+        <span class="keyword">return</span> k[<span class="number">0</span>].toUpperCase() + k.slice(<span class="number">1</span>).toLowerCase();
     };
 
-    return s &amp;&amp; s.split(&#39; &#39;).map(capitalize).join(&#39; &#39;);
+    <span class="keyword">return</span> s &amp;&amp; s.split(<span class="string">' '</span>).map(capitalize).join(<span class="string">' '</span>);
 }</code></pre>
 <p><p>It is likely your implementation will differ from mine somehow. As you have probably noticed so far I really like to use functional features of JavaScript. You can find a <code>map</code> there. I also used <code>&amp;&amp;</code> (and) to deal with possible invalid <code>s</code>.</p>
 <p>The point of this little exercise was to demonstrate the usefulness of tests. Granted the tests weren&#39;t as good as they could have been and the implementation was sort of trivial. Still, I hope you can see the value. This was an example of <code>unit testing</code>. I have coined the other type of testing that complements this well as <code>generative testing</code>. It is a perhaps underappreciated way of testing that can reveal issues you might not be able to detect otherwise.</p></p>
@@ -62,29 +63,29 @@ assert(title() === undefined);</code></pre>
 <p><p>Unit tests are just that, units. Each unit test tests a specific thing. What if we forget to write a test? How do we know which unit tests to write and when? Let&#39;s just say experience helps in these things. Fortunately there are some ways that complement this well and allow us to overcome some of the weaknesses.</p>
 <p>What if we defined the tests of <code>title</code> is a bit different way? First of all we know intuitively it makes sense to pass only Strings to <code>title</code>. I also mumbled something about the fact that each word has to begin with an uppercase character whereas the remained must be lowercase. By combining these observations we can end up with something quite interesting. A way to test our little function in a <code>generative</code> manner.</p>
 <p>As I don&#39;t want to explain how to build the testing tools, I will rather use some experimental tools of my own. The most important one of these is simply known as <a href="https://github.com/bebraw/annotate">annotate</a>. It is a tool that allows you to attach annotations, and more importantly, invariants to your functions. I&#39;ve annotated <code>title</code> below.</p></p>
-<pre><code class="lang-js">var title = annotate(&#39;title&#39;, &#39;Returns given string in a title format.&#39;)
-    .on(is.string, function(str) {
-        ... // original implementation goes here
+<pre><code class="lang-js"><span class="keyword">var</span> title = annotate(<span class="string">'title'</span>, <span class="string">'Returns given string in a title format.'</span>)
+    .on(is.string, <span class="keyword">function</span>(str) {
+        ... <span class="comment">// original implementation goes here</span>
     }).satisfies(is.string);</code></pre>
 <p><p>I use another utility, <a href="https://github.com/bebraw/annois">annois</a>, to define that the function input is a string. Besides this <code>precondition</code> I defined a <code>postcondition</code> to make sure that you will get a string out as well. This might remind you of Eiffel&#39;s concept of <a href="http://en.wikipedia.org/wiki/Design_by_contract">Design by Contract</a>. Congratulations! If not, don&#39;t worry. You&#39;ll see what the fuzz is about in a bit, literally.</p>
 <p>Currently the value of what we&#39;re doing might seem a bit dubious. We just ended up with more code. That was not the point, though. In order to benefit from the extra detail, we&#39;ll need to add second part. An external invariant. Consider the definition below.</p></p>
-<pre><code class="lang-js">fuzz(title, function(op, str) {
-    var parts = op(str).split(&#39; &#39;);
+<pre><code class="lang-js">fuzz(title, <span class="keyword">function</span>(op, str) {
+    <span class="keyword">var</span> parts = op(str).split(<span class="string">' '</span>);
 
-    return parts.map(fst).map(isUpper).filter(id).length == parts.length;
+    <span class="keyword">return</span> parts.map(fst).map(isUpper).filter(id).length == parts.length;
 });
 
-function fst(a) {return a[0];}
-function isUpper(a) {return a === a.toUpperCase();}
-function id(a) {return a;}</code></pre>
+<span class="keyword">function</span> fst(a) {<span class="keyword">return</span> a[<span class="number">0</span>];}
+<span class="keyword">function</span> isUpper(a) {<span class="keyword">return</span> a === a.toUpperCase();}
+<span class="keyword">function</span> id(a) {<span class="keyword">return</span> a;}</code></pre>
 <p><p><code>fuzz</code> is a special kind of function. It uses our function preconditions and the defined invariant to construct tests. It will do its best to try to invalidate it. Can you see how much powerful this new test of ours is?</p>
 <p>In case you are interested in this sort of testing, check out my testing tool, <a href="https://github.com/bebraw/annofuzz">annofuzz</a>, that implements this idea.</p></p>
 <h2><h2 id="fibonacci's numbers using `annotate`">Fibonacci&#39;s Numbers Using <code>annotate</code></h2></h2>
 <p><p>Just to give you another example of the power of annotations, consider the example below. It shows you how to implement a function that yields a series of <a href="http://en.wikipedia.org/wiki/Fibonacci_number">Fibonacci&#39;s numbers</a>. The definition is quite close to the original and reads well at least to my eye.</p></p>
-<pre><code class="lang-js">var fib = annotate(&#39;fib&#39;, &#39;Calculates Fibonacci numbers&#39;)
-    .on(0, 0).on(1, 1)
-    .on(is.number, function(n) {
-        return fib(n - 1) + fib(n - 2);
+<pre><code class="lang-js"><span class="keyword">var</span> fib = annotate(<span class="string">'fib'</span>, <span class="string">'Calculates Fibonacci numbers'</span>)
+    .on(<span class="number">0</span>, <span class="number">0</span>).on(<span class="number">1</span>, <span class="number">1</span>)
+    .on(is.number, <span class="keyword">function</span>(n) {
+        <span class="keyword">return</span> fib(n - <span class="number">1</span>) + fib(n - <span class="number">2</span>);
     });</code></pre>
 <p><p>I use this form of testing quite a bit at a library of mine, <a href="https://github.com/bebraw/funkit">funkit</a>. Unfortunately <code>generative testing</code> hasn&#39;t quite gained widespread acceptance within the JavaScript community. For instance the Haskell guys are way ahead of us with their <a href="http://www.cse.chalmers.se/~rjmh/QuickCheck/manual.html">QuickCheck</a>. There are implementations available for other languages as well and it is quite easy to port the idea.</p>
 <p>These two ways to test are handy for validating some basic assumptions on individual functions. That is only small part of the field. You might for instance want to know how your code behaves on various platforms. This is where <code>browser testing</code> comes in.</p></p>
