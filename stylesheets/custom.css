@@ -47,3 +47,10 @@ header, header h1 {
 blockquote {
     padding-top: 0;
 }
+
+#fork {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+}
