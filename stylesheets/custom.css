@@ -1,0 +1,43 @@
+body {
+    background: #ddd;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rokkitt', serif;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(15, 165, 2);
+}
+
+a:visited {
+    color: rgb(110, 158, 106);
+}
+
+.main {
+    background: #eee;
+}
+
+.content, nav, header, #social {
+    box-sizing: border-box;
+    margin: 1em;
+}
+
+#social {
+    margin-right: 2em;
+    margin-bottom: 0;
+}
+
+header, header h1 {
+    margin-bottom: 0;
+}
+
+.edit {
+    margin: 0;
+}
+
+blockquote {
+    padding-top: 0;
+}

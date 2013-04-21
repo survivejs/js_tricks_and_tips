@@ -5,15 +5,18 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <title>SurviveJS</title>
+    <title>Survive JS</title>
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="stylesheets/base.css">
     <link rel="stylesheet" href="stylesheets/skeleton.css">
     <link rel="stylesheet" href="stylesheets/layout.css">
     <link rel="stylesheet" href="stylesheets/docs.css">
+    <link rel="stylesheet" href="stylesheets/custom.css">
 
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -28,7 +31,7 @@
     <div class="container">
         <div class="three columns sidebar">
             <nav>
-            <h3 id="logo"><a href="/">SurviveJS</a></h3>
+            <h3 id="logo"><a href="/">Survive JS</a></h3>
                 <ul id="navi">
                         <li><a href="#the anti-pattern">The Anti-Pattern</a></li>
                         <li><a href="#concatenating to victory">Concatenating to Victory</a></li>
@@ -43,15 +46,15 @@
                 </ul>
             </nav>
         </div>
-        <div class="twelve columns offset-by-three content">
+        <div class="twelve columns offset-by-three main">
             <header>
-                <h1><a href="/">SurviveJS</a></h1>
+                <h1><a href="/">Survive JS</a></h1>
                 <div id="social">
-                    <a href="http://twitter.com/share" class="twitter-share-button" data-text="SurviveJS" data-count="horizontal">Tweet</a>
-                    <a href="https://github.com/bebraw/survive-js/wiki/Modules/_edit" class="button">Edit</a>
+                    <a href="http://twitter.com/share" class="twitter-share-button" data-text="Survive JS" data-count="horizontal">Tweet</a>
+                    <a href="https://github.com/bebraw/survive-js/wiki/Modules/_edit" class="edit button">Edit</a>
                 </div>
             </header>
-            <div>
+            <div class="content">
                 <p><p>Believe it or not, JavaScript doesn&#39;t come with a module system of its own. ES6 is supposed to fix this problem once and for all. Even though there isn&#39;t a native module system yet, it doesn&#39;t mean it&#39;s not possible to write modular JavaScript. In fact there are multiple solutions each with their strengths and weaknesses.</p></p>
 <h2><h2 id="the anti-pattern">The Anti-Pattern</h2></h2>
 <p><p>Before getting any further, consider the anti-pattern below. This is how people wrote JavaScript in the golden 90s. And they still write at times.</p></p>

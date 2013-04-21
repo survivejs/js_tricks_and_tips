@@ -19,7 +19,6 @@
         width: 160px; }
     #logo {
         margin-bottom: 20px;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         letter-spacing: -1px;
         font-weight: bold; }
     nav ul {
@@ -41,8 +40,7 @@
         font-size: 52px;
         line-height: 61px;
         letter-spacing: -1px;
-        font-weight: normal;
-        font-family: "Georgia", "Times New Roman", Helvetica, Arial, sans-serif; }
+        font-weight: normal; }
     hr.large {
         border: none;
         height: 8px;

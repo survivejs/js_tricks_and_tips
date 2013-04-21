@@ -10,10 +10,13 @@
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+    <link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" href="stylesheets/base.css">
     <link rel="stylesheet" href="stylesheets/skeleton.css">
     <link rel="stylesheet" href="stylesheets/layout.css">
     <link rel="stylesheet" href="stylesheets/docs.css">
+    <link rel="stylesheet" href="stylesheets/custom.css">
 
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -36,15 +39,15 @@
                 </ul>
             </nav>
         </div>
-        <div class="twelve columns offset-by-three content">
+        <div class="twelve columns offset-by-three main">
             <header>
                 <h1><a href="/">{{ name }}</a></h1>
                 <div id="social">
                     <a href="http://twitter.com/share" class="twitter-share-button" data-text="{{ name }}" data-count="horizontal">Tweet</a>
-                    <a href="{{ wikiUrl }}/{{ pageName }}/_edit" class="button">Edit</a>
+                    <a href="{{ wikiUrl }}/{{ pageName }}/_edit" class="edit button">Edit</a>
                 </div>
             </header>
-            <div>
+            <div class="content">
                 {{{ data }}}
             </div>
         </div>

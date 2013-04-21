@@ -5,15 +5,18 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <title>SurviveJS</title>
+    <title>Survive JS</title>
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="stylesheets/base.css">
     <link rel="stylesheet" href="stylesheets/skeleton.css">
     <link rel="stylesheet" href="stylesheets/layout.css">
     <link rel="stylesheet" href="stylesheets/docs.css">
+    <link rel="stylesheet" href="stylesheets/custom.css">
 
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -28,22 +31,22 @@
     <div class="container">
         <div class="three columns sidebar">
             <nav>
-            <h3 id="logo"><a href="/">SurviveJS</a></h3>
+            <h3 id="logo"><a href="/">Survive JS</a></h3>
                 <ul id="navi">
                         <li><a href="#grunt">Grunt</a></li>
                         <li><a href="#conclusion">Conclusion</a></li>
                 </ul>
             </nav>
         </div>
-        <div class="twelve columns offset-by-three content">
+        <div class="twelve columns offset-by-three main">
             <header>
-                <h1><a href="/">SurviveJS</a></h1>
+                <h1><a href="/">Survive JS</a></h1>
                 <div id="social">
-                    <a href="http://twitter.com/share" class="twitter-share-button" data-text="SurviveJS" data-count="horizontal">Tweet</a>
-                    <a href="https://github.com/bebraw/survive-js/wiki/Build-Systems/_edit" class="button">Edit</a>
+                    <a href="http://twitter.com/share" class="twitter-share-button" data-text="Survive JS" data-count="horizontal">Tweet</a>
+                    <a href="https://github.com/bebraw/survive-js/wiki/Build-Systems/_edit" class="edit button">Edit</a>
                 </div>
             </header>
-            <div>
+            <div class="content">
                 <p><p>Eventually you&#39;ll end up needing to set up some kind of a build system for your project. You&#39;ll likely want to use a different build for development and production for instance. There also may be multiple targets ranging from mobile to desktop (each might have different dependencies).</p>
 <p>In addition you might have some extra dependencies (such as some CSS precompiler) in your project. So during development you might need to run the precompiler in a <code>watch</code> mode. And you might want to have <code>LiveReload</code> server running as well.</p>
 <p>As you can see it can get quite complicated, fast. This is the reason why multiple build systems have emerged. <a href="http://gruntjs.com/">grunt</a> is perhaps the most popular, or at least visible, option for Node.js. You can definitely use it on a pure frontend project. Node.js just happens to be the platform it runs on.</p></p>
