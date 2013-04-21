@@ -23,6 +23,7 @@ class: segue dark nobackground
 ---
 
 title: Strategy for Goldfishes
+notes: ["Just one way to go"]
 
 ![Strategy](images/strategy.jpg)
 
@@ -31,7 +32,7 @@ title: Strategy for Goldfishes
 ---
 
 title: Strategy for the Rest of Us
-notes. ["About what, not how", "From A (now) to B (future)"]
+notes: ["About what, not how", "From A (now) to B (future)"]
 
 ![Strategy in a Nutshell](images/strategysimple.png)
 
@@ -45,6 +46,7 @@ class: segue dark nobackground
 title: Ten Days to JavaScript
 class: big
 build_lists: true
+notes: ["Even though developed in a hurry, came out well"]
 
 * 1995 - Brendan Eich's ten days &rarr; Mocha
 * Known as LiveScript till the marketing folks changed the name
@@ -57,6 +59,7 @@ build_lists: true
 ---
 
 title: A Bit of JavaScript
+notes: ["Partial application"]
 
 <pre class="prettyprint" data-lang="javascript">
 var helloAgileJkl = hello.bind(undefined, 'AgileJkl!');
@@ -77,6 +80,7 @@ function hello(target) {
 title: Web - From Documents to Applications
 class: big
 build_lists: true
+notes: ["Documents to applications to documents again?"]
 
 - Web as a Document Platform
     * 1995 - Brendan Eich's ten days
@@ -94,6 +98,7 @@ build_lists: true
 ---
 
 title: JavaScript Has Traction
+notes: ["X: number of projects on GitHub", "Y: number of tags on Stack Overflow"]
 
 ![Traction](images/redmonk.png)
 
@@ -102,6 +107,7 @@ title: JavaScript Has Traction
 ---
 
 title: Crockford
+notes: ["Rediscovered the language", "The good parts", "JSLint"]
 
 ![Crockford](images/crockford.jpg)
 
@@ -110,6 +116,7 @@ title: Crockford
 ---
 
 title: The Good Parts vs. The Rest
+notes: ["A subset will do"]
 
 ![Good vs. Rest](images/goodvsrest.jpg)
 
@@ -170,6 +177,7 @@ title: TypeScript
 
 title: And many others
 content_class: flexbox vcenter bigText
+notes: ["+ some other languages on the backend"]
 
 # [altJS](http://altjs.org/)
 
@@ -187,24 +195,28 @@ content_class: flexbox vcenter bigText
 ---
 
 title: Jade
+notes: ["Resembles YAML", "Primarily for backend-side"]
 
 <iframe src="http://jade-lang.com/"></iframe>
 
 ---
 
 title: Mustache
+notes: ["Logicless"]
 
 <iframe src="http://mustache.github.io/"></iframe>
 
 ---
 
 title: Handlebars
+notes: ["Extends Mustache"]
 
 <iframe src="http://handlebarsjs.com/"></iframe>
 
 ---
 
 title: Transparency
+notes: ["Utilizes HTML markup!", "Primarily for client-side"]
 
 <iframe src="http://leonidas.github.io/transparency/"></iframe>
 
@@ -233,19 +245,15 @@ title: SASS
 
 ---
 
-title: Responsive Web Design
-
-<iframe src="http://finecitizens.com/defineResponsive/"></iframe>
-
----
-
 title: Twitter Bootstrap
+notes: ["Based on LESS", "Responsive", "Columns", "Widgets"]
 
 <iframe src="http://twitter.github.io/bootstrap/"></iframe>
 
 ---
 
 title: Zurb Foundation
+notes: ["Based on SASS", "Mobile first", "Columns", "Widgets"]
 
 <iframe src="http://foundation.zurb.com/"></iframe>
 
@@ -268,6 +276,7 @@ build_lists: true
 ---
 
 title: Big Data
+notes: ["As in social graph"]
 
 ![Static Architecture](images/bigdata.jpg)
 
@@ -351,15 +360,15 @@ class: big
 
 ---
 
-![PhoneGap](images/phonegap.jpg)
-
-<footer class="source"><a href="http://www.flickr.com/photos/44124462151@N01/4923953409/">Brian LeRoux</a> (CC BY-NC-SA)</footer>
-
----
-
 content_class: flexbox vcenter bigText
 
 ## Firefox OS, Jolla etc.
+
+---
+
+![PhoneGap](images/phonegap.jpg)
+
+<footer class="source"><a href="http://www.flickr.com/photos/44124462151@N01/4923953409/">Brian LeRoux</a> (CC BY-NC-SA)</footer>
 
 ---
 
