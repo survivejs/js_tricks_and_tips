@@ -12,5 +12,4 @@ else
 fi
 
 # build now
-node_modules/ghw/bin/ghw -c site.json -i survive-js.wiki -o out -t templates -s
-cp -r templates/[!.]* out
+node_modules/ghw/bin/ghw -c site.json -i survive-js.wiki -o . -t templates -s

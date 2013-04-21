@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>SurviveJS</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="stylesheets/base.css">
+    <link rel="stylesheet" href="stylesheets/skeleton.css">
+    <link rel="stylesheet" href="stylesheets/layout.css">
+    <link rel="stylesheet" href="stylesheets/docs.css">
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+</head>
+<body>
+    <div class="container">
+        <div class="three columns sidebar">
+            <nav>
+            <h3 id="logo"><a href="/">SurviveJS</a></h3>
+                <ul id="navi">
+                        <li><a href="#grunt">Grunt</a></li>
+                        <li><a href="#conclusion">Conclusion</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="twelve columns offset-by-three content">
+            <header>
+                <h1><a href="/">SurviveJS</a></h1>
+                <div id="social">
+                    <a href="http://twitter.com/share" class="twitter-share-button" data-text="SurviveJS" data-count="horizontal">Tweet</a>
+                    <a href="https://github.com/bebraw/survive-js/wiki/Build-Systems/_edit" class="button">Edit</a>
+                </div>
+            </header>
+            <div>
+                <p><p>Eventually you&#39;ll end up needing to set up some kind of a build system for your project. You&#39;ll likely want to use a different build for development and production for instance. There also may be multiple targets ranging from mobile to desktop (each might have different dependencies).</p>
+<p>In addition you might have some extra dependencies (such as some CSS precompiler) in your project. So during development you might need to run the precompiler in a <code>watch</code> mode. And you might want to have <code>LiveReload</code> server running as well.</p>
+<p>As you can see it can get quite complicated, fast. This is the reason why multiple build systems have emerged. <a href="http://gruntjs.com/">grunt</a> is perhaps the most popular, or at least visible, option for Node.js. You can definitely use it on a pure frontend project. Node.js just happens to be the platform it runs on.</p></p>
+<h2><h2 id="grunt">Grunt</h2></h2>
+<p><p>In <code>grunt</code> you define specific tasks for particular purposes (ie. running that LiveReload server). It is possible to run multiple of these tasks at the same time. And it is possible to define custom tasks and plugins based on your needs.</p>
+<p>I won&#39;t go into details. Rather examine <a href="http://gruntjs.com/getting-started">Grunt documentation</a> and <a href="https://github.com/bebraw/libtemplate.js">an example project</a> I&#39;ve set up. The example project is sort of meta in sense that you can use it as a base for your own GitHub based library project.</p>
+<p><code>grunt</code> tends to develop quite fast. In the past this lead to some breakage when newer versions of the tool came out. Remember to refer to a specific version of Grunt in your <code>package.json</code> to avoid this group of problems.</p></p>
+<h2><h2 id="conclusion">Conclusion</h2></h2>
+<p><p>In this chapter I highlighted the importance of build systems and discussed one, <code>Grunt</code>. It is a very good idea to use this type of tool. It may seem like a lot of work initially but it streamlines development somewhat as pretty much all you need to do is to type <code>grunt</code> and you&#39;ve got a development server running that is smart enough to support your workflow. This lets you focus on real problems rather than having to spend too much time at the terminal.</p></p>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+</body>
+</html>

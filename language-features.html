@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>SurviveJS</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="stylesheets/base.css">
+    <link rel="stylesheet" href="stylesheets/skeleton.css">
+    <link rel="stylesheet" href="stylesheets/layout.css">
+    <link rel="stylesheet" href="stylesheets/docs.css">
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+</head>
+<body>
+    <div class="container">
+        <div class="three columns sidebar">
+            <nav>
+            <h3 id="logo"><a href="/">SurviveJS</a></h3>
+                <ul id="navi">
+                        <li><a href="#functions">Functions</a></li>
+                        <li><a href="#globals">Globals</a></li>
+                        <li><a href="#partial application">Partial Application</a></li>
+                        <li><a href="#what is `this`?">What is `this`?</a></li>
+                        <li><a href="#understanding `call` and `apply`">Understanding `call` and `apply`</a></li>
+                        <li><a href="#arguments are fun">Arguments Are Fun</a></li>
+                        <li><a href="#prototypes are phun?">Prototypes Are Phun?</a></li>
+                        <li><a href="#factories and generators">Factories and Generators</a></li>
+                        <li><a href="#properties for fun and profit">Properties for Fun and Profit</a></li>
+                        <li><a href="#data types">Data Types</a></li>
+                        <li><a href="#hoist the sails!">Hoist the Sails!</a></li>
+                        <li><a href="#conclusion">Conclusion</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="twelve columns offset-by-three content">
+            <header>
+                <h1><a href="/">SurviveJS</a></h1>
+                <div id="social">
+                    <a href="http://twitter.com/share" class="twitter-share-button" data-text="SurviveJS" data-count="horizontal">Tweet</a>
+                    <a href="https://github.com/bebraw/survive-js/wiki/Language-Features/_edit" class="button">Edit</a>
+                </div>
+            </header>
+            <div>
+                <p><p>So far we haven&#39;t seen much code apart from that one line. Instead of boring you even more with yadda yadda, let&#39;s dig into some brief examples. I won&#39;t go through the <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">whole specification</a>. I will rather cover some features that are essential to know and understand well.</p></p>
+<h2><h2 id="functions">Functions</h2></h2>
+<p><p>Let&#39;s start with a simple math function that clamps given input based on given bounds. Here we go:</p></p>
+<pre><code class="lang-js">function clamp(a, min, max) {
+    if(a &lt; min) return min;
+    if(a &gt; max) return max;
+
+    return a;
+}</code></pre>
+<p><p>In this case I decided to use a good ol&#39; if statement to deal with the logic. The same may be written using ternary operators perhaps familiar to some from C.</p></p>
+<pre><code class="lang-js">function clamp(a, min, max) {
+    return a &lt; min? min: a &gt; max? max: a;
+}</code></pre>
+<p><p>It&#39;s getting a bit convoluted alright, maybe it&#39;s not a good idea to nest those. Finally we can rewrite it using native <code>min</code> and <code>max</code> functions inherited from Java 1.0. You will find a bunch of these at <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Math">Math module</a>. </p></p>
+<pre><code class="lang-js">function clamp(a, min, max) {
+    return Math.max(min, Math.min(max, a));
+}
+
+// we can invoke any of these three simply using
+clamp(4, 10, 20); // yields 10 in this case</code></pre>
+<p><p>There are likely some other ways to achieve the same result. The purpose of these three was just to give some idea of the basic structures and show the basic function syntax.</p>
+<p>In JavaScript functions are first class citizen unlike in perhaps some less dynamic languages. You can simply pass functions to functions. These are also known as callbacks. This type of programming is quite commonly used in imperative style event based programming.</p>
+<p>Let&#39;s define a simple <code>map</code> function this way. <code>map</code> is something that takes a callback (operation) as input, applies that operation for each member of the given data structure and then returns the result. In this case I&#39;ll stick to arrays although it is possible to generalize this approach to work with objects too. A basic implementation could look like this:</p></p>
+<pre><code class="lang-js">function map(cb, arr) {
+    var ret = [];
+
+    for(var i = 0, len = arr.length; i &lt; len; i++) {
+        ret.push(cb(arr[i], i));
+    }
+
+    return ret;
+}
+
+map(function(v) {
+    return v * 2;
+}, [34, 2, 5]); // yields [68, 4, 10]</code></pre>
+<p><p>There are a couple of things going on here you should be aware of. Notice the loop syntax. It&#39;s quite ugly alright but it&#39;s fine to use it on lower level constructs like this.</p>
+<p>Sometimes it may be beneficial to name the callback (<code>function mul(v)</code> would work in this case) to make it easier to debug the code. The debugger will be able to use this information and show the name at a stack trace.</p>
+<p>There is actually a nice alternative for the ugly default syntax. It is know as <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach">Array.forEach</a>. Check it out. See <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array/map">Array.map</a> while at it.</p>
+<p>Using these may require <code>shims</code> depending on which browsers you want to support but on the other hand they make language so much more fun to use it&#39;s usually worth it.</p></p>
+<h2><h2 id="globals">Globals</h2></h2>
+<p><p>Next I&#39;ll show you how to leak globals. Consider the example below. Can you see what changed? Why is the example leaking?</p></p>
+<pre><code class="lang-js">function map(cb, arr) {
+    var ret = [];
+    var i;
+
+    for(i = 0, len = arr.length; i &lt; len; i++) {
+        ret.push(cb(arr[i], i));
+    }
+
+    return ret;
+}</code></pre>
+<p><p>Even though the change was quite innocent now we have a leak in our hands. <code>len</code> is polluting our global namespace. All we did was to forget to declare our <code>len</code> as a <code>var</code>.</p>
+<p>Many consider this a design flaw of JavaScript and I would agree. It is a good idea to declare which variables you are going to use at the beginning of the function. There are various opinions on how to achieve this syntactically but the above (apart from the bug) is what I like to stick with.</p></p>
+<blockquote>
+<p><p>In browser environment the global namespace is also known as <code>window</code> for some curious reason. As this might not be the case in other environments I&#39;m using the more general term here. This is also why it is not that nice to depend on <code>window</code>.</p></p>
+</blockquote>
+<h2><h2 id="partial application">Partial Application</h2></h2>
+<p><p>Let&#39;s say we have a bunch of forenames (say [&#39;Joe&#39;, &#39;Jack&#39;, &#39;Jill&#39;]). For a sake of example we will want to suffix those with a surname. As we are being really original here, let&#39;s pick &#39;Johnson&#39; as that isn&#39;t generic at all. How could we achieve that using JavaScript? You can go and code something now. I&#39;ll wait here for a while.</p>
+<p>I hope you have something together now. Even if you don&#39;t, let&#39;s consider the problem a while. This sounds like a <code>map</code>. So it must be a map. Now how to define that. We&#39;ll, just look above. You can find the definition there. In case we are feeling particularly lazy and happen to have the right browser at our disposal, the snippet below will do the trick:</p></p>
+<pre><code class="lang-js">[&#39;Joe&#39;, &#39;Jack&#39;, &#39;Jill&#39;].map(function(n) {return n + &#39; Johnson&#39;;});</code></pre>
+<p><p>Yeah, that&#39;s simple but not very over-engineered yet. How can we make our intent clearer? What if we wanted to apply the same function to some other list of items? As this is a contrived example anyway, let&#39;s try some <code>partial application</code>.</p>
+<p><code>partial application</code> is a way to specialize functions. In case you know how <code>Object Oriented Programming</code> and inheritance works in principle, you can consider this an analog to inheritance. We are simply taking something generic and making it more specific.</p>
+<p>Instead of <code>map</code> I will want to end up with <code>johnsonMap</code> in this case. It will take a list of names and return a list of johnsoned names. Simple as that. As it happens ES4 provided us the perfect function for this purpose. It is also known as <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind">bind</a>. There are shims available for less fortunate browsers.</p>
+<p>The way it works is very simple. As you might guess from its name, it binds the values of function arguments to those given. In our case we can end up with something like this given we use the <code>map</code> definition above. This should explain why I prefer to have that callback argument as the first.</p></p>
+<pre><code class="lang-js">var johnsonMap = map.bind(undefined, function(n) {return n + &#39; Johnson&#39;;});
+
+johnsonMap([&#39;Joe&#39;, &#39;Jack&#39;, &#39;Jill&#39;]); // should yield the same as above</code></pre>
+<p><p>What&#39;s up with that first parameter? This brings us one of the perhaps confusing aspects of JavaScript. This concept is also known as <code>this</code>. Confused yet?</p></p>
+<blockquote>
+<p><p>Sometimes you might want to bind <code>console.log</code>. Perhaps a bit counterintuitively just <code>console.log.bind(undefined, &#39;prefix: &#39;)</code> won&#39;t work. Instead you will need to provide <code>console</code> as context like this: <code>console.log.bind(console, &#39;prefix: &#39;)</code>.</p></p>
+</blockquote>
+<h2><h2 id="what is `this`?">What is <code>this</code>?</h2></h2>
+<p><p><code>this</code> refers to function context. What is this context then? It depends. In this case we may set it explicitly. This means we may access contents of <code>this</code> Object within the context itself.</p>
+<p>As I fear I may have confused you even more with this explanation, let&#39;s consider something more concrete. If you are as unlucky not to know what an Object is, let&#39;s stick an Object to our example. In computer science terms JavaScript Object can be considered a map of key-value pairs. All keys are always Strings whereas values can be pretty much anything.</p></p>
+<pre><code>var obj = {
+    ctx: function() {console.log(this)},
+    name: &#39;demo object&#39;
+};
+
+obj.ctx(); // -&gt; ???</code></pre>
+<p><p>Can you guess what <code>object.ctx()</code> prints out? That&#39;s right. We should see the Object itself there. Handy isn&#39;t it?</p>
+<p><code>this</code> can actually be fairly dangerous at times. It is a good idea to think through whether or not you really need it. Some libraries, such as jQuery, tend to rely on it somewhat. I don&#39;t consider that good design personally as you are effectively trading off some composability. And the last thing I want to do is to call certain functions using either <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/call">call</a> or <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/apply">apply</a> speaking of which that is probably what I should cover next.</p></p>
+<h2><h2 id="understanding `call` and `apply`">Understanding <code>call</code> and <code>apply</code></h2></h2>
+<p><p>These two might remind you of that beautiful <code>bind</code>. As it happens these three are siblings. <code>call</code> is the ugly one and I tend to favor <code>apply</code> over it. These two functions allow you to... wait for it... call functions. What&#39;s the point you might ask?</p>
+<p>Suppose you are writing a test runner. You might have some kind of a function definition for the tests. It could be an Object containing name, test function pairs for instance. You will need some way to run them. This is where these guys I just introduced you to come in.</p>
+<p>The difference between the nice <code>apply</code> and the less nice <code>call</code> is that the former accepts the parameters within an array while the latter just accepts them. It reminds me of <code>bind</code> this way. Both take a context parameter first and then do their thing after.</p>
+<p>As I don&#39;t feel like writing an entire test runner here, I&#39;ll leave it as an exercise to the reader. Just to make everything clear, consider the following <code>apply</code> of console.log.</p></p>
+<pre><code class="lang-js">console.log.apply(console, [&#39;you da js champ!&#39;]);</code></pre>
+<p><p>You can probably guess what happens there. If not, it&#39;s still not too late to change the career.</p></p>
+<h2><h2 id="arguments are fun">Arguments Are Fun</h2></h2>
+<p><p>It is definitely fun to argue. Oh wait, I was supposed to introduce you to <code>arguments</code>. Not arguing with people. Wrong book.</p>
+<p>There are generally put three ways to deal with function parameters in JavaScript. And no, I won&#39;t have an argument with you over is it a parameter of an argument. If you look from the outside, it&#39;s a parameter. If from the inside, it&#39;s an argument. Capiche?</p>
+<p>The first way is the one we have used a lot already. You simply pass the parameters in a specific order and the function gets those as arguments in that specific order. Nothing complicated there.</p>
+<p>Unfortunately JavaScript doesn&#39;t provide named parameters for us yet. As it happens it is possible to work around this problem with a little bit of Object magic. There is something about Object.</p>
+<p>The third way has to do with the keyword <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments">arguments</a>. You can probably guess what that contains. It looks like an Array but isn&#39;t quite like one.</p>
+<p>As you might be mighty confused right now about what the guy is blabbering about, I&#39;ve concocted amazing functions performing additions in various interesting and imaginative ways.</p></p>
+<pre><code>var add = function(a, b) {
+    return a + b;
+}
+
+var addNamed = function(o) {
+    return o.a + o.b;
+}
+
+var addMany = function() {
+    var ret = 0;
+    var i, len;
+
+    for(i = 0, len = arguments.length; i &lt; len; i++) {
+        ret += arguments[i];
+    }
+
+    return ret;
+}</code></pre>
+<p><p>I generally favor the first variant in my APIs. If the amount of parameters goes beyond three, I start to question myself even more than usually. That is usually a sign that something needs to change. I use the second variant particularly for jQuery plugins. In that case I often merge the passed parameters over some default ones using <a href="http://api.jquery.com/jQuery.extend/">$.extend</a>. The last one is preserved for special cases only.</p>
+<p>Even though <code>arguments</code> might look like an Array, it isn&#39;t one. As MDN suggests, you can convert it to one either by using <code>Array.prototype.slice.call(arguments)</code> or <code>Array.slice(arguments)</code>. You can <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array#Array_generic_methods">shim latter in</a>.</p>
+<p>I hope this settles the argument once and for all. That <code>Array.prototype</code> actually looks a bit interesting. What&#39;s that about?</p></p>
+<h2><h2 id="prototypes are phun?">Prototypes Are Phun?</h2></h2>
+<p><p>As I have mentioned earlier JavaScript does not implement classical inheritance scheme &quot;as is&quot;. Rather it provides something known as a prototypal scheme. Each object points to some prototype object. It is possible that the object itself shadows some functionality provided by this prototype one.</p>
+<p>It is possible to build more complex relations based on this simple scheme. For instance you could model the classical scheme quite easily. If this topic interests you, I recommend checking out <a href="http://javascriptweblog.wordpress.com/2010/06/07/understanding-javascript-prototypes/">Angus Croll&#39;s excellent post on the subject</a>.</p></p>
+<blockquote>
+<p><p>Back when <a href="http://jquery.com/">jQuery</a> was still in early stages there used to be another popular library known as <a href="http://prototypejs.org/">Prototype</a>. As you might infer from its name, it injects some functionality into prototypes of certain commonly used objects. This was also one of the reasons why jQuery surpassed it in popularity. In short mucking up with those is just asking for trouble as it might lead to breakage in interesting places.</p></p>
+</blockquote>
+<p><p>Personally I don&#39;t use prototypes a lot these days and rather tend to avoid them. The &quot;new&quot; keyword is one reason. In my view it&#39;s just unnecessary syntactical clutter. In practice you see both styles prevalent. An example of &quot;newless&quot; style I prefer may be found at <a href="https://github.com/bebraw/colorjoe">colorjoe</a>, a color picker I have developed.</p>
+<p>In <code>colorjoe</code> I provide a couple of specialized versions of the colorpicker: colorjoe.rgb and colorjoe.hsl. There is a also a chaining syntax and ways to extend the system without having to modify the core code. It is an example of how to use the factory pattern.</p></p>
+<h2><h2 id="factories and generators">Factories and Generators</h2></h2>
+<p><p>If you have used <code>Java</code> you have likely seen the joke about <code>AbstractSingletonProxyFactoryBean</code>. As it happens factories are actually an interesting way to construct specialized objects. JavaScript&#39;s closures enable us to create factories quite easily. This allows us to implement a pattern known as generator. In Python or some other language you might have bumped into <code>yield</code> keyword. That&#39;s what we&#39;re going to effectively implement next.</p>
+<p>A generator is quite a simple thing really. It is just something that gives us a value when we poke it correctly. Let&#39;s get started with something very simple and generalize that later. The simplest possible generator I can think of generates just a series of same values (say 42). Here&#39;s an implementation of this particular case.</p></p>
+<pre><code class="lang-js">function numberGenerator() {
+    return {
+        next: function() {
+            return 42;
+        }
+    };
+}
+
+var gen = numberGenerator();
+console.log(gen.next(), gen.next()); // -&gt; 42 42</code></pre>
+<p><p>As you can see we can get a nice series of 42&#39;s right now. That is only part of the story, though. We could parametrize the function as you might not want a 42 always. We could also take it a step further and make it use some rule. Let&#39;s say we want to get a series of n^2. Time to code!</p></p>
+<pre><code class="lang-js">function powerGenerator() {
+    var i = 0;
+
+    return {
+        next: function() {
+            var ret = Math.pow(i, 2);
+
+            i++;
+
+            return ret;
+        }
+    };
+}
+
+var gen = powerGenerator();
+console.log(gen.next(), gen.next(), gen.next()); // -&gt; 0 1 4</code></pre>
+<p><p>This example shows us the power of closures. As you can see, we store <code>i</code> at the outer scope of the object we actually operate on. It seems kind of trivial but it is one of those features of JavaScript it really pays off to understand as it allows us to implement all sorts of nifty little patterns such as this quite easily.</p>
+<p>You can take the approach even further and generalize it. Since we might not want to operate on <code>pow</code> or squares always, we probably should define some sort of factory. I have done this below. As a bonus there&#39;s a cyclic one.</p></p>
+<pre><code class="lang-js">function generator(valueCb, initial) {
+    return function() {
+        var i = initial || 0;
+
+        return {
+            next: function() {
+                var ret = valueCb(i);
+
+                i++;
+
+                return ret;
+            }
+        };
+    }();
+}
+
+function cycle() {
+    var items = arguments;
+
+    return generator(function(i) {
+        return items[i % items.length];
+    });
+}
+
+function pows(n, initial) {
+    return generator(function(i) {
+        return Math.pow(i, n);
+    }, initial);
+}
+
+var color = cycle(&#39;red&#39;, &#39;green&#39;, &#39;blue&#39;); // red, green, blue, red, green, ...
+
+var nums = pows(1); // 0, 1, 2, 3, ...
+var squares = pows(2, 2); // 4, 9, ...
+var cubes = pows(3); // 0, 1, 8, 27, 64, ...</code></pre>
+<p><p>I hope this example gave you some idea of the power of generators and factories. I know that especially the generator pattern isn&#39;t used a lot but at least it makes a perfect excuse of an example and helps you understand a bit about closures.</p>
+<p>One problem of the approach has to do with the <code>next</code> method. It doesn&#39;t sit that well with existing iterators. You will likely need to implement some custom ones to deal with that. On the other hand the approach is lazy by definition. So no computation will be done unless you really mean it. Overall it is just one example of how to program <code>into</code> language rather than <code>in</code> language to quite McConnell of <code>Code Complete</code> fame.</p></p>
+<h2><h2 id="properties for fun and profit">Properties for Fun and Profit</h2></h2>
+<p><p>In the good old world of Java we used to have getters and setters. And you can of course have those in JavaScript as well in case you really want to. Since I came by properties in Python I&#39;ve considered them ugly. Properties are a bit like attributes except they may invoke some computation or be derived based on other attributes. Since that likely sounded very vague and confusing it&#39;s a good time to discuss a concrete example.</p>
+<p>Since I&#39;m in an overengineering mood, let&#39;s implement an area calculator in a form of Object. It will have three attributes: width, height and area. <code>area</code> is something that is derived based on <code>width</code> and <code>height</code> and will be read-only since I don&#39;t feel comfortable changing <code>width</code> and <code>height</code> as <code>area</code> changes.</p>
+<p>As support for this sort of programming is still a bit sketchy in the world of JavaScript, let&#39;s &quot;implement something ourselves as save some money while at it&quot;(r). I think the interface for our mighty <code>area</code> object might look like this based on our specification:</p></p>
+<pre><code class="lang-js">var f = field({
+    width: 5,
+    height: 10
+});
+
+console.log(f.width(), f.height(), f.area()); // 5 10 50
+
+f.width(10);
+
+console.log(f.area()); // 100</code></pre>
+<p><p>I know having to use that extra <code>()</code>&#39;s is bit of a bore. But it is the price of this particular scheme. In case you feel like, go ahead and implement the specification. If it is still too much to handle, consider my implementation below:</p></p>
+<pre><code class="lang-js">function field(o) {
+    o = o || {}; 
+
+    var ret = {
+        area: function() {
+            return ret.width() * ret.height();
+        }
+    };
+
+    property(ret, &#39;width&#39;, o.width || 0);
+    property(ret, &#39;height&#39;, o.height || 0);
+
+    return ret;
+}
+
+function property(o, name, val) {
+    var prop = &#39;_&#39; + name;
+
+    o[prop] = val;
+
+    o[name] = function(v) {
+        if(v) o[prop] = v;
+        else return o[prop];
+    };
+}
+
+var f = field({
+    width: 5,
+    height: 10
+});
+
+console.log(f.width(), f.height(), f.area()); // 5 10 50
+
+f.width(10);
+
+console.log(f.area()); // 100</code></pre>
+<p><p>This is one possible implementation out of many. You could for instance play around with <code>this</code> but as I mentioned earlier this isn&#39;t something I don&#39;t particularly personally like since it adds some unnecessary complexity in code and it might bite you later. Anyway, do as you like. Sometimes you just cannot avoid this.</p></p>
+<h2><h2 id="data types">Data Types</h2></h2>
+<p><p>JavaScript&#39;s basic types include <code>Object</code>, <code>Array</code>, <code>String</code>, <code>Number</code>, <code>Boolean</code>, <code>null</code> and <code>undefined</code>. Those probably sound pretty familiar to you. <code>Object</code> is a key-value map as you probably have figured out by now. <code>Array</code> is a zero-indexed ... well, array. Rather than having separate types for integers and floats, we get around with <code>Number</code> type in JavaScript. No need to make things more complex than that. <code>Boolean</code> is just that, true or false. <code>null</code> is a bit of useless one. It is a value that is known to exist but value of which is unknown. <code>undefined</code> is both and will be used as a placeholder in that <code>var a;</code> case for instance.</p>
+<p>It is possible to mimic more complex types, such as queues and sets, quite easily using these. A queue of sort can be implemented using an array. We primarily need to make sure that it&#39;s length has been fixed to some predefined value. It&#39;s implementation could look like this for example:</p></p>
+<pre><code class="lang-js">function queue(len) {
+    var ret = [];
+
+    ret.push = function(a) {
+        if(ret.length == len) ret.shift();
+        return Array.prototype.push.apply(this, arguments);
+    };
+
+    return ret;
+}
+
+var a = queue(3);
+a.push(&#39;cat&#39;);
+a.push(&#39;dog&#39;);
+a.push(&#39;chimp&#39;);
+a.push(&#39;giraffe&#39;);
+console.log(a); // should contain dog, chimp, giraffe now</code></pre>
+<p><p>Here we abuse the fact that even an array is an object in JavaScript. In this case we simply attach a custom version of push to our queue. It keeps track of the queuing logic. Otherwise the functionality provided by array is enough for our purposes. You could for instance <code>pop</code> to get and remove the last item or <code>shift</code> to do the same but for the first item.</p>
+<p>This is yet another example of how to benefit from closures. There&#39;s that inner function (push), namespacing and all that shiz. Hopefully you have figured out how they work by now.</p>
+<p>We can do something a bit similar with sets. In this case we benefit from the fact that all keys of an object are unique. That is essentially the definition of a set. The only limitation of this approach is that we may use only numbers or strings as keys. Often this is enough, though.</p></p>
+<h2><h2 id="hoist the sails!">Hoist the Sails!</h2></h2>
+<p><p>So far we have seen various ways to deal with scoping in JavaScript. One very important fact to keep in mind is that the language use <code>function level scope</code> rather than <code>block level</code> one in which many programmers have gotten used to. Effectively this means variables declared within blocks might not behave as you would like. On the other hand JavaScript more than makes up for this with closures as we saw above.</p>
+<p>There is one extra thing that you should be at least aware of: the concept of hoisting. Consider the example below:</p></p>
+<pre><code class="lang-js">function hoist() {
+    console.log(a);
+
+    var a = 42;
+
+    console.log(a);
+}
+
+hoist();</code></pre>
+<p><p>Even though it might look a bit counter-intuitive, it gets interpreted just fine because of hoisting. <code>a</code> will get hoisted on top of the <code>hoist</code> function. It&#39;s value will be <code>undefined</code> initially, though, and the value will be assigned where it is assigned right now. Hoisting also applies to functions. This means you may declare them in an arbitrary order. I often like to declare my functions in some kind of a reading order (dependencies go usually below). This makes it easier and faster to scan through the code.</p>
+<p>Ben Cherry has written an <a href="http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html">excellent post on the topic of hoisting</a>. You should go and read it in case you are interested in the topic further. You will find some additional examples there. </p></p>
+<h2><h2 id="conclusion">Conclusion</h2></h2>
+<p><p>I hope this chapter gave you some idea of the functionality JavaScript provides. I am certain I skipped a lot of it. This little subset I showed you here happens to be one I use quite actively. There are some other technologies in play as well but those will be covered later. In the next chapter I shall look into various <a href="common-problems.html">Common Problems</a> and how to deal with those.</p></p>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+</body>
+</html>
