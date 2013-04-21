@@ -17,6 +17,10 @@ a:visited {
     color: rgb(110, 158, 106);
 }
 
+hr {
+    border: 0.1em dotted rgba(100, 100, 100, 0.5);
+}
+
 .main {
     background: #eee;
     background-image: url('../images/bgnoise_lg.png');
@@ -26,11 +30,11 @@ a:visited {
     box-shadow: 0 0 0.5em rgba(145, 145, 145, 0.75);
 }
 
-.content, nav, header, #social {
+.content, nav, header, footer, #social {
     box-sizing: border-box;
 }
 
-.content, header, #social {
+.content, header, footer, #social {
     margin: 1em;
 }
 
@@ -59,4 +63,16 @@ blockquote {
 
 #logo {
     margin-bottom: 0;
+}
+
+footer {
+    overflow: auto;
+}
+
+footer .license {
+    float: left;
+}
+
+footer .info {
+    float: right;
 }
