@@ -67,7 +67,8 @@ function hello(target) {
     console.log('Hello ' + target);
 }
 
-// or could just console.log('Hello AgileJkl!');
+// or could just
+<b>console.log('Hello AgileJkl!');</b>
 // to avoid over-engineering!
 </pre>
 
@@ -362,6 +363,16 @@ content_class: flexbox vcenter bigText
 
 ---
 
+title: Native vs. HTML5
+class: big
+build_lists: true
+
+* Native apps still have their advantages
+* JS is a good alternative for prototyping
+* Available technology keeps maturing
+* And we'll likely see better platform support
+
+---
 title: Web Architectures
 class: segue dark nobackground
 
@@ -522,13 +533,13 @@ title: LiveReload
 
 ---
 
-title: JSHint
+title: JSLint
 class: big
 build_lists: true
 
-<iframe src="http://jshint.com/"></iframe>
+<iframe src="http://jslint.com/"></iframe>
 
-* See also [JSLint](http://jslint.com/) by Crockford
+* See also [JSHint](http://jshint.com/)
 
 ---
 
@@ -686,7 +697,8 @@ class: big
 build_lists: true
 
 * No need to just Google it
-* Poke me if you need something better
+* Package managers (esp. NPM) make your life easier
+* Avoid NIH and use existing solutions
 
 ---
 
@@ -741,21 +753,27 @@ fuzz(title, function(op, str) {
 
 ---
 
-title: Browserling
+title: Testling
 
 <iframe src="http://ci.testling.com/"></iframe>
-
----
-
-title: Browserstack
-
-<iframe src="http://www.browserstack.com/"></iframe>
 
 ---
 
 title: Travis
 
 <iframe src="http://about.travis-ci.org/"></iframe>
+
+---
+
+title: Browserling
+
+<iframe src="https://browserling.com/"></iframe>
+
+---
+
+title: Browserstack
+
+<iframe src="http://www.browserstack.com/"></iframe>
 
 ---
 
@@ -793,6 +811,16 @@ class: segue dark nobackground
 ---
 
 title: Conclusion
+class: big
+build_lists: true
 
-TODO
+* JS - the most valuable language you don't know yet
+* A target for tool and language development
+* Not without its quirks but still manageable
+* The most important language of this decade?
 
+---
+
+title: Survive JS - The Guide
+
+<iframe src="http://survivejs.com/"></iframe>
