@@ -28,7 +28,14 @@ a:visited {
 
 .content, nav, header, #social {
     box-sizing: border-box;
+}
+
+.content, header, #social {
     margin: 1em;
+}
+
+nav {
+    padding: 1em;
 }
 
 #social {
