@@ -51,26 +51,26 @@
 <blockquote>
 <p><p>Better yet ES6 may finally solve this issue once and for all. I definitely hope so. Even still there will likely be a period of time where ES6 compatible code will be transpiled into ES4 format.</p></p>
 </blockquote>
-<h2><h2 id="might run on your toaster">Might Run on Your Toaster</h2></h2>
+<h2><h2 id="might_run_on_your_toaster">Might Run on Your Toaster</h2></h2>
 <p><p>What makes JavaScript interesting is the fact that it is supported by a wide range of hardware already. Just imagine the mobile devices around that can execute it. Most likely you already have one in your pocket. And that is not counting all the desktop systems. It is as ubiquitous as a language can get. In some ways it can be considered the assembly language of the web generation. It is that important.</p>
 <p>Even though traditionally JavaScript has been thought as a language to be used in web browser, you may use it in various other contexts as well. Node.js provides an example of a server-side usage. <a href="http://cordova.apache.org/">Apache Cordova</a> is an example of a framework allowing you to develop applications in a mobile context. Compared to pure browser based services the platform yields a better access to the hardware.</p>
 <p>It is possible to use JavaScript to control electronics, possibly including your toaster. Look around for various Node.js libraries. You will also find support for the popular <a href="http://www.arduino.cc/">Arduino</a> platform.</p></p>
-<h2><h2 id="there are apis and apis">There are APIs and APIs</h2></h2>
+<h2><h2 id="there_are_apis_and_apis">There are APIs and APIs</h2></h2>
 <p><p>Even though it is widely supported it takes more than just a language to make something useful. That is where browser and server-side APIs come in. Sometimes the APIs aren&#39;t particularly easy to use. As the popularity of <a href="http://jquery.com/">jQuery</a> shows there is sometimes demand for solutions that make them easier.</p>
 <p>In this case DOM operations are made considerably easier or at least more compact. jQuery allows you to chain various methods and build some form of interactivity quite easily. It does have its limits, though. The fact that it relies on a query syntax resembling CSS provides a natural entry point. The example below sets all headers of a page red for instance. In case you are using Chrome, you may give it a go at the JavaScript console (View -&gt; Developer -&gt; JavaScript Console, or Command-Alt-J for the hipstery kind).</p></p>
 <pre><code class="lang-js">$(&#39;:header&#39;).css(&#39;color&#39;, &#39;red&#39;)</code></pre>
 <p><p>The example shows how to use one powerful pseudoselector of jQuery, namely <code>:header</code>. jQuery also uses a powerful pattern known as chaining.</p></p>
-<h2><h2 id="more powerful, more standard">More Powerful, More Standard</h2></h2>
+<h2><h2 id="more_powerful,_more_standard">More Powerful, More Standard</h2></h2>
 <p><p>During the last few years we&#39;ve progressed a lot on the browser side. JavaScript engines have become more powerful. This trend was initiated by Google&#39;s Chrome and has since led to significant improvements in performance. Standards are supported better. Thanks to Microsoft and its initiatives with Internet Explorer 9 and 10 they&#39;ve started to catch up with the others and in some ways gone past even. That is a good trend for us web developers as gradually we may start to ditch legacy solutions needed by antiquated browsers such as Internet Explorer 6.</p>
 <p>There is still a lot to be done. In case you decide to support only a limited set of modern browsers, you are in luck. At times you may use specific <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills">shims</a> in order to be able to use newer features at older browsers. I often use <a href="http://caniuse.com/">caniuse.com</a> to see whether or not I should use something yet and if so, how.</p>
 <p>Sometimes you might want to use certain feature on certain device type while avoid using it on another. A good example of this is <code>hovering</code>. Given there is no hover state on mobile devices, it is definitely something you don&#39;t want to use there. <a href="http://modernizr.com/">Modernizr</a> has been designed to solve this problem. It works on feature level and is a very good fit for this case.</p>
 <p>In the olden days people used to check for specific browser. Generally this isn&#39;t considered a good idea given the browsers may fake their identifying information. So better not to use that unless you really know what you are doing.</p></p>
-<h2><h2 id="still hope for newbies">Still Hope for Newbies</h2></h2>
+<h2><h2 id="still_hope_for_newbies">Still Hope for Newbies</h2></h2>
 <p><p>If you have not hopped into the JavaScript train yet, it is a good time to do so now. It&#39;s not too late. In fact a lot of development is going on. Newest developments include the introduction of <code>MVC frameworks</code> on the frontend side. <code>Reactive programming</code> is another newcomer.</p>
 <p>It is funny how sometimes old concepts are new again. I guess that might have something to do with programmer generations and the development of hardware. Old, discarded techniques become feasible as hardware isn&#39;t the constraint anymore. Or we&#39;re just good figuring out how to make even the new machines crawl.</p>
 <p>There has also been development on the asynchronous side. Solutions have been provided that allow us to deal with callbacks in better ways. <code>Promises</code> for instance obscure callbacks altogether and provide a <code>declarative</code> alternative for them. In a way reactive programming is yet another solution.</p>
 <p>If that sounded like technobabble to you, don&#39;t worry. I still recommend researching the concepts. There should be plenty of material available.</p></p>
-<h2><h2 id="es6 - the future">ES6 - The Future</h2></h2>
+<h2><h2 id="es6_the_future">ES6 - The Future</h2></h2>
 <p><p>The language itself is headed towards a brighter future with <a href="https://wiki.mozilla.org/ES6_plans">ES6</a>. The specification promises to bring forth improvements such as long awaited modules, several language constructs and overall just standard ways of doing things so we can avoid reinventing the wheel ourselves. In fact you can mimic some of the planned features already but obviously it won&#39;t look or feel as good. On example of this is generators. I&#39;ll discuss this particular case later at <a href="language-features.html">Language Features</a>.</p>
 <p>Even if ES6 was finalized tomorrow, it will take quite a while for browsers to catch up. Thanks to legacy and the fact that we cannot go and update everyone&#39;s software to support the newest tricks there will be a transition period. The most likely scenario is that those who wish to adopt ES6 features will include them into their builds and transpile the code into something that is ES4 compatible. This situation is not far from what people are doing already with languages that compile into JavaScript and seems very realistic to me.</p>
 <p>It is possible that ES6 efforts fail for a reason or another. That is not my problem, though. In fact you can use some of the features already if you really want. Just find a transpiler. I would avoid this for now while things settle down.</p></p>
@@ -96,12 +96,19 @@
                     <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://survivejs.com/"></a>
                 </div>
                 <ul id="navi">
-                        <li><a href="#might run on your toaster">Might Run on Your Toaster</a></li>
-                        <li><a href="#there are apis and apis">There are APIs and APIs</a></li>
-                        <li><a href="#more powerful, more standard">More Powerful, More Standard</a></li>
-                        <li><a href="#still hope for newbies">Still Hope for Newbies</a></li>
-                        <li><a href="#es6 - the future">ES6 - The Future</a></li>
+                    
+                        <li><a href="#might_run_on_your_toaster">Might Run on Your Toaster</a></li>
+                    
+                        <li><a href="#there_are_apis_and_apis">There are APIs and APIs</a></li>
+                    
+                        <li><a href="#more_powerful,_more_standard">More Powerful, More Standard</a></li>
+                    
+                        <li><a href="#still_hope_for_newbies">Still Hope for Newbies</a></li>
+                    
+                        <li><a href="#es6_the_future">ES6 - The Future</a></li>
+                    
                         <li><a href="#conclusion">Conclusion</a></li>
+                    
                 </ul>
             </nav>
         </div>

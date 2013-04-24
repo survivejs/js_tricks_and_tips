@@ -49,20 +49,20 @@
                 <p><p>You can develop JavaScript code pretty much using any editor you want. Given the language has been somewhat loosely typed you won&#39;t benefit from an IDE that much. You can, however, improve the experience by using various tools and plugins.</p>
 <p>The situation will improve in the future thanks to solutions such as <a href="https://github.com/marijnh/tern">tern</a> that promise to take the editing experience to the next level.</p>
 <p>I personally use <a href="http://www.vim.org/">vim</a> and a couple of JavaScript related plugins. If you are looking for something more commercial, <a href="http://www.jetbrains.com/webstorm/">WebStorm</a> and <a href="http://www.sublimetext.com/">Sublime Text</a> may be interesting alternatives. I am absolutely certain <a href="http://www.gnu.org/software/emacs/">Emacs</a> is a great editor too when configured correctly.</p></p>
-<h2><h2 id="chrome inspector and firebug">Chrome Inspector and Firebug</h2></h2>
+<h2><h2 id="chrome_inspector_and_firebug">Chrome Inspector and Firebug</h2></h2>
 <p><p>These days browsers have very powerful tools in them. I like to use <a href="https://developers.google.com/chrome-developer-tools/">Chrome Inspector</a> a lot. It comes with a simple JavaScript console and allows me to tweak the structure of the page I am editing. Longer term we will see a <a href="http://sokolovstas.github.io/SublimeWebInspector/">better integration between Inspector and editors</a>. I cannot await to see that day myself.</p>
 <p><a href="http://getfirebug.com/">Firebug</a> is something more or less equivalent for Mozilla Firefox. There is also a light version available you can embed on your site even. This may be useful for developing on mobile although there are likely better solutions available.</p>
 <p>It is very much worth your while to learn to use these tools. They allow you to inspect, modify and learn very fast. They are still quite isolated from actual editors but as I mentioned the future might be more integrated.</p></p>
 <h2><h2 id="livereload">LiveReload</h2></h2>
 <p><p>As a web developer you have likely hit <code>ctrl-r</code> or a similar shortcut enough. Fret not! You can escape this by using a solution such as <a href="http://livereload.com/">LiveReload</a>. By using it the browser will refresh itself. Technically it is quite simple. On browser side you have a plugin which communicates with a server that watches the files you modify. When a file has been modified (and saved) it will trigger refresh. In case of LiveReload changes made to CSS are made on the page without a refresh allowing fast iteration.</p>
 <p>I know it might sound like a small thing. In practice small things such as this count, though, and allow you to focus on the essential rather than refreshing the page while you are iterating.</p></p>
-<h2><h2 id="jslint and jshint">JSLint and JSHint</h2></h2>
+<h2><h2 id="jslint_and_jshint">JSLint and JSHint</h2></h2>
 <p><p><a href="http://jslint.com/">JSLint</a> and its less opinionated cousin <a href="http://jshint.com/">JSHint</a> generate a bunch of warnings. At times these helpers reveal actual issues so you had better take their advice to the heart. I like to use JSHint as it doesn&#39;t complain too much but when it&#39;s not for nothing. There are plugins available for many editors. It is possible to use the tools as standalone (as a part of your build even).</p>
 <p>If you value your time take advantage of these sort of tools. Given JavaScript is so very loose by definition these tools make it a bit less possible to abuse it. You will still run into issues at times but at least these allow you to eliminate some of the most foolish ones. Don&#39;t be a fool, use a proper tool.</p></p>
-<h2><h2 id="jsfiddle, jsbin, jsdo.it and co.">jsFiddle, jsbin, jsdo.it and co.</h2></h2>
+<h2><h2 id="jsfiddle,_jsbin,_jsdoit_and_co">jsFiddle, jsbin, jsdo.it and co.</h2></h2>
 <p><p>Services such as <a href="http://jsfiddle.net/">jsFiddle</a>, <a href="http://jsbin.com/">jsbin</a> and <a href="http://jsdo.it/">jsdo.it</a> form an entire category of their own. These are development tools that operate directly within your browser. Sometimes I use them to prototyping solutions. Nothing is more fun than the type of interactive development they allow.</p>
 <p>The tools are a bit lacking on collaborative department. It is not possible to modify the same code at the same time yet. Also the way they deal with versioning can be a bit interesting. Cloud9 IDE is a solution that aims to fix these problems.</p></p>
-<h2><h2 id="cloud9 ide">Cloud9 IDE</h2></h2>
+<h2><h2 id="cloud9_ide">Cloud9 IDE</h2></h2>
 <p><p>Web development belongs to web. At least that what the <a href="http://c9.io/">Cloud9</a> guys seem to believe. Their service integrates well with GitHub and allows you to do more serious development in web. I don&#39;t use their service actively but it seems there might be some kind of a future for services such as this. There is something innately powerful in the concept.</p></p>
 <h2><h2 id="conclusion">Conclusion</h2></h2>
 <p><p>In this brief chapter I went through various tools I like to use in my development work. Proper tooling makes a huge difference for a web developer. Besides productivity gains these tools enable development on a different level altogether.</p></p>
@@ -86,12 +86,19 @@
                     <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://survivejs.com/"></a>
                 </div>
                 <ul id="navi">
-                        <li><a href="#chrome inspector and firebug">Chrome Inspector and Firebug</a></li>
+                    
+                        <li><a href="#chrome_inspector_and_firebug">Chrome Inspector and Firebug</a></li>
+                    
                         <li><a href="#livereload">LiveReload</a></li>
-                        <li><a href="#jslint and jshint">JSLint and JSHint</a></li>
-                        <li><a href="#jsfiddle, jsbin, jsdo.it and co.">jsFiddle, jsbin, jsdo.it and co.</a></li>
-                        <li><a href="#cloud9 ide">Cloud9 IDE</a></li>
+                    
+                        <li><a href="#jslint_and_jshint">JSLint and JSHint</a></li>
+                    
+                        <li><a href="#jsfiddle,_jsbin,_jsdoit_and_co">jsFiddle, jsbin, jsdo.it and co.</a></li>
+                    
+                        <li><a href="#cloud9_ide">Cloud9 IDE</a></li>
+                    
                         <li><a href="#conclusion">Conclusion</a></li>
+                    
                 </ul>
             </nav>
         </div>

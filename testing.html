@@ -50,7 +50,7 @@
 <pre><code class="lang-js"><span class="keyword">function</span> assert(s) {
     <span class="keyword">if</span>(!s) <span class="keyword">throw</span> <span class="keyword">new</span> Error(<span class="string">'Assertion failed!'</span>);
 }</code></pre>
-<h2><h2 id="unit testing">Unit Testing</h2></h2>
+<h2><h2 id="unit_testing">Unit Testing</h2></h2>
 <p><p>Now that we have a function we can test with, lets define a couple of <code>unit tests</code> for a function known as <code>title</code>. You may recognize it from some other languages you have used before. Strangely vanilla JavaScript doesn&#39;t come with an implementation. So it is up to us to step up to the plate and remedy this vile omission. You can see a specification of sort below.</p></p>
 <pre><code class="lang-js"><span class="keyword">function</span> title(s) {}
 
@@ -69,7 +69,7 @@ assert(title() === undefined);</code></pre>
 }</code></pre>
 <p><p>It is likely your implementation will differ from mine somehow. As you have probably noticed so far I really like to use functional features of JavaScript. You can find a <code>map</code> there. I also used <code>&amp;&amp;</code> (and) to deal with possible invalid <code>s</code>.</p>
 <p>The point of this little exercise was to demonstrate the usefulness of tests. Granted the tests weren&#39;t as good as they could have been and the implementation was sort of trivial. Still, I hope you can see the value. This was an example of <code>unit testing</code>. I have coined the other type of testing that complements this well as <code>generative testing</code>. It is a perhaps underappreciated way of testing that can reveal issues you might not be able to detect otherwise.</p></p>
-<h2><h2 id="generative testing">Generative Testing</h2></h2>
+<h2><h2 id="generative_testing">Generative Testing</h2></h2>
 <p><p>Unit tests are just that, units. Each unit test tests a specific thing. What if we forget to write a test? How do we know which unit tests to write and when? Let&#39;s just say experience helps in these things. Fortunately there are some ways that complement this well and allow us to overcome some of the weaknesses.</p>
 <p>What if we defined the tests of <code>title</code> is a bit different way? First of all we know intuitively it makes sense to pass only Strings to <code>title</code>. I also mumbled something about the fact that each word has to begin with an uppercase character whereas the remained must be lowercase. By combining these observations we can end up with something quite interesting. A way to test our little function in a <code>generative</code> manner.</p>
 <p>As I don&#39;t want to explain how to build the testing tools, I will rather use some experimental tools of my own. The most important one of these is simply known as <a href="https://github.com/bebraw/annotate">annotate</a>. It is a tool that allows you to attach annotations, and more importantly, invariants to your functions. I&#39;ve annotated <code>title</code> below.</p></p>
@@ -90,7 +90,7 @@ assert(title() === undefined);</code></pre>
 <span class="keyword">function</span> id(a) {<span class="keyword">return</span> a;}</code></pre>
 <p><p><code>fuzz</code> is a special kind of function. It uses our function preconditions and the defined invariant to construct tests. It will do its best to try to invalidate it. Can you see how much powerful this new test of ours is?</p>
 <p>In case you are interested in this sort of testing, check out my testing tool, <a href="https://github.com/bebraw/annofuzz">annofuzz</a>, that implements this idea.</p></p>
-<h2><h2 id="fibonacci's numbers using `annotate`">Fibonacci&#39;s Numbers Using <code>annotate</code></h2></h2>
+<h2><h2 id="fibonacci's_numbers_using_`annotate`">Fibonacci&#39;s Numbers Using <code>annotate</code></h2></h2>
 <p><p>Just to give you another example of the power of annotations, consider the example below. It shows you how to implement a function that yields a series of <a href="http://en.wikipedia.org/wiki/Fibonacci_number">Fibonacci&#39;s numbers</a>. The definition is quite close to the original and reads well at least to my eye.</p></p>
 <pre><code class="lang-js"><span class="keyword">var</span> fib = annotate(<span class="string">'fib'</span>, <span class="string">'Calculates Fibonacci numbers'</span>)
     .on(<span class="number">0</span>, <span class="number">0</span>).on(<span class="number">1</span>, <span class="number">1</span>)
@@ -99,7 +99,7 @@ assert(title() === undefined);</code></pre>
     });</code></pre>
 <p><p>I use this form of testing quite a bit at a library of mine, <a href="https://github.com/bebraw/funkit">funkit</a>. Unfortunately <code>generative testing</code> hasn&#39;t quite gained widespread acceptance within the JavaScript community. For instance the Haskell guys are way ahead of us with their <a href="http://www.cse.chalmers.se/~rjmh/QuickCheck/manual.html">QuickCheck</a>. There are implementations available for other languages as well and it is quite easy to port the idea.</p>
 <p>These two ways to test are handy for validating some basic assumptions on individual functions. That is only small part of the field. You might for instance want to know how your code behaves on various platforms. This is where <code>browser testing</code> comes in.</p></p>
-<h2><h2 id="browser testing">Browser Testing</h2></h2>
+<h2><h2 id="browser_testing">Browser Testing</h2></h2>
 <p><p>So far we might have run the tests through some browser or environment such as Node.js. How can we be sure our code works in multiple browsers for instance? That is where services such as <a href="https://browserling.com/">browserling</a>, <a href="http://ci.testling.com/">testling</a>, <a href="http://www.browserstack.com/">BrowserStack</a> and <a href="https://travis-ci.org/">Travis</a> come in.</p>
 <p>I won&#39;t delve into details. Suffice to say the services mentioned make it easier to leave testing to machines. You definitely don&#39;t want to have to check all browsers yourself. You are better off spending that time on something else.</p></p>
 <h2><h2 id="conclusion">Conclusion</h2></h2>
@@ -125,11 +125,17 @@ assert(title() === undefined);</code></pre>
                     <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://survivejs.com/"></a>
                 </div>
                 <ul id="navi">
-                        <li><a href="#unit testing">Unit Testing</a></li>
-                        <li><a href="#generative testing">Generative Testing</a></li>
-                        <li><a href="#fibonacci&#39;s numbers using `annotate`">Fibonacci&#39;s Numbers Using `annotate`</a></li>
-                        <li><a href="#browser testing">Browser Testing</a></li>
+                    
+                        <li><a href="#unit_testing">Unit Testing</a></li>
+                    
+                        <li><a href="#generative_testing">Generative Testing</a></li>
+                    
+                        <li><a href="#fibonacci&#x27;s_numbers_using_&#x60;annotate&#x60;">Fibonacci&#x27;s Numbers Using &#x60;annotate&#x60;</a></li>
+                    
+                        <li><a href="#browser_testing">Browser Testing</a></li>
+                    
                         <li><a href="#conclusion">Conclusion</a></li>
+                    
                 </ul>
             </nav>
         </div>

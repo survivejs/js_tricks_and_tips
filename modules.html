@@ -47,14 +47,14 @@
             </header>
             <div class="content">
                 <p><p>Believe it or not, JavaScript doesn&#39;t come with a module system of its own. ES6 is supposed to fix this problem once and for all. Even though there isn&#39;t a native module system yet, it doesn&#39;t mean it&#39;s not possible to write modular JavaScript. In fact there are multiple solutions each with their strengths and weaknesses.</p></p>
-<h2><h2 id="the anti-pattern">The Anti-Pattern</h2></h2>
+<h2><h2 id="the_anti_pattern">The Anti-Pattern</h2></h2>
 <p><p>Before getting any further, consider the anti-pattern below. This is how people wrote JavaScript in the golden 90s. And they still write at times.</p></p>
 <pre><code class="lang-js">&lt;script src='jquery-current.js' type='text/javascript'>&lt;/script>
 &lt;script src='sorttable.js'      type='text/javascript'>&lt;/script>
 &lt;script src='scripts.js'        type='text/javascript'>&lt;/script>
 &lt;script src='miniCalendar.js'   type='text/javascript'>&lt;/script></code></pre>
 <p><p>The main problem with this approach is that it really doesn&#39;t scale as your application does. Can you repeat after me &quot;it&#39;s brittle&quot;? Especially in team environment using this sort of approach is just asking for trouble.</p></p>
-<h2><h2 id="concatenating to victory">Concatenating to Victory</h2></h2>
+<h2><h2 id="concatenating_to_victory">Concatenating to Victory</h2></h2>
 <p><p>So what does a clever programmer do next? Concatenates. That&#39;s what a clever programmer does. Instead of having multiple scripts you will have just one entry point to your application like below.</p></p>
 <pre><code class="lang-js">&lt;script src='application.js' type='text/javascript'>&lt;/script></code></pre>
 <p><p>It is possible to merge this approach with above one especially if you want to load some resources from a CDN such as <a href="http://jsdelivr.com/">jsDelivr</a>. The advantage of doing this is that popular libraries, such as jQuery, can get loaded very fast as they are very likely in the browser cache already. As the old saying goes &quot;Use the cache, Luke&quot;.</p>
@@ -151,15 +151,15 @@ exports.yRange = <span class="keyword">function</span>() {
 <h2><h2 id="es6">ES6</h2></h2>
 <p><p>ES6 should finally come with a module system. About time! It is actually possible to give the proposed approach a go already by using a <a href="https://github.com/square/es6-module-transpiler">transpiler</a>. Unfortunately the definition doesn&#39;t quite support all possible use cases well.</p>
 <p>For instance it isn&#39;t possible to export a single function. This is a pattern you tend to see especially in the Node world. And micro modules require support for this sort of export. I really hope they fix this little omission. This would make it possible for me to write some of my library code using the definition and then transpile it to wanted targets (likely AMD and CommonJS).</p></p>
-<h2><h2 id="package managers">Package Managers</h2></h2>
+<h2><h2 id="package_managers">Package Managers</h2></h2>
 <p><p>Having a module definition is just a part of the story. What&#39;s the point of having modules if you cannot share them, or better yet, use modules written by other people? This is where various package managers come in. On Node side of the fence the answer is simple, just use <a href="https://npmjs.org/">NPM</a>. On frontend side it becomes a bit trickier.</p>
 <p>In case you use Browserify you can still use NPM. Problem solved! If you don&#39;t want to use NPM for some reason, there are plenty of alternatives. In practice I&#39;ve found <a href="https://github.com/twitter/bower">Bower</a> quite cool. They have a nice <a href="http://sindresorhus.com/bower-components/">site available for browsing packages even</a>. <a href="http://component.io/">component</a> is yet another alternative. With a bit of digging you&#39;ll find plenty of more.</p></p>
-<h3><h3 id="package definition">Package Definition</h3></h3>
+<h3><h3 id="package_definition">Package Definition</h3></h3>
 <p><p>Each of these systems will use some kind of a package definition. It is usually a JSON file which describes package metadata including dependencies. The package manager tool will be able to install the right dependencies based on this information.</p></p>
 <blockquote>
 <p><p>A word of warning! It is a very good idea to fix your dependencies to certain versions. This way the next you have to set up your application it is more likely to work than not. On very special occasions versions of libraries may have disappeared from the server (happened to me once). It is a good idea to prepare for this continuity as well. If you use Node, consider using a package such as <a href="https://npmjs.org/package/lockdown">lockdown</a>. Paranoia can be useful when it comes to this sort of things.</p></p>
 </blockquote>
-<h3><h3 id="finding modules">Finding Modules</h3></h3>
+<h3><h3 id="finding_modules">Finding Modules</h3></h3>
 <p><p>It can be a little bit hard to find modules you are after, especially on the frontend side. Besides NPM, Node guys might want to check out <a href="http://nodetoolbox.com/">node-toolbox</a>. It provides an alternative view to NPM data. On the frontend side you might want to consider <a href="https://github.com/bebraw/jswiki/wiki">JSwiki</a>, <a href="http://jster.net/">JSter</a> or <a href="http://www.jsdb.io/">JSDB</a> for instance. They are a bit different takes on the same subject. You&#39;ll find a few more over at JSwiki.</p></p>
 <h2><h2 id="conclusion">Conclusion</h2></h2>
 <p><p>I hope this chapter gave you some idea how to work with modules in JavaScript. The situation will likely change in the coming years especially on the frontend side. Even when ES6 type modules become supported on browser level some form of transpiling will have to be used to support older ones.</p>
@@ -185,16 +185,27 @@ exports.yRange = <span class="keyword">function</span>() {
                     <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://survivejs.com/"></a>
                 </div>
                 <ul id="navi">
-                        <li><a href="#the anti-pattern">The Anti-Pattern</a></li>
-                        <li><a href="#concatenating to victory">Concatenating to Victory</a></li>
+                    
+                        <li><a href="#the_anti_pattern">The Anti-Pattern</a></li>
+                    
+                        <li><a href="#concatenating_to_victory">Concatenating to Victory</a></li>
+                    
                         <li><a href="#amd">AMD</a></li>
+                    
                         <li><a href="#commonjs">CommonJS</a></li>
+                    
                         <li><a href="#umd">UMD</a></li>
+                    
                         <li><a href="#es6">ES6</a></li>
-                        <li><a href="#package managers">Package Managers</a></li>
-                        <li><a href="#package definition">Package Definition</a></li>
-                        <li><a href="#finding modules">Finding Modules</a></li>
+                    
+                        <li><a href="#package_managers">Package Managers</a></li>
+                    
+                        <li><a href="#package_definition">Package Definition</a></li>
+                    
+                        <li><a href="#finding_modules">Finding Modules</a></li>
+                    
                         <li><a href="#conclusion">Conclusion</a></li>
+                    
                 </ul>
             </nav>
         </div>

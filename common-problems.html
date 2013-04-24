@@ -47,7 +47,7 @@
             </header>
             <div class="content">
                 <p><p>Even though you can plenty done with JavaScript it isn&#39;t without problems. ES6 aims to alleviate some of those. There are all sorts of solutions depending on how far you want to go.</p></p>
-<h2><h2 id="globals and other nasties">Globals and Other Nasties</h2></h2>
+<h2><h2 id="globals_and_other_nasties">Globals and Other Nasties</h2></h2>
 <p><p>As you probably know by now all variables are global by default. You will have to use <code>var</code> keyword to explicitly mark them as global. To quote certain Ackbar, &quot;it&#39;s a trap&quot;. There are a couple of ways to deal with the issue. I&#39;ll start with a conventional one. Consider the example below.</p></p>
 <pre><code class="lang-js"><span class="keyword">function</span> mathMagic(items, b, c) {
     <span class="keyword">var</span> fac = <span class="number">5</span>;
@@ -60,7 +60,7 @@
 <p><a href="https://developer.mozilla.org/en/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode">Strict mode</a> can be very helpful as well. It changes the behavior of the language a bit and makes it easier to spot errors such as this one. <a href="http://www.nczonline.net/blog/2012/03/13/its-time-to-start-using-javascript-strict-mode/">Nicholas Zakas&#39; post on the issue likely provides some extra enlightenment.</a></p>
 <p>Tools such as <a href="http://www.jslint.com/">JSLint</a> and its less opinionated little brother <a href="http://www.jshint.com/">JSHint</a> allow you to spot certain groups of problems quite easily. I recommend picking either one and hooking it up with your editor. You&#39;ll save some time and maybe develop that bald a bit later rather than sooner.</p>
 <p>If you are really obsessed, maybe it&#39;s time to write a transpiler or <a href="http://altjs.org/">use some existing one</a>. After all, what could you not solve by writing code that writes code? That&#39;s yet another bag of problems, though. In practice simple code transformation tools can be nice, though. Just keep your cool with it.</p></p>
-<h2><h2 id="function syntax is cumbersome">Function Syntax Is Cumbersome</h2></h2>
+<h2><h2 id="function_syntax_is_cumbersome">Function Syntax Is Cumbersome</h2></h2>
 <p><p>It can be a bit boring to write that <code>function</code> always, particularly if you enjoy using anonymous functions. Speaking of which it may be handy to name your functions even if you use them as callbacks like below:</p></p>
 <pre><code class="lang-js">$(<span class="string">'.clickety'</span>).on(<span class="string">'click'</span>, <span class="keyword">function</span> clickety() {
     console.log(<span class="string">'Clickety click'</span>);
@@ -86,10 +86,10 @@
 <p><p>Now try thinking what the examples above would look like in vanilla JavaScript. Yes, it would be quite verbose. Sometimes you can hide the complexity behind utility functions. <code>bind</code> comes in handy yet again.</p>
 <p>This is still very bleeding edge. The specification is till work in progress. As things start to settle down I expect that people will begin to use transpilers (ES6 -&gt; ES4) that allows them to use the subset of functionality they want. <a href="http://esprima.org/">Esprima</a> is one popular starting point for this type of work.</p>
 <p>You can try to parse it by hand as I did in <a href="https://github.com/bebraw/mojs">mojs</a> but that is an approach I just cannot recommend. You will want to use something that provides AST level support and allows you to hack in the level of a language definition.</p></p>
-<h2><h2 id="variables and arguments are undefined by default">Variables and Arguments Are Undefined by Default</h2></h2>
+<h2><h2 id="variables_and_arguments_are_undefined_by_default">Variables and Arguments Are Undefined by Default</h2></h2>
 <p><p>As you have probably noticed so far, JavaScript allows a lot, perhaps too much by default. You will likely bump into this problem when dealing with variables and function arguments. In case those are provided, they will <code>undefined</code> by default. Sometimes this is a good thing, sometimes not. The worst thing is that you may end up with silent failures. As such it is one possible source of errors and hard to trace issues.</p>
 <p>You may try to introduce some rigidity to your code using tooling such as <a href="https://github.com/bebraw/annotate.js">annotate.js</a> or just use a dialect, such as <a href="http://www.typescriptlang.org/">TypeScript</a>, that provides extra rigidity. The exact choice depends on your needs. I am actually curious to know how you have solved the issue (or is it an issue at all).</p></p>
-<h2><h2 id="pyramid of doom">Pyramid of Doom</h2></h2>
+<h2><h2 id="pyramid_of_doom">Pyramid of Doom</h2></h2>
 <p><p>Even though callbacks are powerful, they come with a price. It is very easy to end up in a situation where you have nested callbacks like in <a href="http://adamghill.com/2012/12/02/callbacks-considered-a-smell/">the abbreviated example by @adamghill</a> below:</p></p>
 <pre><code class="lang-js"><span class="keyword">var</span> db = <span class="keyword">require</span>(<span class="string">'./db/callbackDb'</span>);
 
@@ -131,16 +131,16 @@ db.set(<span class="string">'key1'</span>, <span class="string">'value1'</span>)
 <p><p>As you can see, the pyramid has been eliminated. The idea of <code>promises</code> is to represent a value in the future. Rather than defining <code>when</code> as in the imperative world, you describe <code>then</code> that is triggered as the value has become available. It comes with a price, though. You will have to instrument the underlying code to support the scheme.</p>
 <p>Besides this it is possible to tame the pyramid by using custom events or control flow tools. Reorganizing the code may be beneficial as well. You can find full examples of these at <a href="http://adamghill.com/2012/12/02/callbacks-considered-a-smell/">@adamghill&#39;s excellent blog post on the topic</a>.</p>
 <p>It is still bit of a wild west out there. In addition to these approaches, there is a whole paradigm known as <code>Functional Reactive Programming</code>. In fact <code>promises</code> are just a subset of that. <a href="http://eamodeorubio.github.io/tamingasync">Presentation slides</a> by @eamoderorubio shows how to go beyond promises. Best practices are still forming. But there are some very good solutions available already.</p></p>
-<h2><h2 id="not all things are equal">Not All Things Are Equal</h2></h2>
+<h2><h2 id="not_all_things_are_equal">Not All Things Are Equal</h2></h2>
 <p><p><code>==</code> and <code>===</code> are common stumbling blocks especially for JavaScript beginners. It is important to know that <code>==</code> comparison coerces values whereas <code>===</code> does not. Just to give you an idea of what this means. Consider the following cases:</p></p>
 <pre><code><span class="number">0</span> == <span class="string">''</span> <span class="comment">// true</span>
 <span class="number">0</span> === <span class="string">''</span> <span class="comment">// false</span></code></pre>
 <p><p>I know it might seem like a trivial detail but it is not. Used right it can be a useful feature. In worst case this behavior can introduce subtle and difficult to detect bugs.</p></p>
-<h2><h2 id="no operator overloading">No Operator Overloading</h2></h2>
+<h2><h2 id="no_operator_overloading">No Operator Overloading</h2></h2>
 <p><p>In case you are dealing with vector math, it can be very unfortunately that JavaScript doesn&#39;t support <code>operator overloading</code> out of box. This can be a powerful feature when used right. By definition it allows you to define what operations between given objects do. In case of a sum of vectors you might expect a vector. In vanilla JavaScript you would have to write <code>a.add(b)</code>. In a language supporting overloading simply <code>a + b</code> would do. This can get very complicated quite fast.</p>
 <p>Fortunately it is quite easy to write a transpiler that provides this functionality for us. I have <a href="http://www.nixtu.info/2011/05/using-jsshaper-to-provide-operator.html">covered how to achieve operator overloading</a> at my blog. The solution uses a tool known as <a href="http://jsshaper.org/">JSShaper</a>. It is a transformation tool that gives access to JavaScript AST. In this case it is a matter of replacing operators with function calls and defining functions. This little hack allows us to overload the behavior based on types of the operands provided.</p>
 <p>This is just one small example of how to extend the language to suit your purposes better. The main disadvantage of JSShaper is that it works only on valid JavaScript syntax. As a result you cannot implement custom language constructs as there is no way to extend AST. In case you can get away by doing some transformation within the current definition, you should be alright.</p></p>
-<h2><h2 id="not invented here">Not Invented Here</h2></h2>
+<h2><h2 id="not_invented_here">Not Invented Here</h2></h2>
 <p><p>Even though it can be quite fun to write JavaScript libraries, widgets and whatnot, there are times when you are better off using some existing solution. As you probably know writing that 80% takes 20% where as the remaining 20% will suck the rest. Especially browser support can be a tough nut to solve depending on your domain. Of course if you just do not have to care, all the better.</p>
 <p>Unfortunately Google isn&#39;t particularly useful for finding modules. Solutions have emerged for this problem. I have listed some of these below:</p></p>
 <ul>
@@ -171,14 +171,23 @@ db.set(<span class="string">'key1'</span>, <span class="string">'value1'</span>)
                     <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://survivejs.com/"></a>
                 </div>
                 <ul id="navi">
-                        <li><a href="#globals and other nasties">Globals and Other Nasties</a></li>
-                        <li><a href="#function syntax is cumbersome">Function Syntax Is Cumbersome</a></li>
-                        <li><a href="#variables and arguments are undefined by default">Variables and Arguments Are Undefined by Default</a></li>
-                        <li><a href="#pyramid of doom">Pyramid of Doom</a></li>
-                        <li><a href="#not all things are equal">Not All Things Are Equal</a></li>
-                        <li><a href="#no operator overloading">No Operator Overloading</a></li>
-                        <li><a href="#not invented here">Not Invented Here</a></li>
+                    
+                        <li><a href="#globals_and_other_nasties">Globals and Other Nasties</a></li>
+                    
+                        <li><a href="#function_syntax_is_cumbersome">Function Syntax Is Cumbersome</a></li>
+                    
+                        <li><a href="#variables_and_arguments_are_undefined_by_default">Variables and Arguments Are Undefined by Default</a></li>
+                    
+                        <li><a href="#pyramid_of_doom">Pyramid of Doom</a></li>
+                    
+                        <li><a href="#not_all_things_are_equal">Not All Things Are Equal</a></li>
+                    
+                        <li><a href="#no_operator_overloading">No Operator Overloading</a></li>
+                    
+                        <li><a href="#not_invented_here">Not Invented Here</a></li>
+                    
                         <li><a href="#conclusion">Conclusion</a></li>
+                    
                 </ul>
             </nav>
         </div>
