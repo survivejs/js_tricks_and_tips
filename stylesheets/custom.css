@@ -20,8 +20,7 @@
 }
 
 body {
-    background: #ddd;
-    background-image: url('../images/bedge_grunge.png');
+    background: #e0e0e0;
 
     text-rendering: optimizeLegibility;
 }
