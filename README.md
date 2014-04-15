@@ -2,6 +2,7 @@
 
 Have you ever felt lost with JavaScript or felt that your skills could use a bit of sharpening? If so you found the right place!
 
-Survive JavaScript is an ongoing project (early stages) that goes through the difficult bits and gathers around valuable resources. In this way it complements [jster.net](http://jster.net). Now the focus is more on conceptual rather than library side.
+In this guide I will go through some of the rocky spots and give you the tools needed to get past them. JavaScript is one of those languages that can hurt you bad if you don't know what you are doing. Fortunately once you come in terms with the nature of the language you might actually enjoy using it.
 
-The guide is developed over at the [wiki](https://github.com/bebraw/survive-js/wiki) so head there for the content. Later on I'll create a nice frontend for that. My long term goal (April) is to take the best parts of the content and turn it into a presentation at a local developer conference and perhaps publish a small booklet based on it even.
+After all it is the language of the web. If you can develop in JavaScript, you can achieve a lot! And it's not just about the frontend. Thanks to the rise of Node.js and related technologies it has become an option at the backend too. You can even program embedded devices using it. It truly is the lingua franca of programming languages.
+
