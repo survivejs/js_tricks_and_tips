@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>Introduction | Survive JavaScript - a Web Developer&#39;s Guide</title>
+        <title>Understanding `call` and `apply` | Survive JavaScript - a Web Developer&#39;s Guide</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
@@ -13,11 +13,13 @@
         <meta name="generator" content="www.gitbook.io">
 
         
-        <link rel="next" href="./a_misunderstood_language/README.html" />
+        <link rel="next" href="../language_features/arguments.html" />
         
+        
+        <link rel="prev" href="../language_features/this.html" />
         
 
-        <meta property="og:title" content="Introduction | Survive JavaScript - a Web Developer&#39;s Guide">
+        <meta property="og:title" content="Understanding `call` and `apply` | Survive JavaScript - a Web Developer&#39;s Guide">
         <meta property="og:site_name" content="Survive JavaScript - a Web Developer&#39;s Guide">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
@@ -29,12 +31,12 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
         
     </head>
     <body>
         
-    <div class="book" data-github="bebraw/survive-js" data-level="0" data-basepath="." data-revision="1397573357601">
+    <div class="book" data-github="bebraw/survive-js" data-level="3.5" data-basepath=".." data-revision="1397573357601">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -54,7 +56,7 @@
     
 
     <!-- Title -->
-    <h1><a href="./" >Survive JavaScript - a Web Developer&#39;s Guide</a></h1>
+    <h1><a href="../" >Survive JavaScript - a Web Developer&#39;s Guide</a></h1>
 </div>
 
     <div class="book-summary">
@@ -70,17 +72,17 @@
             <a href="https://github.com/bebraw/survive-js/issues" target="blank">Questions and Issues</a>
         </li>
         <li>
-            <a href="https://github.com/bebraw/survive-js/edit/master/README.md" target="blank">Edit and Contribute</a>
+            <a href="https://github.com/bebraw/survive-js/edit/master/language_features/call_and_apply.md" target="blank">Edit and Contribute</a>
         </li>
         <li class="divider"></li>
         
         <li data-level="0" data-path="index.html">
-            <a href="./"><i class="fa fa-check"></i> Introduction</a>
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
         </li>
         
             <li  data-level="1" data-path="a_misunderstood_language/README.html">
                 
-                <a href="./a_misunderstood_language/README.html">
+                <a href="../a_misunderstood_language/README.html">
                     <i class="fa fa-check"></i> <b>1.</b> A Misunderstood Language?
                 </a>
                 
@@ -89,7 +91,7 @@
                     
                         <li  data-level="1.1" data-path="a_misunderstood_language/how_to_characterize.html">
                             
-                            <a href="./a_misunderstood_language/how_to_characterize.html">
+                            <a href="../a_misunderstood_language/how_to_characterize.html">
                                 <i class="fa fa-check"></i> <b>1.1.</b> How to Characterize?
                             </a>
                             
@@ -97,7 +99,7 @@
                     
                         <li  data-level="1.2" data-path="a_misunderstood_language/altjs.html">
                             
-                            <a href="./a_misunderstood_language/altjs.html">
+                            <a href="../a_misunderstood_language/altjs.html">
                                 <i class="fa fa-check"></i> <b>1.2.</b> AltJS
                             </a>
                             
@@ -105,7 +107,7 @@
                     
                         <li  data-level="1.3" data-path="a_misunderstood_language/conclusion.html">
                             
-                            <a href="./a_misunderstood_language/conclusion.html">
+                            <a href="../a_misunderstood_language/conclusion.html">
                                 <i class="fa fa-check"></i> <b>1.3.</b> Conclusion
                             </a>
                             
@@ -117,7 +119,7 @@
         
             <li  data-level="2" data-path="current_state/README.html">
                 
-                <a href="./current_state/README.html">
+                <a href="../current_state/README.html">
                     <i class="fa fa-check"></i> <b>2.</b> Current State
                 </a>
                 
@@ -126,7 +128,7 @@
                     
                         <li  data-level="2.1" data-path="current_state/might_run_on_toaster.html">
                             
-                            <a href="./current_state/might_run_on_toaster.html">
+                            <a href="../current_state/might_run_on_toaster.html">
                                 <i class="fa fa-check"></i> <b>2.1.</b> Might Run on Toaster
                             </a>
                             
@@ -134,7 +136,7 @@
                     
                         <li  data-level="2.2" data-path="current_state/there_are_apis.html">
                             
-                            <a href="./current_state/there_are_apis.html">
+                            <a href="../current_state/there_are_apis.html">
                                 <i class="fa fa-check"></i> <b>2.2.</b> There are APIs and APIs
                             </a>
                             
@@ -142,7 +144,7 @@
                     
                         <li  data-level="2.3" data-path="current_state/more_powerful.html">
                             
-                            <a href="./current_state/more_powerful.html">
+                            <a href="../current_state/more_powerful.html">
                                 <i class="fa fa-check"></i> <b>2.3.</b> More Powerful, More Standard
                             </a>
                             
@@ -150,7 +152,7 @@
                     
                         <li  data-level="2.4" data-path="current_state/hope_for_newbies.html">
                             
-                            <a href="./current_state/hope_for_newbies.html">
+                            <a href="../current_state/hope_for_newbies.html">
                                 <i class="fa fa-check"></i> <b>2.4.</b> Still Hope for Newbies
                             </a>
                             
@@ -158,7 +160,7 @@
                     
                         <li  data-level="2.5" data-path="current_state/es6.html">
                             
-                            <a href="./current_state/es6.html">
+                            <a href="../current_state/es6.html">
                                 <i class="fa fa-check"></i> <b>2.5.</b> ES6 - The Future
                             </a>
                             
@@ -166,7 +168,7 @@
                     
                         <li  data-level="2.6" data-path="current_state/conclusion.html">
                             
-                            <a href="./current_state/conclusion.html">
+                            <a href="../current_state/conclusion.html">
                                 <i class="fa fa-check"></i> <b>2.6.</b> Conclusion
                             </a>
                             
@@ -178,7 +180,7 @@
         
             <li  data-level="3" data-path="language_features/README.html">
                 
-                <a href="./language_features/README.html">
+                <a href="../language_features/README.html">
                     <i class="fa fa-check"></i> <b>3.</b> Language Features
                 </a>
                 
@@ -187,7 +189,7 @@
                     
                         <li  data-level="3.1" data-path="language_features/functions.html">
                             
-                            <a href="./language_features/functions.html">
+                            <a href="../language_features/functions.html">
                                 <i class="fa fa-check"></i> <b>3.1.</b> Functions
                             </a>
                             
@@ -195,7 +197,7 @@
                     
                         <li  data-level="3.2" data-path="language_features/globals.html">
                             
-                            <a href="./language_features/globals.html">
+                            <a href="../language_features/globals.html">
                                 <i class="fa fa-check"></i> <b>3.2.</b> Globals
                             </a>
                             
@@ -203,7 +205,7 @@
                     
                         <li  data-level="3.3" data-path="language_features/partial.html">
                             
-                            <a href="./language_features/partial.html">
+                            <a href="../language_features/partial.html">
                                 <i class="fa fa-check"></i> <b>3.3.</b> Partial Application
                             </a>
                             
@@ -211,7 +213,7 @@
                     
                         <li  data-level="3.4" data-path="language_features/this.html">
                             
-                            <a href="./language_features/this.html">
+                            <a href="../language_features/this.html">
                                 <i class="fa fa-check"></i> <b>3.4.</b> What is `this`?
                             </a>
                             
@@ -219,7 +221,7 @@
                     
                         <li  data-level="3.5" data-path="language_features/call_and_apply.html">
                             
-                            <a href="./language_features/call_and_apply.html">
+                            <a href="../language_features/call_and_apply.html">
                                 <i class="fa fa-check"></i> <b>3.5.</b> Understanding `call` and `apply`
                             </a>
                             
@@ -227,7 +229,7 @@
                     
                         <li  data-level="3.6" data-path="language_features/arguments.html">
                             
-                            <a href="./language_features/arguments.html">
+                            <a href="../language_features/arguments.html">
                                 <i class="fa fa-check"></i> <b>3.6.</b> Arguments are Fun
                             </a>
                             
@@ -235,7 +237,7 @@
                     
                         <li  data-level="3.7" data-path="language_features/prototypes.html">
                             
-                            <a href="./language_features/prototypes.html">
+                            <a href="../language_features/prototypes.html">
                                 <i class="fa fa-check"></i> <b>3.7.</b> Prototypes are Phun?
                             </a>
                             
@@ -243,7 +245,7 @@
                     
                         <li  data-level="3.8" data-path="language_features/factories.html">
                             
-                            <a href="./language_features/factories.html">
+                            <a href="../language_features/factories.html">
                                 <i class="fa fa-check"></i> <b>3.8.</b> Factories and Generators
                             </a>
                             
@@ -251,7 +253,7 @@
                     
                         <li  data-level="3.9" data-path="language_features/properties.html">
                             
-                            <a href="./language_features/properties.html">
+                            <a href="../language_features/properties.html">
                                 <i class="fa fa-check"></i> <b>3.9.</b> Properties for Fun and Profit
                             </a>
                             
@@ -259,7 +261,7 @@
                     
                         <li  data-level="3.10" data-path="language_features/data_types.html">
                             
-                            <a href="./language_features/data_types.html">
+                            <a href="../language_features/data_types.html">
                                 <i class="fa fa-check"></i> <b>3.10.</b> Data Types
                             </a>
                             
@@ -267,7 +269,7 @@
                     
                         <li  data-level="3.11" data-path="language_features/hoisting.html">
                             
-                            <a href="./language_features/hoisting.html">
+                            <a href="../language_features/hoisting.html">
                                 <i class="fa fa-check"></i> <b>3.11.</b> Hoist the Sails!
                             </a>
                             
@@ -275,7 +277,7 @@
                     
                         <li  data-level="3.12" data-path="language_features/conclusion.html">
                             
-                            <a href="./language_features/conclusion.html">
+                            <a href="../language_features/conclusion.html">
                                 <i class="fa fa-check"></i> <b>3.12.</b> Conclusion
                             </a>
                             
@@ -287,7 +289,7 @@
         
             <li  data-level="4" data-path="common_problems/README.html">
                 
-                <a href="./common_problems/README.html">
+                <a href="../common_problems/README.html">
                     <i class="fa fa-check"></i> <b>4.</b> Common Problems
                 </a>
                 
@@ -296,7 +298,7 @@
                     
                         <li  data-level="4.1" data-path="common_problems/globals.html">
                             
-                            <a href="./common_problems/globals.html">
+                            <a href="../common_problems/globals.html">
                                 <i class="fa fa-check"></i> <b>4.1.</b> Globals and Other Nasties
                             </a>
                             
@@ -304,7 +306,7 @@
                     
                         <li  data-level="4.2" data-path="common_problems/function_syntax.html">
                             
-                            <a href="./common_problems/function_syntax.html">
+                            <a href="../common_problems/function_syntax.html">
                                 <i class="fa fa-check"></i> <b>4.2.</b> Function Syntax is Cumbersome
                             </a>
                             
@@ -312,7 +314,7 @@
                     
                         <li  data-level="4.3" data-path="common_problems/variables.html">
                             
-                            <a href="./common_problems/variables.html">
+                            <a href="../common_problems/variables.html">
                                 <i class="fa fa-check"></i> <b>4.3.</b> Variables and Arguments are `undefined` by Default
                             </a>
                             
@@ -320,7 +322,7 @@
                     
                         <li  data-level="4.4" data-path="common_problems/pyramid.html">
                             
-                            <a href="./common_problems/pyramid.html">
+                            <a href="../common_problems/pyramid.html">
                                 <i class="fa fa-check"></i> <b>4.4.</b> Pyramid of Doom
                             </a>
                             
@@ -328,7 +330,7 @@
                     
                         <li  data-level="4.5" data-path="common_problems/not_all_things.html">
                             
-                            <a href="./common_problems/not_all_things.html">
+                            <a href="../common_problems/not_all_things.html">
                                 <i class="fa fa-check"></i> <b>4.5.</b> Not All Tshings are Equal
                             </a>
                             
@@ -336,7 +338,7 @@
                     
                         <li  data-level="4.6" data-path="common_problems/no_op_overloading.html">
                             
-                            <a href="./common_problems/no_op_overloading.html">
+                            <a href="../common_problems/no_op_overloading.html">
                                 <i class="fa fa-check"></i> <b>4.6.</b> No Operator Overloading
                             </a>
                             
@@ -344,7 +346,7 @@
                     
                         <li  data-level="4.7" data-path="common_problems/nih.html">
                             
-                            <a href="./common_problems/nih.html">
+                            <a href="../common_problems/nih.html">
                                 <i class="fa fa-check"></i> <b>4.7.</b> Not Invented Here
                             </a>
                             
@@ -352,7 +354,7 @@
                     
                         <li  data-level="4.8" data-path="common_problems/conclusion.html">
                             
-                            <a href="./common_problems/conclusion.html">
+                            <a href="../common_problems/conclusion.html">
                                 <i class="fa fa-check"></i> <b>4.8.</b> Conclusion
                             </a>
                             
@@ -364,7 +366,7 @@
         
             <li  data-level="5" data-path="modules/README.html">
                 
-                <a href="./modules/README.html">
+                <a href="../modules/README.html">
                     <i class="fa fa-check"></i> <b>5.</b> Modules
                 </a>
                 
@@ -373,7 +375,7 @@
                     
                         <li  data-level="5.1" data-path="modules/anti.html">
                             
-                            <a href="./modules/anti.html">
+                            <a href="../modules/anti.html">
                                 <i class="fa fa-check"></i> <b>5.1.</b> The Anti-Pattern
                             </a>
                             
@@ -381,7 +383,7 @@
                     
                         <li  data-level="5.2" data-path="modules/concat.html">
                             
-                            <a href="./modules/concat.html">
+                            <a href="../modules/concat.html">
                                 <i class="fa fa-check"></i> <b>5.2.</b> Concatenating to Victory
                             </a>
                             
@@ -389,7 +391,7 @@
                     
                         <li  data-level="5.3" data-path="modules/amd.html">
                             
-                            <a href="./modules/amd.html">
+                            <a href="../modules/amd.html">
                                 <i class="fa fa-check"></i> <b>5.3.</b> AMD
                             </a>
                             
@@ -397,7 +399,7 @@
                     
                         <li  data-level="5.4" data-path="modules/common.html">
                             
-                            <a href="./modules/common.html">
+                            <a href="../modules/common.html">
                                 <i class="fa fa-check"></i> <b>5.4.</b> CommonJS
                             </a>
                             
@@ -405,7 +407,7 @@
                     
                         <li  data-level="5.5" data-path="modules/umd.html">
                             
-                            <a href="./modules/umd.html">
+                            <a href="../modules/umd.html">
                                 <i class="fa fa-check"></i> <b>5.5.</b> UMD
                             </a>
                             
@@ -413,7 +415,7 @@
                     
                         <li  data-level="5.6" data-path="modules/es6.html">
                             
-                            <a href="./modules/es6.html">
+                            <a href="../modules/es6.html">
                                 <i class="fa fa-check"></i> <b>5.6.</b> ES6
                             </a>
                             
@@ -421,7 +423,7 @@
                     
                         <li  data-level="5.7" data-path="modules/package.html">
                             
-                            <a href="./modules/package.html">
+                            <a href="../modules/package.html">
                                 <i class="fa fa-check"></i> <b>5.7.</b> Package Managers
                             </a>
                             
@@ -429,7 +431,7 @@
                     
                         <li  data-level="5.8" data-path="modules/conclusion.html">
                             
-                            <a href="./modules/conclusion.html">
+                            <a href="../modules/conclusion.html">
                                 <i class="fa fa-check"></i> <b>5.8.</b> Conclusion
                             </a>
                             
@@ -441,7 +443,7 @@
         
             <li  data-level="6" data-path="testing/README.html">
                 
-                <a href="./testing/README.html">
+                <a href="../testing/README.html">
                     <i class="fa fa-check"></i> <b>6.</b> Testing
                 </a>
                 
@@ -450,7 +452,7 @@
                     
                         <li  data-level="6.1" data-path="testing/unit.html">
                             
-                            <a href="./testing/unit.html">
+                            <a href="../testing/unit.html">
                                 <i class="fa fa-check"></i> <b>6.1.</b> Unit Testing
                             </a>
                             
@@ -458,7 +460,7 @@
                     
                         <li  data-level="6.2" data-path="testing/generative.html">
                             
-                            <a href="./testing/generative.html">
+                            <a href="../testing/generative.html">
                                 <i class="fa fa-check"></i> <b>6.2.</b> Generative Testing
                             </a>
                             
@@ -466,7 +468,7 @@
                     
                         <li  data-level="6.3" data-path="testing/fibo.html">
                             
-                            <a href="./testing/fibo.html">
+                            <a href="../testing/fibo.html">
                                 <i class="fa fa-check"></i> <b>6.3.</b> Fibonacci&#39;s Numbers Using `annotate`
                             </a>
                             
@@ -474,7 +476,7 @@
                     
                         <li  data-level="6.4" data-path="testing/browser.html">
                             
-                            <a href="./testing/browser.html">
+                            <a href="../testing/browser.html">
                                 <i class="fa fa-check"></i> <b>6.4.</b> Browser Testing
                             </a>
                             
@@ -482,7 +484,7 @@
                     
                         <li  data-level="6.5" data-path="testing/conclusion.html">
                             
-                            <a href="./testing/conclusion.html">
+                            <a href="../testing/conclusion.html">
                                 <i class="fa fa-check"></i> <b>6.5.</b> Conclusion
                             </a>
                             
@@ -494,7 +496,7 @@
         
             <li  data-level="7" data-path="development_tools/README.html">
                 
-                <a href="./development_tools/README.html">
+                <a href="../development_tools/README.html">
                     <i class="fa fa-check"></i> <b>7.</b> Development Tools
                 </a>
                 
@@ -503,7 +505,7 @@
                     
                         <li  data-level="7.1" data-path="development_tools/chrome.html">
                             
-                            <a href="./development_tools/chrome.html">
+                            <a href="../development_tools/chrome.html">
                                 <i class="fa fa-check"></i> <b>7.1.</b> Chrome Inspector and Firebug
                             </a>
                             
@@ -511,7 +513,7 @@
                     
                         <li  data-level="7.2" data-path="development_tools/live.html">
                             
-                            <a href="./development_tools/live.html">
+                            <a href="../development_tools/live.html">
                                 <i class="fa fa-check"></i> <b>7.2.</b> LiveReload
                             </a>
                             
@@ -519,7 +521,7 @@
                     
                         <li  data-level="7.3" data-path="development_tools/jslint.html">
                             
-                            <a href="./development_tools/jslint.html">
+                            <a href="../development_tools/jslint.html">
                                 <i class="fa fa-check"></i> <b>7.3.</b> JSLint and JSHint
                             </a>
                             
@@ -527,7 +529,7 @@
                     
                         <li  data-level="7.4" data-path="development_tools/jsfiddle.html">
                             
-                            <a href="./development_tools/jsfiddle.html">
+                            <a href="../development_tools/jsfiddle.html">
                                 <i class="fa fa-check"></i> <b>7.4.</b> jsFiddle, jsbin, jsdo.it and co.
                             </a>
                             
@@ -535,7 +537,7 @@
                     
                         <li  data-level="7.5" data-path="development_tools/cloud9.html">
                             
-                            <a href="./development_tools/cloud9.html">
+                            <a href="../development_tools/cloud9.html">
                                 <i class="fa fa-check"></i> <b>7.5.</b> Cloud9 IDE
                             </a>
                             
@@ -543,7 +545,7 @@
                     
                         <li  data-level="7.6" data-path="development_tools/conclusion.html">
                             
-                            <a href="./development_tools/conclusion.html">
+                            <a href="../development_tools/conclusion.html">
                                 <i class="fa fa-check"></i> <b>7.6.</b> Conclusion
                             </a>
                             
@@ -555,7 +557,7 @@
         
             <li  data-level="8" data-path="build_systems/README.html">
                 
-                <a href="./build_systems/README.html">
+                <a href="../build_systems/README.html">
                     <i class="fa fa-check"></i> <b>8.</b> Build Systems
                 </a>
                 
@@ -564,7 +566,7 @@
                     
                         <li  data-level="8.1" data-path="build_systems/grunt.html">
                             
-                            <a href="./build_systems/grunt.html">
+                            <a href="../build_systems/grunt.html">
                                 <i class="fa fa-check"></i> <b>8.1.</b> Grunt
                             </a>
                             
@@ -572,7 +574,7 @@
                     
                         <li  data-level="8.2" data-path="build_systems/conclusion.html">
                             
-                            <a href="./build_systems/conclusion.html">
+                            <a href="../build_systems/conclusion.html">
                                 <i class="fa fa-check"></i> <b>8.2.</b> Conclusion
                             </a>
                             
@@ -584,7 +586,7 @@
         
             <li  data-level="9" data-path="boilerplates/README.html">
                 
-                <a href="./boilerplates/README.html">
+                <a href="../boilerplates/README.html">
                     <i class="fa fa-check"></i> <b>9.</b> Boilerplates
                 </a>
                 
@@ -599,141 +601,145 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 0%;min-width: 0%;"></div>
+        <div class="inner" style="width: 33.898305084745765%;min-width: 32.20338983050848%;"></div>
     </div>
     <div class="chapters">
     
-        <a href="./index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
     
-        <a href="./a_misunderstood_language/README.html" title="A Misunderstood Language?" class="chapter  new-chapter" data-progress="1" style="left: 1.694915254237288%;"></a>
+        <a href="../a_misunderstood_language/README.html" title="A Misunderstood Language?" class="chapter done new-chapter" data-progress="1" style="left: 1.694915254237288%;"></a>
     
-        <a href="./a_misunderstood_language/how_to_characterize.html" title="How to Characterize?" class="chapter  " data-progress="1.1" style="left: 3.389830508474576%;"></a>
+        <a href="../a_misunderstood_language/how_to_characterize.html" title="How to Characterize?" class="chapter done " data-progress="1.1" style="left: 3.389830508474576%;"></a>
     
-        <a href="./a_misunderstood_language/altjs.html" title="AltJS" class="chapter  " data-progress="1.2" style="left: 5.084745762711864%;"></a>
+        <a href="../a_misunderstood_language/altjs.html" title="AltJS" class="chapter done " data-progress="1.2" style="left: 5.084745762711864%;"></a>
     
-        <a href="./a_misunderstood_language/conclusion.html" title="Conclusion" class="chapter  " data-progress="1.3" style="left: 6.779661016949152%;"></a>
+        <a href="../a_misunderstood_language/conclusion.html" title="Conclusion" class="chapter done " data-progress="1.3" style="left: 6.779661016949152%;"></a>
     
-        <a href="./current_state/README.html" title="Current State" class="chapter  new-chapter" data-progress="2" style="left: 8.474576271186441%;"></a>
+        <a href="../current_state/README.html" title="Current State" class="chapter done new-chapter" data-progress="2" style="left: 8.474576271186441%;"></a>
     
-        <a href="./current_state/might_run_on_toaster.html" title="Might Run on Toaster" class="chapter  " data-progress="2.1" style="left: 10.169491525423728%;"></a>
+        <a href="../current_state/might_run_on_toaster.html" title="Might Run on Toaster" class="chapter done " data-progress="2.1" style="left: 10.169491525423728%;"></a>
     
-        <a href="./current_state/there_are_apis.html" title="There are APIs and APIs" class="chapter  " data-progress="2.2" style="left: 11.864406779661017%;"></a>
+        <a href="../current_state/there_are_apis.html" title="There are APIs and APIs" class="chapter done " data-progress="2.2" style="left: 11.864406779661017%;"></a>
     
-        <a href="./current_state/more_powerful.html" title="More Powerful, More Standard" class="chapter  " data-progress="2.3" style="left: 13.559322033898304%;"></a>
+        <a href="../current_state/more_powerful.html" title="More Powerful, More Standard" class="chapter done " data-progress="2.3" style="left: 13.559322033898304%;"></a>
     
-        <a href="./current_state/hope_for_newbies.html" title="Still Hope for Newbies" class="chapter  " data-progress="2.4" style="left: 15.254237288135593%;"></a>
+        <a href="../current_state/hope_for_newbies.html" title="Still Hope for Newbies" class="chapter done " data-progress="2.4" style="left: 15.254237288135593%;"></a>
     
-        <a href="./current_state/es6.html" title="ES6 - The Future" class="chapter  " data-progress="2.5" style="left: 16.949152542372882%;"></a>
+        <a href="../current_state/es6.html" title="ES6 - The Future" class="chapter done " data-progress="2.5" style="left: 16.949152542372882%;"></a>
     
-        <a href="./current_state/conclusion.html" title="Conclusion" class="chapter  " data-progress="2.6" style="left: 18.64406779661017%;"></a>
+        <a href="../current_state/conclusion.html" title="Conclusion" class="chapter done " data-progress="2.6" style="left: 18.64406779661017%;"></a>
     
-        <a href="./language_features/README.html" title="Language Features" class="chapter  new-chapter" data-progress="3" style="left: 20.338983050847457%;"></a>
+        <a href="../language_features/README.html" title="Language Features" class="chapter done new-chapter" data-progress="3" style="left: 20.338983050847457%;"></a>
     
-        <a href="./language_features/functions.html" title="Functions" class="chapter  " data-progress="3.1" style="left: 22.033898305084747%;"></a>
+        <a href="../language_features/functions.html" title="Functions" class="chapter done " data-progress="3.1" style="left: 22.033898305084747%;"></a>
     
-        <a href="./language_features/data_types.html" title="Data Types" class="chapter  " data-progress="3.10" style="left: 23.728813559322035%;"></a>
+        <a href="../language_features/data_types.html" title="Data Types" class="chapter done " data-progress="3.10" style="left: 23.728813559322035%;"></a>
     
-        <a href="./language_features/hoisting.html" title="Hoist the Sails!" class="chapter  " data-progress="3.11" style="left: 25.423728813559322%;"></a>
+        <a href="../language_features/hoisting.html" title="Hoist the Sails!" class="chapter done " data-progress="3.11" style="left: 25.423728813559322%;"></a>
     
-        <a href="./language_features/conclusion.html" title="Conclusion" class="chapter  " data-progress="3.12" style="left: 27.11864406779661%;"></a>
+        <a href="../language_features/conclusion.html" title="Conclusion" class="chapter done " data-progress="3.12" style="left: 27.11864406779661%;"></a>
     
-        <a href="./language_features/globals.html" title="Globals" class="chapter  " data-progress="3.2" style="left: 28.8135593220339%;"></a>
+        <a href="../language_features/globals.html" title="Globals" class="chapter done " data-progress="3.2" style="left: 28.8135593220339%;"></a>
     
-        <a href="./language_features/partial.html" title="Partial Application" class="chapter  " data-progress="3.3" style="left: 30.508474576271187%;"></a>
+        <a href="../language_features/partial.html" title="Partial Application" class="chapter done " data-progress="3.3" style="left: 30.508474576271187%;"></a>
     
-        <a href="./language_features/this.html" title="What is `this`?" class="chapter  " data-progress="3.4" style="left: 32.20338983050848%;"></a>
+        <a href="../language_features/this.html" title="What is `this`?" class="chapter done " data-progress="3.4" style="left: 32.20338983050848%;"></a>
     
-        <a href="./language_features/call_and_apply.html" title="Understanding `call` and `apply`" class="chapter  " data-progress="3.5" style="left: 33.898305084745765%;"></a>
+        <a href="../language_features/call_and_apply.html" title="Understanding `call` and `apply`" class="chapter done " data-progress="3.5" style="left: 33.898305084745765%;"></a>
     
-        <a href="./language_features/arguments.html" title="Arguments are Fun" class="chapter  " data-progress="3.6" style="left: 35.59322033898305%;"></a>
+        <a href="../language_features/arguments.html" title="Arguments are Fun" class="chapter  " data-progress="3.6" style="left: 35.59322033898305%;"></a>
     
-        <a href="./language_features/prototypes.html" title="Prototypes are Phun?" class="chapter  " data-progress="3.7" style="left: 37.28813559322034%;"></a>
+        <a href="../language_features/prototypes.html" title="Prototypes are Phun?" class="chapter  " data-progress="3.7" style="left: 37.28813559322034%;"></a>
     
-        <a href="./language_features/factories.html" title="Factories and Generators" class="chapter  " data-progress="3.8" style="left: 38.983050847457626%;"></a>
+        <a href="../language_features/factories.html" title="Factories and Generators" class="chapter  " data-progress="3.8" style="left: 38.983050847457626%;"></a>
     
-        <a href="./language_features/properties.html" title="Properties for Fun and Profit" class="chapter  " data-progress="3.9" style="left: 40.67796610169491%;"></a>
+        <a href="../language_features/properties.html" title="Properties for Fun and Profit" class="chapter  " data-progress="3.9" style="left: 40.67796610169491%;"></a>
     
-        <a href="./common_problems/README.html" title="Common Problems" class="chapter  new-chapter" data-progress="4" style="left: 42.3728813559322%;"></a>
+        <a href="../common_problems/README.html" title="Common Problems" class="chapter  new-chapter" data-progress="4" style="left: 42.3728813559322%;"></a>
     
-        <a href="./common_problems/globals.html" title="Globals and Other Nasties" class="chapter  " data-progress="4.1" style="left: 44.067796610169495%;"></a>
+        <a href="../common_problems/globals.html" title="Globals and Other Nasties" class="chapter  " data-progress="4.1" style="left: 44.067796610169495%;"></a>
     
-        <a href="./common_problems/function_syntax.html" title="Function Syntax is Cumbersome" class="chapter  " data-progress="4.2" style="left: 45.76271186440678%;"></a>
+        <a href="../common_problems/function_syntax.html" title="Function Syntax is Cumbersome" class="chapter  " data-progress="4.2" style="left: 45.76271186440678%;"></a>
     
-        <a href="./common_problems/variables.html" title="Variables and Arguments are `undefined` by Default" class="chapter  " data-progress="4.3" style="left: 47.45762711864407%;"></a>
+        <a href="../common_problems/variables.html" title="Variables and Arguments are `undefined` by Default" class="chapter  " data-progress="4.3" style="left: 47.45762711864407%;"></a>
     
-        <a href="./common_problems/pyramid.html" title="Pyramid of Doom" class="chapter  " data-progress="4.4" style="left: 49.152542372881356%;"></a>
+        <a href="../common_problems/pyramid.html" title="Pyramid of Doom" class="chapter  " data-progress="4.4" style="left: 49.152542372881356%;"></a>
     
-        <a href="./common_problems/not_all_things.html" title="Not All Tshings are Equal" class="chapter  " data-progress="4.5" style="left: 50.847457627118644%;"></a>
+        <a href="../common_problems/not_all_things.html" title="Not All Tshings are Equal" class="chapter  " data-progress="4.5" style="left: 50.847457627118644%;"></a>
     
-        <a href="./common_problems/no_op_overloading.html" title="No Operator Overloading" class="chapter  " data-progress="4.6" style="left: 52.54237288135593%;"></a>
+        <a href="../common_problems/no_op_overloading.html" title="No Operator Overloading" class="chapter  " data-progress="4.6" style="left: 52.54237288135593%;"></a>
     
-        <a href="./common_problems/nih.html" title="Not Invented Here" class="chapter  " data-progress="4.7" style="left: 54.23728813559322%;"></a>
+        <a href="../common_problems/nih.html" title="Not Invented Here" class="chapter  " data-progress="4.7" style="left: 54.23728813559322%;"></a>
     
-        <a href="./common_problems/conclusion.html" title="Conclusion" class="chapter  " data-progress="4.8" style="left: 55.932203389830505%;"></a>
+        <a href="../common_problems/conclusion.html" title="Conclusion" class="chapter  " data-progress="4.8" style="left: 55.932203389830505%;"></a>
     
-        <a href="./modules/README.html" title="Modules" class="chapter  new-chapter" data-progress="5" style="left: 57.6271186440678%;"></a>
+        <a href="../modules/README.html" title="Modules" class="chapter  new-chapter" data-progress="5" style="left: 57.6271186440678%;"></a>
     
-        <a href="./modules/anti.html" title="The Anti-Pattern" class="chapter  " data-progress="5.1" style="left: 59.32203389830509%;"></a>
+        <a href="../modules/anti.html" title="The Anti-Pattern" class="chapter  " data-progress="5.1" style="left: 59.32203389830509%;"></a>
     
-        <a href="./modules/concat.html" title="Concatenating to Victory" class="chapter  " data-progress="5.2" style="left: 61.016949152542374%;"></a>
+        <a href="../modules/concat.html" title="Concatenating to Victory" class="chapter  " data-progress="5.2" style="left: 61.016949152542374%;"></a>
     
-        <a href="./modules/amd.html" title="AMD" class="chapter  " data-progress="5.3" style="left: 62.71186440677966%;"></a>
+        <a href="../modules/amd.html" title="AMD" class="chapter  " data-progress="5.3" style="left: 62.71186440677966%;"></a>
     
-        <a href="./modules/common.html" title="CommonJS" class="chapter  " data-progress="5.4" style="left: 64.40677966101696%;"></a>
+        <a href="../modules/common.html" title="CommonJS" class="chapter  " data-progress="5.4" style="left: 64.40677966101696%;"></a>
     
-        <a href="./modules/umd.html" title="UMD" class="chapter  " data-progress="5.5" style="left: 66.10169491525424%;"></a>
+        <a href="../modules/umd.html" title="UMD" class="chapter  " data-progress="5.5" style="left: 66.10169491525424%;"></a>
     
-        <a href="./modules/es6.html" title="ES6" class="chapter  " data-progress="5.6" style="left: 67.79661016949153%;"></a>
+        <a href="../modules/es6.html" title="ES6" class="chapter  " data-progress="5.6" style="left: 67.79661016949153%;"></a>
     
-        <a href="./modules/package.html" title="Package Managers" class="chapter  " data-progress="5.7" style="left: 69.49152542372882%;"></a>
+        <a href="../modules/package.html" title="Package Managers" class="chapter  " data-progress="5.7" style="left: 69.49152542372882%;"></a>
     
-        <a href="./modules/conclusion.html" title="Conclusion" class="chapter  " data-progress="5.8" style="left: 71.1864406779661%;"></a>
+        <a href="../modules/conclusion.html" title="Conclusion" class="chapter  " data-progress="5.8" style="left: 71.1864406779661%;"></a>
     
-        <a href="./testing/README.html" title="Testing" class="chapter  new-chapter" data-progress="6" style="left: 72.88135593220339%;"></a>
+        <a href="../testing/README.html" title="Testing" class="chapter  new-chapter" data-progress="6" style="left: 72.88135593220339%;"></a>
     
-        <a href="./testing/unit.html" title="Unit Testing" class="chapter  " data-progress="6.1" style="left: 74.57627118644068%;"></a>
+        <a href="../testing/unit.html" title="Unit Testing" class="chapter  " data-progress="6.1" style="left: 74.57627118644068%;"></a>
     
-        <a href="./testing/generative.html" title="Generative Testing" class="chapter  " data-progress="6.2" style="left: 76.27118644067797%;"></a>
+        <a href="../testing/generative.html" title="Generative Testing" class="chapter  " data-progress="6.2" style="left: 76.27118644067797%;"></a>
     
-        <a href="./testing/fibo.html" title="Fibonacci&#39;s Numbers Using `annotate`" class="chapter  " data-progress="6.3" style="left: 77.96610169491525%;"></a>
+        <a href="../testing/fibo.html" title="Fibonacci&#39;s Numbers Using `annotate`" class="chapter  " data-progress="6.3" style="left: 77.96610169491525%;"></a>
     
-        <a href="./testing/browser.html" title="Browser Testing" class="chapter  " data-progress="6.4" style="left: 79.66101694915254%;"></a>
+        <a href="../testing/browser.html" title="Browser Testing" class="chapter  " data-progress="6.4" style="left: 79.66101694915254%;"></a>
     
-        <a href="./testing/conclusion.html" title="Conclusion" class="chapter  " data-progress="6.5" style="left: 81.35593220338983%;"></a>
+        <a href="../testing/conclusion.html" title="Conclusion" class="chapter  " data-progress="6.5" style="left: 81.35593220338983%;"></a>
     
-        <a href="./development_tools/README.html" title="Development Tools" class="chapter  new-chapter" data-progress="7" style="left: 83.05084745762711%;"></a>
+        <a href="../development_tools/README.html" title="Development Tools" class="chapter  new-chapter" data-progress="7" style="left: 83.05084745762711%;"></a>
     
-        <a href="./development_tools/chrome.html" title="Chrome Inspector and Firebug" class="chapter  " data-progress="7.1" style="left: 84.7457627118644%;"></a>
+        <a href="../development_tools/chrome.html" title="Chrome Inspector and Firebug" class="chapter  " data-progress="7.1" style="left: 84.7457627118644%;"></a>
     
-        <a href="./development_tools/live.html" title="LiveReload" class="chapter  " data-progress="7.2" style="left: 86.44067796610169%;"></a>
+        <a href="../development_tools/live.html" title="LiveReload" class="chapter  " data-progress="7.2" style="left: 86.44067796610169%;"></a>
     
-        <a href="./development_tools/jslint.html" title="JSLint and JSHint" class="chapter  " data-progress="7.3" style="left: 88.13559322033899%;"></a>
+        <a href="../development_tools/jslint.html" title="JSLint and JSHint" class="chapter  " data-progress="7.3" style="left: 88.13559322033899%;"></a>
     
-        <a href="./development_tools/jsfiddle.html" title="jsFiddle, jsbin, jsdo.it and co." class="chapter  " data-progress="7.4" style="left: 89.83050847457628%;"></a>
+        <a href="../development_tools/jsfiddle.html" title="jsFiddle, jsbin, jsdo.it and co." class="chapter  " data-progress="7.4" style="left: 89.83050847457628%;"></a>
     
-        <a href="./development_tools/cloud9.html" title="Cloud9 IDE" class="chapter  " data-progress="7.5" style="left: 91.52542372881356%;"></a>
+        <a href="../development_tools/cloud9.html" title="Cloud9 IDE" class="chapter  " data-progress="7.5" style="left: 91.52542372881356%;"></a>
     
-        <a href="./development_tools/conclusion.html" title="Conclusion" class="chapter  " data-progress="7.6" style="left: 93.22033898305085%;"></a>
+        <a href="../development_tools/conclusion.html" title="Conclusion" class="chapter  " data-progress="7.6" style="left: 93.22033898305085%;"></a>
     
-        <a href="./build_systems/README.html" title="Build Systems" class="chapter  new-chapter" data-progress="8" style="left: 94.91525423728814%;"></a>
+        <a href="../build_systems/README.html" title="Build Systems" class="chapter  new-chapter" data-progress="8" style="left: 94.91525423728814%;"></a>
     
-        <a href="./build_systems/grunt.html" title="Grunt" class="chapter  " data-progress="8.1" style="left: 96.61016949152543%;"></a>
+        <a href="../build_systems/grunt.html" title="Grunt" class="chapter  " data-progress="8.1" style="left: 96.61016949152543%;"></a>
     
-        <a href="./build_systems/conclusion.html" title="Conclusion" class="chapter  " data-progress="8.2" style="left: 98.30508474576271%;"></a>
+        <a href="../build_systems/conclusion.html" title="Conclusion" class="chapter  " data-progress="8.2" style="left: 98.30508474576271%;"></a>
     
-        <a href="./boilerplates/README.html" title="Boilerplates" class="chapter  new-chapter" data-progress="9" style="left: 100%;"></a>
+        <a href="../boilerplates/README.html" title="Boilerplates" class="chapter  new-chapter" data-progress="9" style="left: 100%;"></a>
     
     </div>
 </div>
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_4">
+                    <section class="normal" id="section-gitbook_35">
                     
-                        <h1 id="survive-javascript-a-web-developer-s-guide">Survive JavaScript - a Web Developer&#39;s Guide</h1>
-<p>Have you ever felt lost with JavaScript or felt that your skills could use a bit of sharpening? If so you found the right place!</p>
-<p>Survive JavaScript is an ongoing project (early stages) that goes through the difficult bits and gathers around valuable resources. In this way it complements <a href="http://jster.net/" target="_blank">jster.net</a>. Now the focus is more on conceptual rather than library side.</p>
-<p>The guide is developed over at the <a href="https://github.com/bebraw/survive-js/wiki" target="_blank">wiki</a> so head there for the content. Later on I&#39;ll create a nice frontend for that. My long term goal (April) is to take the best parts of the content and turn it into a presentation at a local developer conference and perhaps publish a small booklet based on it even.</p>
+                        <h1 id="understanding-call-and-apply-">Understanding <code>call</code> and <code>apply</code></h1>
+<p>These two might remind you of that beautiful <code>bind</code>. As it happens these three are siblings. <code>call</code> is the ugly one and I tend to favor <code>apply</code> over it. These two functions allow you to... wait for it... call functions. What&#39;s the point you might ask?</p>
+<p>Suppose you are writing a test runner. You might have some kind of a function definition for the tests. It could be an Object containing name, test function pairs for instance. You will need some way to run them. This is where these guys I just introduced you to come in.</p>
+<p>The difference between the nice <code>apply</code> and the less nice <code>call</code> is that the former accepts the parameters within an array while the latter just accepts them. It reminds me of <code>bind</code> this way. Both take a context parameter first and then do their thing after.</p>
+<p>As I don&#39;t feel like writing an entire test runner here, I&#39;ll leave it as an exercise to the reader. Just to make everything clear, consider the following <code>apply</code> of console.log.</p>
+<pre><code class="lang-js">console.log.apply(console, [<span class="hljs-string">'you da js champ!'</span>]);
+</code></pre>
+<p>You can probably guess what happens there. If not, it&#39;s still not too late to change the career.</p>
 
                     
                     </section>
@@ -743,20 +749,22 @@
         </div>
 
         
+        <a href="../language_features/this.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
         
-        <a href="./a_misunderstood_language/README.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+        <a href="../language_features/arguments.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
 
         
-        <link rel="stylesheet" href="gitbook/style.css">
+        <link rel="stylesheet" href="../gitbook/style.css">
         
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
-        <script src="gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
-        <script src="gitbook/app.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
         
     </body>
 </html>
