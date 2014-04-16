@@ -29,7 +29,7 @@
     * [Function Syntax is Cumbersome](common_problems/function_syntax.md)
     * [Variables and Arguments are `undefined` by Default](common_problems/variables.md)
     * [Pyramid of Doom](common_problems/pyramid.md)
-    * [Not All Tshings are Equal](common_problems/not_all_things.md)
+    * [Not All Things are Equal](common_problems/not_all_things.md)
     * [No Operator Overloading](common_problems/no_op_overloading.md)
     * [Not Invented Here](common_problems/nih.md)
     * [Conclusion](common_problems/conclusion.md)
