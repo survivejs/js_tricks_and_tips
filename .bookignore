@@ -1,0 +1,4 @@
+*.sh
+Gruntfile.js
+package.json
+
