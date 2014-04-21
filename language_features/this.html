@@ -36,7 +36,10 @@
     </head>
     <body>
         
-    <div class="book" data-github="bebraw/survive-js" data-level="3.4" data-basepath=".." data-revision="1397680531450">
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    <div class="book" data-github="bebraw/survive-js" data-level="3.4" data-basepath=".." data-revision="1398096622007">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -730,17 +733,17 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_50">
+                    <section class="normal" id="section-gitbook_48">
                     
                         <h1 id="what-is-this-">What is <code>this</code>?</h1>
 <p><code>this</code> refers to function context. What is this context then? It depends. In this case we may set it explicitly. This means we may access contents of <code>this</code> Object within the context itself.</p>
 <p>As I fear I may have confused you even more with this explanation, let&#39;s consider something more concrete. If you are as unlucky not to know what an Object is, let&#39;s stick an Object to our example. In computer science terms JavaScript Object can be considered a map of key-value pairs. All keys are always Strings whereas values can be pretty much anything.</p>
-<pre><code><span class="hljs-keyword">var</span> obj = {
-    ctx: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>console.log(<span class="hljs-keyword">this</span>)},
-    name: <span class="hljs-string">'demo object'</span>
+<pre><code>var obj = {
+    ctx: function() {console.log(this)},
+    name: &#39;demo object&#39;
 };
 
-obj.ctx(); <span class="hljs-comment">// -&gt; ???</span>
+obj.ctx(); // -&gt; ???
 </code></pre><p>Can you guess what <code>object.ctx()</code> prints out? That&#39;s right. We should see the Object itself there. Handy isn&#39;t it?</p>
 <p><code>this</code> can actually be fairly dangerous at times. It is a good idea to think through whether or not you really need it. Some libraries, such as jQuery, tend to rely on it somewhat. I don&#39;t consider that good design personally as you are effectively trading off some composability. And the last thing I want to do is to call certain functions using either <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/call" target="_blank">call</a> or <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/apply" target="_blank">apply</a> speaking of which that is probably what I should cover next.</p>
 
@@ -761,9 +764,9 @@ obj.ctx(); <span class="hljs-comment">// -&gt; ???</span>
 </div>
 
         
-        <link rel="stylesheet" href="../gitbook/style.css">
-        
-        
+        <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+        </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
         <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>

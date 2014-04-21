@@ -36,7 +36,10 @@
     </head>
     <body>
         
-    <div class="book" data-github="bebraw/survive-js" data-level="3.6" data-basepath=".." data-revision="1397680531450">
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    <div class="book" data-github="bebraw/survive-js" data-level="3.6" data-basepath=".." data-revision="1398096622007">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -730,7 +733,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_44">
+                    <section class="normal" id="section-gitbook_42">
                     
                         <h1 id="arguments-are-fun">Arguments are Fun</h1>
 <p>It is definitely fun to argue. Oh wait, I was supposed to introduce you to <code>arguments</code>. Not arguing with people. Wrong book.</p>
@@ -739,23 +742,23 @@
 <p>Unfortunately JavaScript doesn&#39;t provide named parameters for us yet. As it happens it is possible to work around this problem with a little bit of Object magic. There is something about Object.</p>
 <p>The third way has to do with the keyword <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments" target="_blank">arguments</a>. You can probably guess what that contains. It looks like an Array but isn&#39;t quite like one.</p>
 <p>As you might be mighty confused right now about what the guy is blabbering about, I&#39;ve concocted amazing functions performing additions in various interesting and imaginative ways.</p>
-<pre><code><span class="hljs-keyword">var</span> add = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(a, b)</span> {</span>
-    <span class="hljs-keyword">return</span> a + b;
+<pre><code>var add = function(a, b) {
+    return a + b;
 }
 
-<span class="hljs-keyword">var</span> addNamed = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(o)</span> {</span>
-    <span class="hljs-keyword">return</span> o.a + o.b;
+var addNamed = function(o) {
+    return o.a + o.b;
 }
 
-<span class="hljs-keyword">var</span> addMany = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
-    <span class="hljs-keyword">var</span> ret = <span class="hljs-number">0</span>;
-    <span class="hljs-keyword">var</span> i, len;
+var addMany = function() {
+    var ret = 0;
+    var i, len;
 
-    <span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>, len = <span class="hljs-built_in">arguments</span>.length; i &lt; len; i++) {
-        ret += <span class="hljs-built_in">arguments</span>[i];
+    for(i = 0, len = arguments.length; i &lt; len; i++) {
+        ret += arguments[i];
     }
 
-    <span class="hljs-keyword">return</span> ret;
+    return ret;
 }
 </code></pre><p>I generally favor the first variant in my APIs. If the amount of parameters goes beyond three, I start to question myself even more than usually. That is usually a sign that something needs to change. I use the second variant particularly for jQuery plugins. In that case I often merge the passed parameters over some default ones using <a href="http://api.jquery.com/jQuery.extend/" target="_blank">$.extend</a>. The last one is preserved for special cases only.</p>
 <p>Even though <code>arguments</code> might look like an Array, it isn&#39;t one. As MDN suggests, you can convert it to one either by using <code>Array.prototype.slice.call(arguments)</code> or <code>Array.slice(arguments)</code>. You can <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array#Array_generic_methods" target="_blank">shim latter in</a>.</p>
@@ -778,9 +781,9 @@
 </div>
 
         
-        <link rel="stylesheet" href="../gitbook/style.css">
-        
-        
+        <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+        </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
         <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
