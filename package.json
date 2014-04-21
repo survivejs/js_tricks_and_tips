@@ -1,31 +1,28 @@
 {
-    "name": "survive-js",
-    "description": "SurviveJS book",
-    "author": "Juho Vepsalainen <bebraw@gmail.com>",
-    "version": "0.1.0",
-    "private": "true",
-
-    "dependencies": {
-        "grunt": "0.4.1",
-        "grunt-gitbook": "0.2.0",
-        "grunt-gh-pages": "0.9.1",
-        "grunt-contrib-clean": "~0.5.0"
-    },
-
-    "peerDependencies": {
-        "grunt": "0.4.1"
-    },
-
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:bebraw/survive-js.git"
-    },
-
-    "homepage": "http://survivejs.com",
-
-    "bugs": {
-        "url": "https://github.com/bebraw/survive-js/issues"
-    },
-
-    "keywords": ["javascript", "book"]
+  "name": "survive-js",
+  "description": "SurviveJS book",
+  "author": "Juho Vepsalainen <bebraw@gmail.com>",
+  "version": "0.1.0",
+  "private": "true",
+  "dependencies": {
+    "grunt": "0.4.4",
+    "grunt-gitbook": "0.2.3",
+    "grunt-gh-pages": "0.9.1",
+    "grunt-contrib-clean": "0.5.0"
+  },
+  "peerDependencies": {
+    "grunt": "0.4.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bebraw/survive-js.git"
+  },
+  "homepage": "http://survivejs.com",
+  "bugs": {
+    "url": "https://github.com/bebraw/survive-js/issues"
+  },
+  "keywords": [
+    "javascript",
+    "book"
+  ]
 }
