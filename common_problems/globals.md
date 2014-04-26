@@ -1,6 +1,6 @@
 # Globals and Other Nasties
 
-As you probably know by now all variables are global by default. You will have to use `var` keyword to explicitly mark them as global. To quote certain Ackbar, "it's a trap". There are a couple of ways to deal with the issue. I'll start with a conventional one. Consider the example below.
+As you probably know by now all variables are global by default. You will have to use `var` keyword to explicitly mark them as local. To quote certain Ackbar, "it's a trap". There are a couple of ways to deal with the issue. I'll start with a conventional one. Consider the example below.
 
 ```js
 function mathMagic(items, b, c) {
