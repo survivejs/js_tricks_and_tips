@@ -6,3 +6,8 @@ In this guide I will go through some of the rocky spots and give you the tools n
 
 After all it is the language of the web. If you can develop in JavaScript, you can achieve a lot! And it's not just about the frontend. Thanks to the rise of Node.js and related technologies it has become an option at the backend too. You can even program embedded devices using it. It truly is the lingua franca of programming languages.
 
+## Contributors
+
+* [@EvanBurchard](https://github.com/EvanBurchard) - Typo fix
+* [@joetime](https://github.com/joetime) - Typo fix
+* [@Hermanya](https://github.com/Hermanya) - Typo fixes
