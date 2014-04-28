@@ -11,3 +11,4 @@ After all it is the language of the web. If you can develop in JavaScript, you c
 * [@EvanBurchard](https://github.com/EvanBurchard) - Typo fix
 * [@joetime](https://github.com/joetime) - Typo fix
 * [@Hermanya](https://github.com/Hermanya) - Typo fixes
+* [@naven87](https://github.com/naven87) - Helped to improve `functions` section
