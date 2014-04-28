@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="bebraw/survive-js" data-level="3.1" data-basepath=".." data-revision="1398669110940">
+    <div class="book" data-github="bebraw/survive-js" data-level="3.1" data-basepath=".." data-revision="1398671236463">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -777,7 +777,7 @@
     <span class="hljs-keyword">return</span> a;
 }
 </code></pre>
-<p>In this case I decided to use a good ol&#39; if statement to deal with the logic. The same may be written using ternary operators perhaps familiar to some from C.</p>
+<p>In this case I decided to use a good ol&#39; <code>if</code> statement to deal with the logic. The same may be written using ternary operators perhaps familiar to some from C.</p>
 <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">clamp</span><span class="hljs-params">(a, min, max)</span> {</span>
     <span class="hljs-keyword">return</span> a &lt; min? min: a &gt; max? max: a;
 }
@@ -795,9 +795,10 @@ clamp(<span class="hljs-number">4</span>, <span class="hljs-number">10</span>, <
 <p>Let&#39;s define a simple <code>map</code> function this way. <code>map</code> is something that takes a callback (operation) as input, applies that operation for each member of the given data structure and then returns the result. In this case I&#39;ll stick to arrays although it is possible to generalize this approach to work with objects too. A basic implementation could look like this:</p>
 <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">map</span><span class="hljs-params">(cb, arr)</span> {</span>
     <span class="hljs-keyword">var</span> ret = [];
+    <span class="hljs-keyword">var</span> i;
 
-    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>, len = arr.length; i &lt; len; i++) {
-        ret.push(cb(arr[i], i));
+    <span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>, len = arr.length; i &lt; len; i++) {
+        ret.push(cb(arr[i]));
     }
 
     <span class="hljs-keyword">return</span> ret;
@@ -811,6 +812,120 @@ map(<span class="hljs-function"><span class="hljs-keyword">function</span><span 
 <p>Sometimes it may be beneficial to name the callback (<code>function mul(v)</code> would work in this case) to make it easier to debug the code. The debugger will be able to use this information and show the name at a stack trace.</p>
 <p>There is actually a nice alternative for the ugly default syntax. It is know as <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank">Array.forEach</a>. Check it out. See <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array/map" target="_blank">Array.map</a> while at it.</p>
 <p>Using these may require <code>shims</code> depending on which browsers you want to support but on the other hand they make language so much more fun to use it&#39;s usually worth it.</p>
+<h2 id="exercises">Exercises</h2>
+<p>Besides <code>map</code> there are a couple of other functional constructs that you will find useful. These are known as <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" target="_blank">Array.filter</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce" target="_blank">Array.reduce</a>.</p>
+<p>As you saw above <code>Array.map</code> can be useful for mapping values from a domain to another. <code>Array.filter</code> is something that allows you to remove values from given input. <code>Array.reduce</code> allows you to fold given values into a new value.</p>
+<p>In order to understand better what these functions do and how they work I want you to implement them. In case you need some help, see the links above for more comprehensive descriptions.</p>
+
+                    
+                    </section>
+                
+                    <section class="exercise" id="section-gitbook_31">
+                    
+                        <div class="header">
+    <h2>Exercise</h2>
+</div>
+<div class="alert alert-success">
+    <b>Correct!</b>
+</div>
+
+<div class="alert alert-danger error-message">
+    <b>False!</b>
+</div>
+
+<div class="message">
+    <p>Define a <code>filter</code> function. It should yield following results:</p>
+<ul>
+<li>filter(function(v) {return v &gt; 10;}, [0, 4, 13, 20]).length === 2</li>
+<li>filter(function(v) {return true;}, [1, 2, 3]).length === 3</li>
+<li>filter(function(v) {return false;}, [4, 5, 6]).length === 0</li>
+</ul>
+
+</div>
+<div class="editor" style="height: 280px">function filter(cb, arr) {
+    var ret = [];
+
+    return ret;
+}</div>
+
+<pre class="hidden code-solution">function filter(cb, arr) {
+    var ret = [];
+    var i, v;
+
+    for(i = 0, len = arr.length; i &lt; len; i++) {
+        v = arr[i];
+
+        if(cb(v)) {
+            ret.push(v);
+        }
+    }
+
+    return ret;
+}</pre>
+<pre class="hidden code-validation">assert(filter(function(v) {return v &gt; 10;}, [0, 4, 13, 20]).length === 2, &#39;should return only items matching to filter&#39;);
+assert(filter(function(v) {return true;}, [1, 2, 3]).length === 3, &#39;should return all if filter is true&#39;);
+assert(filter(function(v) {return false;}, [4, 5, 6]).length === 0, &#39;should return none if filter is false&#39;);</pre>
+
+
+<div class="btn-group btn-group-justified">
+    <a href="#" class="btn btn-default action-submit">Submit</a>
+    <a href="#" class="btn btn-default action-solution">Solution</a>
+    
+    <a href="https://github.com/bebraw/survive-js/issues/new" target="_blank" class="btn btn-default">Have a Question?</a>
+    
+</div>
+
+                    
+                    </section>
+                
+                    <section class="exercise" id="section-gitbook_33">
+                    
+                        <div class="header">
+    <h2>Exercise</h2>
+</div>
+<div class="alert alert-success">
+    <b>Correct!</b>
+</div>
+
+<div class="alert alert-danger error-message">
+    <b>False!</b>
+</div>
+
+<div class="message">
+    <p>Define a <code>reduce</code> function. It should yield following results:</p>
+<ul>
+<li>reduce(function(a, b) {return a + b;}, [0, 4, 13, 20]) === 37</li>
+<li>reduce(function(a, b) {return a.concat(b);}, [[0, 1], [0, 2], [0, 3]]).length === 6</li>
+</ul>
+
+</div>
+<div class="editor" style="height: 200px">function reduce(cb, arr) {
+    var ret = [];
+
+    return ret;
+}</div>
+
+<pre class="hidden code-solution">function reduce(cb, arr) {
+    var ret = arr[0];
+    var i;
+
+    for(i = 1, len = arr.length; i &lt; len; i++) {
+        ret = cb(ret, arr[i]);
+    }
+
+    return ret;
+}</pre>
+<pre class="hidden code-validation">assert(reduce(function(a, b) {return a + b;}, [0, 4, 13, 20]) === 37, &#39;should sum given array&#39;);
+assert(reduce(function(a, b) {return a.concat(b);}, [[0, 1], [0, 2], [0, 3]]).length === 6, &#39;should return all if filter is true&#39;);</pre>
+
+
+<div class="btn-group btn-group-justified">
+    <a href="#" class="btn btn-default action-submit">Submit</a>
+    <a href="#" class="btn btn-default action-solution">Solution</a>
+    
+    <a href="https://github.com/bebraw/survive-js/issues/new" target="_blank" class="btn btn-default">Have a Question?</a>
+    
+</div>
 
                     
                     </section>
