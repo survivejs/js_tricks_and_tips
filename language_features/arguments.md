@@ -2,7 +2,7 @@
 
 It is definitely fun to argue. Oh wait, I was supposed to introduce you to `arguments`. Not arguing with people. Wrong book.
 
-There are generally put three ways to deal with function parameters in JavaScript. And no, I won't have an argument with you over is it a parameter of an argument. If you look from the outside, it's a parameter. If from the inside, it's an argument. Capiche?
+There are generally put three ways to deal with function parameters in JavaScript. And no, I won't have an argument with you over is it a parameter or an argument. If you look from the outside, it's a parameter. If from the inside, it's an argument. Capiche?
 
 The first way is the one we have used a lot already. You simply pass the parameters in a specific order and the function gets those as arguments in that specific order. Nothing complicated there.
 
