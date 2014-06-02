@@ -1,0 +1,12 @@
+{
+    "plugins": [
+        "-mathjax",
+        "-mixpanel",
+        "ga"
+    ],
+    "pluginsConfig": {
+        "ga": {
+            "token": "UA-5272959-9"
+        }
+    }
+}

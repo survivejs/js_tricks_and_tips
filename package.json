@@ -5,14 +5,14 @@
   "version": "0.1.0",
   "private": "true",
   "dependencies": {
-    "gitbook-plugin-ga": "0.0.1",
-    "grunt": "0.4.4",
+    "gitbook-plugin-ga": "0.1.0",
+    "grunt": "0.4.5",
     "grunt-contrib-clean": "0.5.0",
     "grunt-gh-pages": "0.9.1",
-    "grunt-gitbook": "0.2.3"
+    "grunt-gitbook": "0.4.8"
   },
   "peerDependencies": {
-    "grunt": "0.4.4"
+    "grunt": "0.4.x"
   },
   "repository": {
     "type": "git",
