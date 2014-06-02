@@ -4,6 +4,17 @@
         "-mixpanel",
         "ga"
     ],
+    "links": {
+        "about": "http://nixtu.info",
+        "issues": "https://github.com/bebraw/survive-js/issues",
+        "contribute": "https://github.com/bebraw/survive-js",
+
+        "sharing": {
+            "google": false,
+            "facebook": false,
+            "twitter": false
+        }
+    },
     "pluginsConfig": {
         "ga": {
             "token": "UA-5272959-9"
