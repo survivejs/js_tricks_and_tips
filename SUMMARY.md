@@ -53,7 +53,7 @@
     * [LiveReload](development_tools/live.md)
     * [JSLint and JSHint](development_tools/jslint.md)
     * [jsFiddle, jsbin, jsdo.it and co.](development_tools/jsfiddle.md)
-    * [Cloud9 IDE](development_tools/cloud9.md)
+    * [Online IDEs](development_tools/online_ides.md)
     * [Conclusion](development_tools/conclusion.md)
 * [Build Systems](build_systems/README.md)
     * [Grunt](build_systems/grunt.md)
