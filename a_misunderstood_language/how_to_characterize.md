@@ -1,8 +1,10 @@
 # How to Characterize?
 
-So how would you characterize JavaScript? Even though it looks a bit like Java or C due to bracing there it is actually an implementation of a couple of powerful languages in disguise. These languages are a variant of Lisp known as Scheme and Self. From former JavaScript inherited some of its functional programming capabilities whereas latter gave it prototypal inheritance system which in some ways can be considered superior to classical one used by languages such as Java.
+So how would you characterize JavaScript? Even though it looks a bit like Java or C due to bracing there it is actually an implementation of a couple of powerful languages in disguise. From a Lisp variant known as Scheme JavaScript gained some of its functional programming capabilities. Self helped to bring prototypal inheritance to the language. In some ways it can be considered superior to classical system implemented by languages such as Java.
 
-> It is possible to mimic the more commonly used one with a little effort, though. As a result there are dozens of implementations around. It doesn't take a genius to realize that this isn't particularly nice. ES6 aims to various implementations and will provide a single pattern to use.
+Incidentally some of the base libraries, such as Date and Math, were modeled after Java 1.0. Even though the language looks like Java a lot it couldn't be farther off. It takes a different kind of mindset to be successful in JavaScript.
+
+> It is possible to mimic the classical inheritance system with a little effort. As a result there are dozens of implementations around. It doesn't take a genius to realize that this isn't particularly nice. ES6 aims to combine various implementations and will provide a single pattern to use.
 
 Particularly JavaScript's functional capabilities make it in some ways an exceptional language. For a long while this power was well hidden, or at least not that well recognized. The language was improved in this regard in well supported ES4 (there are shims for older browsers). ES6 will take this a notch further.
 
