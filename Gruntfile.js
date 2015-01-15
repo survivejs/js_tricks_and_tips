@@ -1,4 +1,5 @@
-var path = require("path");
+'use strict';
+
 
 module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-gitbook');
@@ -8,8 +9,8 @@ module.exports = function (grunt) {
     grunt.initConfig({
         'gitbook': {
             development: {
-                input: "./",
-                github: "GitbookIO/javascript"
+                input: './',
+                github: 'GitbookIO/javascript'
             }
         },
         'gh-pages': {
