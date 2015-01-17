@@ -13,4 +13,4 @@ After all it is the language of the web. If you can develop in JavaScript, you c
 * [@Hermanya](https://github.com/Hermanya) - Typo fixes
 * [@naven87](https://github.com/naven87) - Typo fix and helped to improve `functions` section
 * [@piotrklibert](https://github.com/piotrklibert) - Helped to improve characterization of the language
-
+* [@smurfpandey](https://github.com/smurfpandey) - Helped to fix altJS link
