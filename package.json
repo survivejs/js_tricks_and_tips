@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "private": "true",
   "dependencies": {
+    "gitbook": "^1.5.0",
     "gitbook-plugin-ga": "^0.2.1",
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",
